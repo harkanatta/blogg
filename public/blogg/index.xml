@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogg on  Sjávarlíffræði, R og fleira.</title>
+    <link>/blogg/</link>
+    <description>Recent content in Blogg on  Sjávarlíffræði, R og fleira.</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>is</language>
+    <lastBuildDate>Thu, 24 Oct 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="/blogg/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Þari</title>
+      <link>/blogg/%C3%BEari/</link>
+      <pubDate>Thu, 24 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/blogg/%C3%BEari/</guid>
+      <description>Hlutverk
+Mitt starf hjá Náttúrustofu Norðurlands vestra felur í sér að skoða náttúruna og stunda rannsóknir á henni. Ástæða þess að flest verkefni náttúrustofanna eru á landi frekar en í sjó er sú að aðgengi er mjög takmarkað í sjó. Maður finnur það um leið og maður stekkur í sjóinn að þarna á maður ekki heima. Mín verkefni tengjast nær öll sjónum sem er óheppilegt af því leiti að ég er mjög sjóveikur.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,17 @@
+---
+title: "Erindi"
+author: "Valtýr"
+date: "09/12/2019"
+---
+<!-- `r anicon::faa("gamepad", animate='ring')` --> 
+# Sources and Pathways of Microplastics to Icelandic Seas (**a talk**)
+
+## 29. nóvember 2019
+
+This is the english version of a talk about the results of a report that was made for the environmental ministry of Iceland. Here is the [talk <i class="fas fa-chalkboard-teacher"></i>](https://harkanatta.github.io/mp-mirror/) and here is the [report <i class="fas fa-book"></i>](https://harkanatta.github.io/orplastskyrslaUAR/) (**in Icelandic**)
+
+# Örplast í hafinu við Ísland - Helstu uppsprettur, magn og farleiðir í hafið
+
+## 31. október 2019
+
+Létt erindi um niðurstöður skýrslu sem ber sama heiti og má finna [hér <i class="fas fa-book"></i>](https://harkanatta.github.io/orplastskyrslaUAR/). Erindið má sjá [hér <i class="fas fa-chalkboard-teacher"></i>](https://harkanatta.github.io/innragrunn/#1)
