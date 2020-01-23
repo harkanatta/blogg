@@ -6,10 +6,20 @@
     <description>Recent content on  Sjávarlíffræði, R og fleira.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>is</language>
-    <lastBuildDate>Tue, 17 Dec 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Experiment with D3 and R markdown</title>
+      <link>/blogg/experiment-with-d3-and-r-markdown/</link>
+      <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blogg/experiment-with-d3-and-r-markdown/</guid>
+      <description>The visualization below was adapted from GitHub here. It represents measurements taken as a part of a monitoring program of some of the main catch species in Iceland.
+library(tidyverse)allt &amp;lt;- read.csv(&amp;quot;allt.csv&amp;quot;)fiskur &amp;lt;- allt %&amp;gt;% filter(MAELIADGERD == 3) %&amp;gt;% select(c(&amp;quot;TEGUND&amp;quot;, &amp;quot;LENGD&amp;quot;, &amp;quot;OSLAEGT&amp;quot;)) %&amp;gt;% na.omit()fiskur$TEGUND &amp;lt;- ifelse(fiskur$TEGUND==&amp;quot;1&amp;quot;,&amp;quot;Gadus morhua&amp;quot;,ifelse(fiskur$TEGUND==&amp;quot;2&amp;quot;,&amp;quot;Melanogrammus aeglefinus&amp;quot;,&amp;quot;Other&amp;quot;))#fiskur &amp;lt;- rbind(fiskur[fiskur$TEGUND==&amp;quot;Other&amp;quot;,],fiskur[sample(1:dim(fiskur)[1],100),])library(jsonlite)cat(paste(&amp;#39;&amp;lt;script&amp;gt;var data = &amp;#39;,toJSON(fiskur),&amp;#39;;&amp;lt;/script&amp;gt;&amp;#39;, sep=&amp;quot;&amp;quot;))var data = [{&#34;</description>
+    </item>
     
     <item>
       <title>GBIF og R</title>
@@ -32,12 +42,21 @@ Mitt starf hjá Náttúrustofu Norðurlands vestra felur í sér að skoða nát
     </item>
     
     <item>
+      <title></title>
+      <link>/blogg/skjol/globed3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/blogg/skjol/globed3/</guid>
+      <description>Geo (spinning))body {font-family: &#34;Helvetica Neue&#34;, Helvetica, sans-serif;font-size: 14px;color: #333;}var geojson = {}var context = d3.select(&#39;#content canvas&#39;).node().getContext(&#39;2d&#39;);var projection = d3.geoOrthographic().scale(300);var geoGenerator = d3.geoPath().projection(projection).pointRadius(6).context(context);var yaw = 300;function update() {projection.rotate([yaw, -80])context.clearRect(0, 0, 800, 600);context.lineWidth = 0.5;context.strokeStyle = &#39;#333&#39;;context.beginPath();geoGenerator({type: &#39;FeatureCollection&#39;, features: geojson.features})context.</description>
+    </item>
+    
+    <item>
       <title>Erindi</title>
       <link>/erindi/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/erindi/</guid>
-      <description>&amp;lt;i class=&#34;fas fa-gamepad faa-ring animated &#34;&amp;gt;&amp;lt;/i&amp;gt; --Sources and Pathways of Microplastics to Icelandic Seas (a talk)29. nóvember 2019Steve Franciaknitr::include_graphics(&amp;quot;http://www.holar.is/sites/holar.is/files/images/valtyr_sigurdsson.jpg&amp;quot;)This is the english version of a talk about the results of a report that was made for the environmental ministry of Iceland. Here is the talk  and here is the report  (in Icelandic)
+      <description>&amp;lt;i class=&#34;fas fa-gamepad faa-ring animated &#34;&amp;gt;&amp;lt;/i&amp;gt; --Sources and Pathways of Microplastics to Icelandic Seas (a talk)29. nóvember 2019This is the english version of a talk about the results of a report that was made for the environmental ministry of Iceland. Here is the talk  and here is the report  (in Icelandic)
 Örplast í hafinu við Ísland - Helstu uppsprettur, magn og farleiðir í hafið31.</description>
     </item>
     

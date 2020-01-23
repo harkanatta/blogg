@@ -7,17 +7,6 @@ date: "09/12/2019"
 # Sources and Pathways of Microplastics to Icelandic Seas (**a talk**)
 
 ## 29. nóvember 2019
-<figure>
-  <img src="http://www.holar.is/sites/holar.is/files/images/valtyr_sigurdsson.jpg" width = "10" height = "5"  />
-  <figcaption>
-      <h4>Steve Francia</h4>
-  </figcaption>
-</figure>
-
-```{r fig.height=2, fig.width=2, message=FALSE, warning=FALSE}
-knitr::include_graphics("http://www.holar.is/sites/holar.is/files/images/valtyr_sigurdsson.jpg")
-```
-
 
 This is the english version of a talk about the results of a report that was made for the environmental ministry of Iceland. Here is the [talk <i class="fas fa-chalkboard-teacher"></i>](https://harkanatta.github.io/mp-mirror/) and here is the [report <i class="fas fa-book"></i>](https://harkanatta.github.io/orplastskyrslaUAR/) (**in Icelandic**)
 
