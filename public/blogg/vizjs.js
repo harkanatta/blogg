@@ -21,7 +21,7 @@ data = JSON.parse(JSON.stringify(data).split('"' + colnames[2]+'":').join('"y":'
      
     var margin = {top: 33, right: 5, bottom: 20, left: 50},
 	    width = 450 - margin.left - margin.right,
-	    height = 500 - margin.top - margin.bottom;
+	    height = 400 - margin.top - margin.bottom;
 
 	  var svg = d3.select(".chart").append("svg")
 	      .attr("width", width + margin.left + margin.right)

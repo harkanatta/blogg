@@ -17,8 +17,8 @@
       <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
       
       <guid>/blogg/experiment-with-d3-and-r-markdown/</guid>
-      <description>The visualization below was adapted from GitHub here. It represents measurements taken as a part of a monitoring program of some of the main catch species in Iceland.
-library(tidyverse)allt &amp;lt;- read.csv(&amp;quot;allt.csv&amp;quot;)fiskur &amp;lt;- allt %&amp;gt;% filter(MAELIADGERD == 3) %&amp;gt;% select(c(&amp;quot;TEGUND&amp;quot;, &amp;quot;LENGD&amp;quot;, &amp;quot;OSLAEGT&amp;quot;)) %&amp;gt;% na.omit()fiskur$TEGUND &amp;lt;- ifelse(fiskur$TEGUND==&amp;quot;1&amp;quot;,&amp;quot;Gadus morhua&amp;quot;,ifelse(fiskur$TEGUND==&amp;quot;2&amp;quot;,&amp;quot;Melanogrammus aeglefinus&amp;quot;,&amp;quot;Other&amp;quot;))#fiskur &amp;lt;- rbind(fiskur[fiskur$TEGUND==&amp;quot;Other&amp;quot;,],fiskur[sample(1:dim(fiskur)[1],100),])library(jsonlite)cat(paste(&amp;#39;&amp;lt;script&amp;gt;var data = &amp;#39;,toJSON(fiskur),&amp;#39;;&amp;lt;/script&amp;gt;&amp;#39;, sep=&amp;quot;&amp;quot;))var data = [{&#34;</description>
+      <description>People enjoy interactive charts. RStudio offers Shiny apps which require running R to support it so I find that complicated. Instead of a Shiny application it’s possible to embed a D3 visualisation into R markdown files. Going from R code to D3 is not a small step and getting the hang takes a long time but there is inspiration to be found here
+The visualization below was forked and adapted from a Github repository.</description>
     </item>
     
     <item>

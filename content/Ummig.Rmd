@@ -1,0 +1,11 @@
+---
+title: "Ummig (about me)"
+author: "Valtýr"
+date: "09/12/2019"
+---
+
+
+  - I work at [BioPol](https://biopol.is/) in a little village called Skagaströnd in the north of Iceland. I am also employed by the regional branch of the Icelandic Institute of Natural History [Náttúrustofu Norðurlands vestra](https://www.nnv.is/). 
+  - I have a <i class="fas fa-chalkboard-teacher"></i> BSc and MSc in biology from the University of Iceland. <i class="fas fa-chalkboard-teacher"></i>
+Starfsmaður hjá [BioPol](https://biopol.is/) á Skagaströnd og hjá [Náttúrustofu Norðurlands vestra](https://www.nnv.is/). Er með BSc og MSc í líffræði frá Háskóla Íslands.
+
