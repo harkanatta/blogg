@@ -59,8 +59,7 @@ cat(
 <script src="https://d3js.org/d3.v4.min.js"></script>
 <script src="vizjs.js"></script>
 
-The useless regression line does look odd and a power curve is more appropriate for this data. This is useful for spotting outliers when skimming through the data. The graph below has the desired power regression lines. Next up on my list is to figure out how to get the power curves into D3.
-
+The useless regression line does look odd and a power curve is more appropriate for this data. A power corve is useful for spotting outliers when skimming through the data. The graph below has the desired power regression lines. 
 
 ```{r echo=FALSE}
 
@@ -83,4 +82,8 @@ points(sortlength,expw2*0.65, type="l",col='blue')
 
 ```
 
-![Linda and me working on measuring fish at BioPol in Skagaströnd. Fiskmælingar hjá BioPol á Skagaströnd](/blogg/2020-01-23-experiment-with-d3-and-r-markdown_files/VL.JPG){width=60%}
+Next up on my list is to figure out how to get the power curves into D3.
+
+<img src="/blogg/2020-01-23-experiment-with-d3-and-r-markdown_files/VL.JPG" style="width:60.0%; display:block; margin: 0 auto;" alt="Linda and me working on measuring fish at BioPol in Skagaströnd. Fiskmælingar hjá BioPol á Skagaströnd">
+
+Linda and I working on data collection.

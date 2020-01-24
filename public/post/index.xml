@@ -1,33 +1,29 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Post on  Sjávarlíffræði, R og fleira.</title>
+    <title>Post on Various things from my job</title>
     <link>/post/</link>
-    <description>Recent content in Post on  Sjávarlíffræði, R og fleira.</description>
+    <description>Recent content in Post on Various things from my job</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>is</language>
-    <lastBuildDate>Tue, 05 Nov 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 24 Jan 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Stundasrká</title>
-      <link>/post/stundasrka/</link>
-      <pubDate>Tue, 05 Nov 2019 00:00:00 +0000</pubDate>
+      <title>Interactive Google Vizualisation</title>
+      <link>/post/interactive-google-vizualisation/</link>
+      <pubDate>Fri, 24 Jan 2020 00:00:00 +0000</pubDate>
       
-      <guid>/post/stundasrka/</guid>
-      <description>library(timevis)## Warning: package &amp;#39;timevis&amp;#39; was built under R version 3.5.3data &amp;lt;- data.frame(id = 1:11,content = c(&amp;quot;Start&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;Research Proposal&amp;quot;, &amp;quot;Obj 1. Phenotype Data QC &amp;amp; Analysis&amp;quot;,&amp;quot;Obj 2. Gneotype Data QC &amp;amp; Annotation&amp;quot;, &amp;quot;Obj 3. Heritability Analysis&amp;quot;, &amp;quot;Obj 4. Pedigree-based GWAS&amp;quot;, &amp;quot;Obj 5. Machine-learning GWAS&amp;quot;, &amp;quot;Finish&amp;quot;, &amp;quot;&amp;quot;, &amp;quot;Hand-in&amp;quot;),start = c(&amp;quot;2018-01-15&amp;quot;, &amp;quot;2018-02-15&amp;quot;, &amp;quot;2018-02-15&amp;quot;, &amp;quot;2018-03-29&amp;quot;,&amp;quot;2018-05-01&amp;quot;, &amp;quot;2018-05-28&amp;quot;, &amp;quot;2018-06-12&amp;quot;, &amp;quot;2018-07-28&amp;quot;, &amp;quot;2018-11-01&amp;quot;, &amp;quot;2018-03-29&amp;quot;, &amp;quot;2018-10-07&amp;quot;),end = c(NA, &amp;quot;2018-10-07&amp;quot;, &amp;quot;2018-03-28&amp;quot;, &amp;quot;2018-05-07&amp;quot;, &amp;quot;2018-05-28&amp;quot;, &amp;quot;2018-06-12&amp;quot;, &amp;quot;2018-07-28&amp;quot;, &amp;quot;2018-09-20&amp;quot;, NA, &amp;quot;2018-09-20&amp;quot;, NA),group = c(3, rep(1, 2), rep(2, 5),3, 2, 3),type = c(&amp;quot;box&amp;quot;, &amp;quot;background&amp;quot;, &amp;quot;range&amp;quot;, &amp;quot;range&amp;quot;, &amp;quot;range&amp;quot;, &amp;quot;range&amp;quot;, &amp;quot;range&amp;quot;, &amp;quot;range&amp;quot;, &amp;quot;box&amp;quot;, &amp;quot;background&amp;quot;, &amp;quot;box&amp;quot;),style = c(&amp;quot;color: black;&amp;quot;, &amp;quot;color: cadetblue;&amp;quot;, &amp;quot;color: cadetblue;&amp;quot;, &amp;quot;color: darkred;&amp;quot;,&amp;quot;color: darkred;&amp;quot;, &amp;quot;color: darkred;&amp;quot;, &amp;quot;color: darkred;&amp;quot;, &amp;quot;color: darkred;&amp;quot;, &amp;quot;color: black;&amp;quot;, &amp;quot;color: darkred;&amp;quot;, &amp;quot;color: black;&amp;quot;),fit = TRUE)# add configuration options allowing editing of content in timelineconfig &amp;lt;- list(editable = TRUE,multiselect = TRUE)# add grouping informationgroups &amp;lt;- data.</description>
-    </item>
-    
-    <item>
-      <title>Þari</title>
-      <link>/post/%C3%BEari/</link>
-      <pubDate>Thu, 24 Oct 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/post/%C3%BEari/</guid>
-      <description>Hlutverk
-Mitt starf hjá Náttúrustofu Norðurlands vestra felur í sér að skoða náttúruna og stunda rannsóknir á henni. Ástæða þess að flest verkefni náttúrustofanna eru á landi frekar en í sjó er sú að aðgengi er mjög takmarkað í sjó. Maður finnur það um leið og maður stekkur í sjóinn að þarna á maður ekki heima. Mín verkefni tengjast nær öll sjónum sem er óheppilegt af því leiti að ég er mjög sjóveikur.</description>
+      <guid>/post/interactive-google-vizualisation/</guid>
+      <description>&amp;lt;!DOCTYPE html&amp;gt;   
+&amp;lt;link rel=&amp;quot;stylesheet&amp;quot; type=&amp;quot;text/css&amp;quot; href=&amp;quot;/css/normalize.css&amp;quot;&amp;gt; &amp;lt;link rel=&amp;quot;stylesheet&amp;quot; type=&amp;quot;text/css&amp;quot; href=&amp;quot;/css/result-light.css&amp;quot;&amp;gt; &amp;lt;link rel=&amp;quot;stylesheet&amp;quot; type=&amp;quot;text/css&amp;quot; href=&amp;quot;http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css&amp;quot;&amp;gt; &amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt; &amp;lt;script type=&amp;quot;text/javascript&amp;quot; src=&amp;quot;https://www.google.com/jsapi&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;  
+Afli í Húnaflóa 2017 by valtyrio
+// 
+            
+ &amp;lt;div class=&amp;quot;col-sm-6 col-md-6&amp;quot;&amp;gt; &amp;lt;div id=&amp;quot;ChartColumn&amp;quot;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt; &amp;lt;div id=&amp;quot;TableProxy&amp;quot; style=&amp;quot;display: none;&amp;quot;&amp;gt;&amp;lt;/div&amp;gt; &amp;lt;/div&amp;gt;   
+ // tell the embed parent frame the height of the content if (window.</description>
     </item>
     
   </channel>
