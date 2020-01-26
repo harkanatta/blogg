@@ -1,4 +1,4 @@
-baseurl = "https://example.com/"
+baseurl = "https://relaxed-curie-6ab3e3.netlify.com/"
 theme = "cocoa-eh-hugo-theme"
 builddrafts = true
 canonifyurls = true
@@ -30,7 +30,7 @@ share = true
 # disable by setting share_on_<social network> = false
 # example: share_on_googleplus = false
 latestpostcount = 5
-github = "example"
+github = "https://github.com/harkanatta"
 email = "valtyrgullhjarta@gmail.com"
 social_banner = "img/banner.png"
 usesmallsummarycard = true
