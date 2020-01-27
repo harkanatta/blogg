@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Various things from my job</title>
+    <title>Various things from the job</title>
     <link>/</link>
-    <description>Recent content on Various things from my job</description>
+    <description>Recent content on Various things from the job</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>is</language>
     <lastBuildDate>Thu, 23 Jan 2020 00:00:00 +0000</lastBuildDate>
@@ -37,8 +37,8 @@ The visualization below was forked and adapted from a Github repository.</descri
       <pubDate>Thu, 24 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>/blogg/%C3%BEari/</guid>
-      <description>Hlutverk
-Mitt starf hjá Náttúrustofu Norðurlands vestra felur í sér að skoða náttúruna og stunda rannsóknir á henni. Ástæða þess að flest verkefni náttúrustofanna eru á landi frekar en í sjó er sú að aðgengi er mjög takmarkað í sjó. Maður finnur það um leið og maður stekkur í sjóinn að þarna á maður ekki heima. Mín verkefni tengjast nær öll sjónum sem er óheppilegt af því leiti að ég er mjög sjóveikur.</description>
+      <description>In summertime we marine biologist get to venture out in the sun. Despite regular winds most of the year summers here are great. It is highly unfortunate for me that I am very sea sick but still I manage to work my way around it.
+Figure 1: Click the slideshow above, press &#39;c&#39; to clone it (opens on a seperate window) and then press &#39;f&#39; for fullscreen.</description>
     </item>
     
     <item>
@@ -56,8 +56,8 @@ Mitt starf hjá Náttúrustofu Norðurlands vestra felur í sér að skoða nát
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/erindi/</guid>
-      <description>&amp;lt;i class=&#34;fas fa-gamepad faa-ring animated &#34;&amp;gt;&amp;lt;/i&amp;gt; --Sources and Pathways of Microplastics to Icelandic Seas (a talk)29. nóvember 2019This is a talk about the results of a report that I, and a colleague, made for the Environmental Ministry of Iceland. Here is the talk  and here is the report  (in Icelandic)
-Örplast í hafinu við Ísland - Helstu uppsprettur, magn og farleiðir í hafið31.</description>
+      <description>&amp;lt;i class=&#34;fas fa-gamepad faa-ring animated &#34;&amp;gt;&amp;lt;/i&amp;gt; --Sources and Pathways of Microplastics to Icelandic Seas (a talk)29. nóvember 2019This is a talk about the results of a report that I, and a colleague, made for the Environmental Ministry of Iceland. Below is the talk  and here is the report  (in Icelandic)
+Figure 1: Click the slideshow above, press &#39;c&#39; to clone it (opens on a seperate window) and then press &#39;f&#39; for fullscreen.</description>
     </item>
     
     <item>
@@ -78,7 +78,8 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/ummig/</guid>
-      <description>I work at BioPol in a little village called Skagaströnd in the north of Iceland since the spring of 2015. I am also employed by the regional Nature center (in icelandic: Náttúrustofu Norðurlands vestra).I have a  BSc and MSc in biology from the University of Iceland. Starfsmaður hjá BioPol á Skagaströnd og hjá Náttúrustofu Norðurlands vestra. Er með BSc og MSc í líffræði frá Háskóla Íslands.</description>
+      <description>Me, my wife and our three kids live in a little village called Skagaströnd in the north of Iceland. We came here for a job but have stayed longer than we expected (since the spring of 2015). Our kids have become proud villagers (skagstrendingar) and are absolutely opposed to moving anywhere else.
+I work as a marine biologist at BioPol and I am also employed by the regional Nature center (in icelandic: Náttúrustofu Norðurlands vestra).</description>
     </item>
     
   </channel>

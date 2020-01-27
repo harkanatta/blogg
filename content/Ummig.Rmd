@@ -4,9 +4,12 @@ author: "Valtýr"
 date: "09/12/2019"
 ---
 
+Me, my wife and our three kids live in a little village called Skagaströnd in the north of Iceland. We came here for a job but have stayed longer than we expected (since the spring of 2015). Our kids have become proud villagers (skagstrendingar) and are absolutely opposed to moving anywhere else.
 
-  - I work at [BioPol](https://biopol.is/) in a little village called Skagaströnd in the north of Iceland since the spring of 2015. I am also employed by the regional Nature center  (in icelandic: [Náttúrustofu Norðurlands vestra](https://www.nnv.is/)). 
-  - I have a <i class="fas fa-chalkboard-teacher"></i> BSc and MSc in biology from the University of Iceland. <i class="fas fa-chalkboard-teacher"></i>
+  - I work as a marine biologist at [BioPol](https://biopol.is/) and I am also employed by the regional Nature center  (in icelandic: [Náttúrustofu Norðurlands vestra](https://www.nnv.is/)). 
+  - I have a <i class="fas fa-chalkboard-teacher"></i> BSc and MSc in biology from the University of Iceland. <i class="fas fa-chalkboard-teacher"></i>.
+  - Assistant teacher in invertebrate zoology at the University of Iceland (spring 2014).
+  - Summer jobs: Ice-cream truck driver, sement worker, after-school instructor....
 
 Starfsmaður hjá [BioPol](https://biopol.is/) á Skagaströnd og hjá [Náttúrustofu Norðurlands vestra](https://www.nnv.is/). Er með BSc og MSc í líffræði frá Háskóla Íslands.
 

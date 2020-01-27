@@ -13,16 +13,8 @@ lobsters_id: ''
 meta_img: /images/iconid.png
 ---
 
-Hlutverk 
+In summertime we marine biologist get to venture out in the sun. Despite regular winds most of the year summers here are great. It is highly unfortunate for me that I am very `r anicon::nia("sea sick",animate="float",speed="slow")` but still I manage to work my way around it.
 
-Mitt starf hjá Náttúrustofu Norðurlands vestra felur í sér að skoða náttúruna og stunda rannsóknir á henni. Ástæða þess að flest verkefni náttúrustofanna eru á landi frekar en í sjó er sú að aðgengi er mjög takmarkað í sjó. Maður finnur það um leið og maður stekkur í sjóinn að þarna á maður ekki heima. Mín verkefni tengjast nær öll sjónum sem er óheppilegt af því leiti að `r anicon::nia("ég er",animate="spin",speed="slow")` `r anicon::nia("mjög",animate="wrench",speed="slow")` `r anicon::nia("sjóveikur.",animate="float",speed="slow")`
-
-Ég frétti af [neðansjávardróna í ódýrari kantinum](https://www.sofarocean.com/products/trident) og langaði að sjá hvort hægt væri að nota hann til þess að skoða fiskiseiði í þarabreiðum. Þarabreiður eru skjól fyrir ýmsar sjávarlífverur og miðað við víðernin í hafinu eru þær heitur reitur með tilliti til líffjölbreytileika. 
-
-Ég hef ekki neina sérþekkingu á þarabreiðum og veit því ekki hvaða rannsóknir hafa verið gerðar á þeim.
-En hvernig átti ég að fá styrkfé til þess að skoða þarabreiður? Ég hafði enga sérþekkingu á þarabreiðum og gat ekki hannað áhugaverða rannsókn, sem ekki hefði verið gerð áður, á þeim sisvona. Það þurfti að finna annað sjónarhorn, forvitnin ein er ekki næg ástæða til að veita fé til athuganna. Því var gaukað að mér að hugsanlega mætti finna verkefni í tengslum við nýtingu á þara. Ef einhver dugandi maður sæi ástæðu til að sækja þara á svæðinu og jafnvel vinna eitthvað úr honum í þorpinu gæti það orðið akkur fyrir samfélagið og því ástæða fyrir [Uppbyggingasjóð Norðurlands vestra](http://www.ssnv.is/is/uppbyggingarsjodur) til að leggja til fé. 
-
-Þessi sjóður er með tiltölulega lágar fjárhæðir í boði en styrkir fjöldamörg verkefni í landshlutanum. Hér að neðan má sjá dæmi um styrkina sem var úthlutað 2019 (sjá töflu \@ref[tab:tafla]). Við sóttum um fé til SSNV og fengum styrk upp á eina milljón fyrir verkefnið *Kortlagning þaraflóru í austanverðum Húnaflóa* árið 2017. 
 
 ```{r tafla, eval=FALSE, message=FALSE, warning=FALSE, include=FALSE, out.width='70%'}
 #https://stackoverflow.com/questions/1395528/scraping-html-tables-into-r-data-frames-using-the-xml-package
@@ -43,15 +35,14 @@ colnames(tafla) <- c("Styrkhafi","Verkefni","Milljónir")
 widgetframe::frameWidget(datatable(tafla))
 ```
 
-Hafist var handa við að safna gögnum á meðan dróninn var ókominn. Við Óli, sem var sumarstarfsmaður árið 2017, græjuðum tvo kajaka sem kollegar okkar, Jim og Karin, eiga. Sjókajakarnir eru hannaðir að fyrirmynd eskimóakajakanna og það krefst talsverðrar tækni að sigla þeim. Ég var ekki fyrr kominn út í þegar mér hvolfdi. Dýpið var varla 50 sentimetrar sem var frekar óþægilegt því ég var hálfpartinn fastur milli botnsins og kajaksins. Það gekk mikið betur hjá Óla og komst hann frá þessu án þess að verða blautur. Hér fyrir neðan er stutt slæðusýning um þessa forkönnun.
 
-```{r echo=FALSE}
+```{r echo=FALSE, fig.cap="Click the slideshow above, press `'c'` to clone it (opens on a seperate window) and then press `'f'` for fullscreen."}
 knitr::include_url("https://harkanatta.github.io/kajakslides")
 ```
 
-Kajakferðirnar nýttust til að koma auga á nokkra áhugaverða staði, sumir þeirra voru skoðaðir betur en við ráðfærðum okkur líka við grásleppuveiðimenn sem gátu bent okkur á fleiri staði. Grásleppan hrygnir gjarnan í þaraskógum 
+Last summer we wanted to estimate how extensive our kelp beds are in Húnaflói to see if there was some extra to be harvested for various purposes. We started off with looking out for sites of interest on kayaks (also took advice from local fishermen) then followed up with an [underwater drone](https://www.sofarocean.com/products/trident). The video recordings from the drone were used for classifying the kelp and other interesting things down there.
 
-```{r yfirlitskort, echo=FALSE, error=FALSE, fig.align="center", message=FALSE, warning=FALSE, out.width='100%'}
+```{r yfirlitskort, fig.cap="Click on the points to see figures from the area (then right-click the image and select an option to view it better).", echo=FALSE, error=FALSE, fig.align="center", message=FALSE, warning=FALSE, out.width='100%'}
 
 stodvar <- sf::read_sf(dsn="skjol/stodvar.shp")
 #dypi20 <- rgdal::readOGR(dsn="skjol/20mDypi.shp", verbose = FALSE)
@@ -86,15 +77,14 @@ images = c("https://raw.githubusercontent.com/harkanatta/ssnv_trident/master/skj
 urls=c("https://harkanatta.github.io/orplast2019/slaedur/slaedur.html#1","https://harkanatta.github.io/orplast2019/slaedur/slaedur.html#3","https://harkanatta.github.io/orplast2019/slaedur/slaedur.html#18","https://harkanatta.github.io/orplast2019/slaedur/slaedur.html#21","https://harkanatta.github.io/orplast2019/slaedur/slaedur.html#11","https://harkanatta.github.io/orplast2019/slaedur/slaedur.html#20","https://harkanatta.github.io/orplast2019/slaedur/slaedur.html#7")
 
 litir <- RColorBrewer::brewer.pal(7,"Accent")
-library(mapview)     
-map <- mapview(dypi10,col.regions="#cb5600",map.types="Stamen.TerrainBackground", legend = FALSE,popup=leafpop::popupTable(DF2))+mapview(stodvar, popup = popupImage(images,width="500"),legend=FALSE,col.regions=litir,cex=14)+mapview(skogar,popup=leafpop::popupTable(DF),label=skogar@data$SV,legend=FALSE)+mapview(dyptarl,lwd=0.3,legend=FALSE)
-
+library(mapview)
 library(magrittr)
-img <- "https://github.com/harkanatta/ssnv_trident/blob/master/graphs/tvologo.jpg?raw=true"
-map %>% leafem::addLogo(img, width = '20%', height = '25%',offset.y = 20,offset.x = 80,alpha = 0.7) %>% leaflet.extras::addFullscreenControl(pseudoFullscreen = T)
+map <- mapview(dypi10,col.regions="#cb5600",map.types="Stamen.TerrainBackground", legend = FALSE,popup=leafpop::popupTable(DF2))+mapview(stodvar, popup = leafpop::popupImage(images,width="500"),legend=FALSE,col.regions=litir,cex=14)+mapview(skogar,popup=leafpop::popupTable(DF),label=skogar@data$SV,legend=FALSE)+mapview(dyptarl,lwd=0.3,legend=FALSE)
+map
+
+# library(magrittr)
+# img <- "https://github.com/harkanatta/ssnv_trident/blob/master/graphs/tvologo.jpg?raw=true"
+# map %>% leafem::addLogo(img, width = '20', height = '25',offset.y = 20,offset.x = 80,alpha = 0.7) %>% leaflet.extras::addFullscreenControl(pseudoFullscreen = T)
 
 ```
 
-```{r echo=FALSE}
-knitr::include_url("https://harkanatta.github.io/3dkort")
-```
