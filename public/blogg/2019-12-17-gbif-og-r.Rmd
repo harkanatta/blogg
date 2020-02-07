@@ -13,13 +13,6 @@ meta_img: /images/image.jpg
 ---
 ## Þetta skráir sig ekki sjálft
 
-{{< gallery dir="/myndaalbum/" />}} {{< load-photoswipe >}}
-
-```{r echo=FALSE}
-#blogdown::shortcode("gallery", src = '"/myndaalbum/"', alt = "Some alt text", .content = "load-photoswipe")
-blogdown::shortcode("figure", src = '"/myndaalbum/Efrimynd.png"', alt = "Some alt text")
-```
-
 
 Gögn eru dýrmæt ef þau eru aðgengileg. Opnir gagnagrunnar geta verið mjög mikilvægir fyrir rannsóknir ef þeir yfirgripsmiklir. Gagnagrunnurinn GBIF (stendur fyrir Global Biodiversity Information Facility). Það er gagnagrunnur þar sem skráð eru tilvik þar sem ýmsar lífverur hafa sést eða veiðst. Til þess að lífvera sé skráð í gagnagrunn þarf bæði hún og skrásetjarinn að vera til staðar. Þess vegna eru flest tilvik við þéttbýli eða fjölfarnar slóðir líkt og vegi og einnig, af sömu ástæðu, eru flest tilvik á fjölbýlli stöðum en á Íslandi. Auðvitað væri best ef að lífverurnar skráðu sig sjálfar í gagnagrunninn en svo gott er það ekki. Sem dæmi skal taka rostunga *Odobenus rosmarus* sem voru eitt sinn hluti af dýrafánu Íslands en ekki lengur því miður. Í þessu dæmi eru notaðir nokkrir R-pakkar. Til þess að kveikja á þeim öllum í einu er þetta góð aðferð:
 
