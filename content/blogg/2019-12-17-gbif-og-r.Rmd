@@ -1,5 +1,5 @@
 ---
-title: GBIF og R
+title: GBIF and Mapview
 author: Valtýr
 date: '2019-12-17'
 slug: gbif-og-r
@@ -11,53 +11,6 @@ hacker_news_id: ''
 lobsters_id: ''
 meta_img: /images/image.jpg
 ---
-## Þetta skráir sig ekki sjálft
-Databases are important but they require input from people. Animals sadly do not registrate themselves. The database GBIF (Global Biodiversity Information Facility) has data logs from various species and places around the world that can be interesting and fun to play with. A recent immigrant in my area in northern Iceland is the thrush species *Turdus merula*. There aren't many animals to look at here so this is truly a welcome resident. Lets look at what the database has on this bird with R:
-
-First we need to load a few packages:
-
-`Packages <- c("rgbif", "leafpop" ,"mapview" ,"leaflet" ,"leaflet.extras" ,"magrittr" ,"sf" ,"rgdal") lapply(Packages, library, character.only = TRUE)`
-
-The R-package [rgbif](https://cran.r-project.org/web/packages/rgbif/index.html) has a simple way for the user to get data from the database:
-
-`Latin_name <- "Turdus merula"`
-`Species <- occ_search(scientificName = Latin_name, limit = 20) #limit = 20 is to limit the output of the function to 20 incidents only.`
-
-The output is a nested list that contains, among other things, a `data frame` (a `tibble` frá `tidyverse`) called *data* which stores the GPS-locations.
-
-`DF <- Species$data`
-
-Some recordings lack GPS-coordinates so it's best to get rid of these:
-
-`DF <- DF[!is.na(DF[,3]) & !is.na(DF[,4]),]` or ``DF <- DF[!is.na(DF[,"decimalLatitude"]) & !is.na(DF[,"decimalLongitude"]),]`
-
-Then we create a SpatialPointsDataFrame and write that to a Geojson file with the rgdal package:
-
-`Points<- SpatialPointsDataFrame(DF[,c(4,3)], DF[,-c(4,3)])`
-`rgdal::writeOGR(obj=Points, dsn='species.geojson', layer='DF', driver='GeoJSON', overwrite_layer = TRUE)`
-
-The leaflet maps are interactive and there is an option to view pop-up images. Here is a little for loop to mangle the data in such a way that we get a data frame of data logs that include an image-URL:
-
-`a <- list();`
-`c <- list();`
-`rows <- dim(DF[!is.na(DF[,"decimalLatitude"]) & !is.na(DF[,"decimalLongitude"]),])[1];`
-`for (i in 1:rows) {`
-`  a[i] <- Species$media[[i]]`
-`  b <- a[i] %>% unlist() %>% as.data.frame()`
-`  c[i] <- ifelse(dim(table(grepl("identifier",rownames(b))))<2,list(c(NA,NA)),list(c(as.character(b[rownames(b)=="key",]),as.character(b[rownames(b)=="identifier",]))))};`
-`DF3 <- do.call(rbind,c);`
-`DF3 <- DF3[complete.cases(DF3),]`
-`Data_logs <- sf::read_sf("species.geojson")`
-`Data_logs$photo <-  ifelse(Data_logs$key %in% DF3[,1],DF3[,2],NA)`
-`Photos <- Data_logs[!is.na(Data_logs$photo),]`
-
-And the last bit of R code I want to show is how I make the map:
-
-`library(mapview)     `
-`map <- mapview(Photos,legend=FALSE,col.regions="blue",map.types="Esri.WorldImagery", cex=14, popup =` `leafpop::popupImage(Photos$photo,width="300")) + mapview(Data_logs,col.regions="#cb5600", legend =` `F,popup=leafpop::popupTable(DF2))`
-
-To add a logo and a full screen option is very simple with the mapview and leaflet packages.
-
 
 ```{r rostungur, echo=FALSE, message=FALSE, warning=FALSE}
 Packages <- c("rgbif","leafpop","mapview","leaflet","leaflet.extras","magrittr","sf","rgdal")
@@ -97,3 +50,55 @@ map %>% leafem::addLogo(img, width = 60, height = 30,offset.y = 20,offset.x = 80
 
 
 This map does represent some of the extent of the species distribution and where it intersects with idle contributors to the database GBIF.
+
+## Maps
+
+Making interactive maps in R is easy with mapview Databases are important but they require input from people. Animals sadly do not registrate themselves. The database GBIF (Global Biodiversity Information Facility) has data logs from various species and places around the world that can be interesting and fun to play with. A recent immigrant in my area in northern Iceland is the thrush species *Turdus merula*. There aren't many animals to look at here so this is truly a welcome resident. Lets look at what the database has on this bird with R:
+
+First we need to load a few packages:
+
+    Packages <- c("rgbif", "leafpop" ,"mapview" ,"leaflet" ,"leaflet.extras" ,"magrittr" ,"sf" ,"rgdal");
+    lapply(Packages, library, character.only = TRUE)
+
+The R-package [rgbif](https://cran.r-project.org/web/packages/rgbif/index.html) has a simple way for the user to get data from the database:
+
+    Latin_name <- "Turdus merula"
+    Species <- occ_search(scientificName = Latin_name, limit = 20) #limit = 20 is to limit the output of the function to 20 incidents only.
+
+The output is a nested list that contains, among other things, a `data frame` (a `tibble` frá `tidyverse`) called *data* which stores the GPS-locations.
+
+    DF <- Species$data
+
+Some recordings lack GPS-coordinates so it's best to get rid of these:
+
+    DF <- DF[!is.na(DF[,3]) & !is.na(DF[,4]),] 
+    # or DF <- DF[!is.na(DF[,"decimalLatitude"]) & !is.na(DF[,"decimalLongitude"]),]
+
+Then we create a SpatialPointsDataFrame and write that to a Geojson file with the rgdal package:
+
+    Points<- SpatialPointsDataFrame(DF[,c(4,3)], DF[,-c(4,3)])
+    rgdal::writeOGR(obj=Points, dsn='species.geojson', layer='DF', driver='GeoJSON', overwrite_layer = TRUE)
+
+The leaflet maps are interactive and there is an option to view pop-up images. Here is a little for loop to mangle the data in such a way that we get a data frame of data logs that include an image-URL:
+
+    a <- list();
+    `c <- list();
+    rows <- dim(DF[!is.na(DF[,"decimalLatitude"]) & !is.na(DF[,"decimalLongitude"]),])[1];
+    for (i in 1:rows) {
+    a[i] <- Species$media[[i]]
+    b <- a[i] %>% unlist() %>% as.data.frame()
+    c[i] <- ifelse(dim(table(grepl("identifier",rownames(b))))<2,list(c(NA,NA)),list(c(as.character(b[rownames(b)=="key",]),as.character(b[rownames(b)=="identifier",]))))};
+    DF3 <- do.call(rbind,c);
+    DF3 <- DF3[complete.cases(DF3),]
+    Data_logs <- sf::read_sf("species.geojson")
+    Data_logs$photo <-  ifelse(Data_logs$key %in% DF3[,1],DF3[,2],NA)
+    Photos <- Data_logs[!is.na(Data_logs$photo),]
+
+And the last bit of R code I want to show is how I make the map:
+
+    library(mapview)
+    map <- mapview(Photos,legend=FALSE,col.regions="blue",map.types="Esri.WorldImagery", cex=14, popup = leafpop::popupImage(Photos$photo,width="300")) + mapview(Data_logs,col.regions="#cb5600", legend = F,popup=leafpop::popupTable(DF2))
+
+To add a logo and a full screen option is very simple with the mapview and leaflet packages.
+
+
