@@ -59,5 +59,14 @@ The visualization below was forked and adapted from a Github repository.</descri
       <description>Geo (spinning))body {font-family: &#34;Helvetica Neue&#34;, Helvetica, sans-serif;font-size: 14px;color: #333;}var geojson = {}var context = d3.select(&#39;#content canvas&#39;).node().getContext(&#39;2d&#39;);var projection = d3.geoOrthographic().scale(300);var geoGenerator = d3.geoPath().projection(projection).pointRadius(6).context(context);var yaw = 300;function update() {projection.rotate([yaw, -80])context.clearRect(0, 0, 800, 600);context.lineWidth = 0.5;context.strokeStyle = &#39;#333&#39;;context.beginPath();geoGenerator({type: &#39;FeatureCollection&#39;, features: geojson.features})context.</description>
     </item>
     
+    <item>
+      <title></title>
+      <link>/blogg/skjol/sankeysources/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/blogg/skjol/sankeysources/</guid>
+      <description>sankeyNetwork(function() {// If window.HTMLWidgets is already defined, then use it; otherwise create a// new object. This allows preceding code to set options that affect the// initialization process (though none currently exist).window.HTMLWidgets = window.HTMLWidgets || {};// See if we&#39;re running in a viewer pane. If not, we&#39;re in a web browser.var viewerMode = window.HTMLWidgets.viewerMode =/\bviewer_pane=1\b/.test(window.location);// See if we&#39;re running in Shiny mode.</description>
+    </item>
+    
   </channel>
 </rss>

@@ -38,6 +38,11 @@
   </url>
   
   <url>
+    <loc>/blogg/skjol/sankeysources/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>/ummig/</loc>
   </url>
   
