@@ -1,19 +1,19 @@
 ---
-title: "Erindi (talks)"
+title: "Talks"
 author: "Valtýr"
 date: "09/12/2019"
 ---
 <!-- `r anicon::faa("gamepad", animate='ring')` --> 
 ## Sources and Pathways of Microplastics to Icelandic Seas (**a talk**)
-### 29. nóvember 2019
+### November 29th 2019
 
-This is a talk about the results of a report that I, and a colleague, made for the Environmental Ministry of Iceland. Below is the talk <i class="fas fa-chalkboard-teacher"></i> and [here is the report <i class="fas fa-book"></i>](https://harkanatta.github.io/orplastskyrslaUAR/) (*in Icelandic*)
+This is a talk about the results of a report that I, along with a colleague, made for the Environmental Ministry of Iceland. Below is the [talk <i class="fas fa-chalkboard-teacher"></i>]("https://harkanatta.github.io/mp-mirror") and [here is the report <i class="fas fa-book"></i>](https://harkanatta.github.io/orplastskyrslaUAR/) (*in Icelandic*)
 
 ```{r echo=FALSE, fig.cap="Click the slideshow above, press `'c'` to clone it (opens on a seperate window) and then press `'f'` for fullscreen."}
 knitr::include_url("https://harkanatta.github.io/mp-mirror")
 ```
 
-## Örplast í hafinu við Ísland - Helstu uppsprettur, magn og farleiðir í hafið
+## In Icelandic: Örplast í hafinu við Ísland - Helstu uppsprettur, magn og farleiðir í hafið
 ### 31. október 2019
 
 Létt erindi um niðurstöður skýrslu sem ber sama heiti og má finna [hér <i class="fas fa-book"></i>](https://harkanatta.github.io/orplastskyrslaUAR/). Erindið má sjá [hér <i class="fas fa-chalkboard-teacher"></i>](https://harkanatta.github.io/innragrunn)
@@ -26,5 +26,9 @@ knitr::include_url("https://harkanatta.github.io/innragrunn")
 ### October 2014 and November 2015
 
 [The effects of a herring mass death on the bottom biota in Kolgrafafjörður Iceland <i class="fas fa-chalkboard-teacher"></i>](http://www.vegagerdin.is/vefur2.nsf/c16a923a6485025d0025793b003db0e2/b81be193196d902500257d85004e57c2/$FILE/1630%20ValtyrSigurdsson1630.pdf) (*Masters thesis*). This talk was held on an event in 2014 by The Icelandic Road and Coastal Administration (which funded the project) and again, slightly modified, at the [Icelandic Biology Conference in 2015](https://biologia.is/liffraediradstefnan-2015/dagskra/)
+
+Abstract: 
+> The overwintering Atlantic herring Clupea harengus, off the coast of the Snæfellsnes peninsula, western Iceland, has had a large impact on the marine ecosystem of the southern Breiðafjörður bay. In winter 2012 - 2013, over 50,000 tonnes of herring succumbed to oxygen depletion in a large scale die-off in the shallow silled fjord Kolgrafafjörður. Around 20,000 tonnes of dead herring accumulated on the seafloor and subsequently some of the benthic biota washed ashore. The effects of the oxygen depleted conditions caused by the organic material on benthic infaunal communities were assessed with bottom grab sampling. The results were compared with those from a similar study made in 1999 as part of an environmental assessment prior to construction of a bridge crossing the fjord. Data indicated lowered biodiversity and dominance of the polychaete Capitella capitata, in contrast to a species rich fauna in the area in 1999 (where only a single C. capitata specimen was found). Over 77,000 individuals/m² of C. capitata were recorded at one station in 2013. This species is particularly associated with disturbed or polluted sediments.
+Similar conditions have not been documented in Iceland before but the impact of a 500 tonne herring death on the benthic fauna of a small fjord in North Norway lasted for approximately three years. Another study on the effects of a smaller scale herring death was conducted at another location in southern Breiðafjörður bay. There, the catch of amphipod traps, baited for epifaunal lysianassids, indicated that the scavenging amphipod Anonyx sarsi avoided sources of organic pollution.
 
 

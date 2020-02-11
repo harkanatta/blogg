@@ -6,10 +6,20 @@
     <description>Recent content on Various things from the job</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>is</language>
-    <lastBuildDate>Thu, 23 Jan 2020 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 10 Feb 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Sources of Microplastics in Iceland</title>
+      <link>/blogg/sources-of-microplastics-in-iceland/</link>
+      <pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/blogg/sources-of-microplastics-in-iceland/</guid>
+      <description>Sankey diagramThe main sources of microplastics in Iceland and pathways to the ocean are represented in this interactive Sankey-diagram below. Even though we haven’t yet confirmed rubber tires in great quantities in ocean sediments we theorise that rubber and road particles are washed to the sea with surface water. There is no doubt these particles exist and persist in the environment.
+{&#34;x&#34;:{&#34;url&#34;:&#34;/blogg/2020-02-10-sources-of-microplastics-in-iceland_files/figure-html//widgets/widget_unnamed-chunk-1.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}In Húnaflói bay, northern Iceland, there is little microplastic pollution because of very few inhabitants.</description>
+    </item>
     
     <item>
       <title>Experiment with D3 and R markdown</title>
@@ -31,12 +41,12 @@ The visualization below was forked and adapted from a Github repository.</descri
     </item>
     
     <item>
-      <title>Þari</title>
+      <title>Kelp</title>
       <link>/blogg/%C3%BEari/</link>
       <pubDate>Thu, 24 Oct 2019 00:00:00 +0000</pubDate>
       
       <guid>/blogg/%C3%BEari/</guid>
-      <description>In summertime we marine biologist get to venture out in the sun. Despite regular winds most of the year summers here are great. It is highly unfortunate for me that I am very sea sick but still I manage to work my way around it.
+      <description>In summertime we marine biologist get to venture out in the sun. Despite regular winds most of the year, summers here are great. But at these high latitudes they are short, only about 3 months. Unfortunately for me, I can get sea sick but still I manage to work my way around it.
 Figure 1: Click the slideshow above, press &#39;c&#39; to clone it (opens on a seperate window) and then press &#39;f&#39; for fullscreen.</description>
     </item>
     
@@ -50,13 +60,13 @@ The visualization below was forked and adapted from a Github repository.</descri
     </item>
     
     <item>
-      <title>Erindi (talks)</title>
-      <link>/erindi/</link>
+      <title>About me</title>
+      <link>/ummig/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/erindi/</guid>
-      <description>&amp;lt;i class=&#34;fas fa-gamepad faa-ring animated &#34;&amp;gt;&amp;lt;/i&amp;gt; --Sources and Pathways of Microplastics to Icelandic Seas (a talk)29. nóvember 2019This is a talk about the results of a report that I, and a colleague, made for the Environmental Ministry of Iceland. Below is the talk  and here is the report  (in Icelandic)
-Figure 1: Click the slideshow above, press &#39;c&#39; to clone it (opens on a seperate window) and then press &#39;f&#39; for fullscreen.</description>
+      <guid>/ummig/</guid>
+      <description>Me, my wife and our three kids live in a little village called Skagaströnd in the north of Iceland. We came here for a job but have stayed longer than we expected (since the spring of 2015). Our kids have become proud villagers (skagstrendingar) and are absolutely opposed to moving anywhere else.
+I work as a marine biologist at BioPol and I am also employed by the regional Nature center (in icelandic: Náttúrustofu Norðurlands vestra).</description>
     </item>
     
     <item>
@@ -72,13 +82,13 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
     </item>
     
     <item>
-      <title>Ummig (about me)</title>
-      <link>/ummig/</link>
+      <title>Talks</title>
+      <link>/erindi/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/ummig/</guid>
-      <description>Me, my wife and our three kids live in a little village called Skagaströnd in the north of Iceland. We came here for a job but have stayed longer than we expected (since the spring of 2015). Our kids have become proud villagers (skagstrendingar) and are absolutely opposed to moving anywhere else.
-I work as a marine biologist at BioPol and I am also employed by the regional Nature center (in icelandic: Náttúrustofu Norðurlands vestra).</description>
+      <guid>/erindi/</guid>
+      <description>&amp;lt;i class=&#34;fas fa-gamepad faa-ring animated &#34;&amp;gt;&amp;lt;/i&amp;gt; --Sources and Pathways of Microplastics to Icelandic Seas (a talk)November 29th 2019This is a talk about the results of a report that I, along with a colleague, made for the Environmental Ministry of Iceland. Below is the talk  and here is the report  (in Icelandic)
+Figure 1: Click the slideshow above, press &#39;c&#39; to clone it (opens on a seperate window) and then press &#39;f&#39; for fullscreen.</description>
     </item>
     
   </channel>

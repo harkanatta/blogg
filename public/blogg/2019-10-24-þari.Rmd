@@ -1,5 +1,5 @@
 ---
-title: Þari
+title: Kelp
 author: Valtýr
 date: '2019-10-24'
 slug: þari
@@ -13,7 +13,7 @@ lobsters_id: ''
 meta_img: /images/iconid.png
 ---
 
-In summertime we marine biologist get to venture out in the sun. Despite regular winds most of the year summers here are great. It is highly unfortunate for me that I am very `r anicon::nia("sea sick",animate="float",speed="slow")` but still I manage to work my way around it.
+In summertime we marine biologist get to venture out in the sun. Despite regular winds most of the year, summers here are great. But at these high latitudes they are short, only about 3 months. Unfortunately for me, I can get `r anicon::nia("sea sick",animate="float",speed="slow")` but still I manage to work my way around it.
 
 
 ```{r tafla, eval=FALSE, message=FALSE, warning=FALSE, include=FALSE, out.width='70%'}
@@ -88,3 +88,4 @@ map
 
 ```
 
+Click the points on the map above to see figures from the area (then right-click the image and select an option to view it better).

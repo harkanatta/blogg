@@ -1,5 +1,5 @@
 ---
-title: "Ummig (about me)"
+title: "About me"
 author: "Valtýr"
 date: "09/12/2019"
 ---
