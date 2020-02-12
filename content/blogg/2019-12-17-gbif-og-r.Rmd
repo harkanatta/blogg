@@ -17,7 +17,7 @@ Packages <- c("rgbif","leafpop","mapview","leaflet","leaflet.extras","magrittr",
 invisible(lapply(Packages, library, character.only = TRUE))
 
 Latin_name <- "Turdus merula"
-Species <- occ_search(scientificName = Latin_name, limit = 20)
+Species <- occ_search(scientificName = Latin_name, limit = 60)
 DF <- Species$data
 DF <- DF[!is.na(DF[,4]) & !is.na(DF[,3]),]
 DF2 <- DF[,c(2,15,16,66,70)] # áhugaverðr dálkar hjá *Odobenus rosmarus* en ekkert endilega hjá öðrum tegundum
@@ -62,9 +62,9 @@ First we need to load a few packages:
 The R-package [rgbif](https://cran.r-project.org/web/packages/rgbif/index.html) has a simple way for the user to get data from the database:
 
     Latin_name <- "Turdus merula"
-    Species <- occ_search(scientificName = Latin_name, limit = 20) #limit = 20 is to limit the output of the function to 20 incidents only.
+    Species <- occ_search(scientificName = Latin_name, limit = 60) #limit = 60 is to limit the output of the function to 60 incidents only.
 
-The output is a nested list that contains, among other things, a `data frame` (a `tibble` frá `tidyverse`) called *data* which stores the GPS-locations.
+The output is a nested list that contains, among other things, a `data frame` (a `tibble` from `tidyverse`) called *data* which stores the GPS-locations.
 
     DF <- Species$data
 
@@ -81,7 +81,7 @@ Then we create a SpatialPointsDataFrame and write that to a Geojson file with th
 The leaflet maps are interactive and there is an option to view pop-up images. Here is a little for loop to mangle the data in such a way that we get a data frame of data logs that include an image-URL:
 
     a <- list();
-    `c <- list();
+    c <- list();
     rows <- dim(DF[!is.na(DF[,"decimalLatitude"]) & !is.na(DF[,"decimalLongitude"]),])[1];
     for (i in 1:rows) {
     a[i] <- Species$media[[i]]
@@ -98,6 +98,7 @@ And the last bit of R code I want to show is how I make the map:
     library(mapview)
     map <- mapview(Photos,legend=FALSE,col.regions="blue",map.types="Esri.WorldImagery", cex=14, popup = leafpop::popupImage(Photos$photo,width="300")) + mapview(Data_logs,col.regions="#cb5600", legend = F,popup=leafpop::popupTable(DF2))
 
-To add a logo and a full screen option is very simple with the mapview and leaflet packages.
+To add a logo and a full screen option is very simple with the mapview and leaflet packages:
 
-
+    #img <- the URL of the image
+    map %>% leafem::addLogo(img, width = 60, height = 30,offset.y = 20,offset.x = 80,alpha = 0.4, url = "https://www.gbif.org/") %>% leaflet.extras::addFullscreenControl(pseudoFullscreen = T)
