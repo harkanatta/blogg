@@ -1,25 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Post on Various things from the job</title>
-    <link>/post/</link>
-    <description>Recent content in Post on Various things from the job</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>is</language>
-    <lastBuildDate>Mon, 10 Feb 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Sources of Microplastics in Iceland</title>
-      <link>/post/sources-of-microplastics-in-iceland/</link>
-      <pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/post/sources-of-microplastics-in-iceland/</guid>
-      <description>Sankey diagramThe main sources of microplastics in Iceland and pathways to the ocean are represented in this interactive Sankey-diagram below. Even though we haven’t yet confirmed rubber tires in great quantities in ocean sediments we theorise that rubber and road particles are washed to the sea with surface water. There is no doubt these particles exist and persist in the environment.
-{&#34;x&#34;:{&#34;url&#34;:&#34;/post/2020-02-10-sources-of-microplastics-in-iceland_files/figure-html//widgets/widget_unnamed-chunk-1.html&#34;,&#34;options&#34;:{&#34;xdomain&#34;:&#34;*&#34;,&#34;allowfullscreen&#34;:false,&#34;lazyload&#34;:false}},&#34;evals&#34;:[],&#34;jsHooks&#34;:[]}In Húnaflói bay, northern Iceland, there is little microplastic pollution because of very few inhabitants.</description>
-    </item>
-    
-  </channel>
-</rss>

@@ -1,104 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Various things from the job</title>
-    <link>/</link>
-    <description>Recent content on Various things from the job</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>is</language>
-    <lastBuildDate>Mon, 10 Feb 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>Sources of Microplastics in Iceland</title>
-      <link>/blogg/sources-of-microplastics-in-iceland/</link>
-      <pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/blogg/sources-of-microplastics-in-iceland/</guid>
-      <description>The ministry of environment requested an estimate of microplastic pollution to Icelandic seas. The main goal was to obtain information about the main sources and pathways to be able to react with political action if necessary. A part of the goal was to write a overview on the state of knowledge about microplastics regarding the marine environment especially. The outcome was a report (in Icelandic).</description>
-    </item>
-    
-    <item>
-      <title>Experiment with D3 and R markdown</title>
-      <link>/blogg/experiment-with-d3-and-r-markdown/</link>
-      <pubDate>Thu, 23 Jan 2020 00:00:00 +0000</pubDate>
-      
-      <guid>/blogg/experiment-with-d3-and-r-markdown/</guid>
-      <description>People enjoy interactive charts. RStudio offers Shiny apps which require running R to support it so I find that complicated. Instead of a Shiny application it’s possible to embed a D3 visualisation into R markdown files. Going from R code to D3 is not a small step and getting the hang takes a long time but there is inspiration to be found here
-The visualization below was forked and adapted from a Github repository.</description>
-    </item>
-    
-    <item>
-      <title>GBIF and Mapview</title>
-      <link>/blogg/gbif-og-r/</link>
-      <pubDate>Tue, 17 Dec 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/blogg/gbif-og-r/</guid>
-      <description>{&#34;x&#34;:{&#34;options&#34;:{&#34;minZoom&#34;:1,&#34;maxZoom&#34;:100,&#34;crs&#34;:{&#34;crsClass&#34;:&#34;L.CRS.EPSG3857&#34;,&#34;code&#34;:null,&#34;proj4def&#34;:null,&#34;projectedBounds&#34;:null,&#34;options&#34;:{}},&#34;preferCanvas&#34;:false,&#34;bounceAtZoomLimits&#34;:false,&#34;maxBounds&#34;:[[[-90,-370]],[[90,370]]],&#34;fullscreenControl&#34;:{&#34;position&#34;:&#34;topleft&#34;,&#34;pseudoFullscreen&#34;:true}},&#34;calls&#34;:[{&#34;method&#34;:&#34;addProviderTiles&#34;,&#34;args&#34;:[&#34;Esri.WorldImagery&#34;,1,&#34;Esri.WorldImagery&#34;,{&#34;errorTileUrl&#34;:&#34;&#34;,&#34;noWrap&#34;:false,&#34;detectRetina&#34;:false}]},{&#34;method&#34;:&#34;createMapPane&#34;,&#34;args&#34;:[&#34;point&#34;,440]},{&#34;method&#34;:&#34;addCircleMarkers&#34;,&#34;args&#34;:[[51.759832,45.124119,51.91,48.262202,48.126076,45.954298,45.124119,52.358658,55.950183],[8.711067,10.366345,-0.58,13.032801,16.304871,8.873744,10.366345,4.869113,-3.125446],14,null,&#34;Photos&#34;,{&#34;crs&#34;:{&#34;crsClass&#34;:&#34;L.CRS.EPSG3857&#34;,&#34;code&#34;:null,&#34;proj4def&#34;:null,&#34;projectedBounds&#34;:null,&#34;options&#34;:{}},&#34;pane&#34;:&#34;point&#34;,&#34;stroke&#34;:true,&#34;color&#34;:&#34;#333333&#34;,&#34;weight&#34;:2,&#34;opacity&#34;:0.9,&#34;fill&#34;:true,&#34;fillColor&#34;:&#34;#0000FF&#34;,&#34;fillOpacity&#34;:0.6},null,null,[&#34;   #popup { font-family: Arial, Helvetica, sans-serif; width: 100%; border-collapse: collapse; } div.scrollableContainer { max-height: 2000px; max-width: 2000px; overflow-y: auto; overflow-x: auto; margin: 0px; background: transparent; } div::-webkit-scrollbar { width: 5px; height: 5px; } div::-webkit-scrollbar-button { width: 0px; height: 0px; } div::-webkit-scrollbar-thumb { background: #666666; border: 0px none #ffffff; border-radius: 0px; } div::-webkit-scrollbar-thumb:hover { background: #333333; } div::-webkit-scrollbar-thumb:active { background: #333333; } div::-webkit-scrollbar-track { background: #e1e1e1; border: 0px none #ffffff; border-radius: 50px; } div::-webkit-scrollbar-track:hover { background: #e1e1e1; } div::-webkit-scrollbar-track:active { background: #e1e1e1; } div::-webkit-scrollbar-corner { background: transparent; } .</description>
-    </item>
-    
-    <item>
-      <title>Kelp</title>
-      <link>/blogg/%C3%BEari/</link>
-      <pubDate>Thu, 24 Oct 2019 00:00:00 +0000</pubDate>
-      
-      <guid>/blogg/%C3%BEari/</guid>
-      <description>In summertime we marine biologist get to venture out in the sun. Despite regular winds most of the year, summers here are great. But at these high latitudes they are short, only about 3 months. Unfortunately for me, I can get sea sick but still I manage to work my way around it.
-Figure 1: Click the slideshow above, press &#39;c&#39; to clone it (opens on a seperate window) and then press &#39;f&#39; for fullscreen.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>/blogg/skjol/globed3/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/blogg/skjol/globed3/</guid>
-      <description>Geo (spinning))body {font-family: &#34;Helvetica Neue&#34;, Helvetica, sans-serif;font-size: 14px;color: #333;}var geojson = {}var context = d3.select(&#39;#content canvas&#39;).node().getContext(&#39;2d&#39;);var projection = d3.geoOrthographic().scale(300);var geoGenerator = d3.geoPath().projection(projection).pointRadius(6).context(context);var yaw = 300;function update() {projection.rotate([yaw, -80])context.clearRect(0, 0, 800, 600);context.lineWidth = 0.5;context.strokeStyle = &#39;#333&#39;;context.beginPath();geoGenerator({type: &#39;FeatureCollection&#39;, features: geojson.features})context.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>/blogg/skjol/sankeysources/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/blogg/skjol/sankeysources/</guid>
-      <description>sankeyNetwork(function() {// If window.HTMLWidgets is already defined, then use it; otherwise create a// new object. This allows preceding code to set options that affect the// initialization process (though none currently exist).window.HTMLWidgets = window.HTMLWidgets || {};// See if we&#39;re running in a viewer pane. If not, we&#39;re in a web browser.var viewerMode = window.HTMLWidgets.viewerMode =/\bviewer_pane=1\b/.test(window.location);// See if we&#39;re running in Shiny mode.</description>
-    </item>
-    
-    <item>
-      <title>About me</title>
-      <link>/ummig/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/ummig/</guid>
-      <description>We are a family of five and live in a little village, in the north of Iceland, called Skagaströnd. We came here for a job and have stayed a bit longer than we expected (since the spring of 2015). Our kids have become proud villagers and one of them is born here, he was born in 2016 but his older sisters were born 2008 and 2010.
-I did not take the traditional route in my education, I made some shorter stops here and there on the job market and had a good time drumming and playing basketball in my early twenties, those skills have proved important later on socially.</description>
-    </item>
-    
-    <item>
-      <title>License</title>
-      <link>/license/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/license/</guid>
-      <description>You can use this page to put a license on the contents of your blog, like so:
- The MIT License (MIT)
-Copyright &amp;copy; 2020 Valtýrvaltyrgullhjarta@gmail.com
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &amp;ldquo;Software&amp;rdquo;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</description>
-    </item>
-    
-    <item>
-      <title>Talks</title>
-      <link>/erindi/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/erindi/</guid>
-      <description>&amp;lt;i class=&#34;fas fa-gamepad faa-ring animated &#34;&amp;gt;&amp;lt;/i&amp;gt; --Sources and Pathways of Microplastics to Icelandic Seas (a talk)November 29th 2019
-This is a talk about the results of a report that I, along with a colleague, made for the Environmental Ministry of Iceland. Below is the talk  and here is the report  (in Icelandic)
-Figure 1: Click the slideshow above, press &#39;c&#39; to clone it (opens on a seperate window) and then press &#39;f&#39; for fullscreen.</description>
-    </item>
-    
-  </channel>
-</rss>
