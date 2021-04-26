@@ -1,0 +1,75 @@
+---
+title: The weather
+author: Valtýr
+date: '2021-04-24'
+slug: the-weather
+categories: []
+tags: []
+description: Desc
+hacker_news_id: ''
+lobsters_id: ''
+meta_img: /images/image.jpg
+---
+
+After moving to Skagaströnd I became a weather enthusiast. The weather here has such clear patterns that I hadn't realized before. In winter a north-east wind brings snow from the highlands that piles up behind every obsticle downwind, so houses that have front doors not facing the blizzard are covered with snow.
+
+```{r BASEMAN, echo=FALSE, message=FALSE, warning=FALSE, fig.cap='Regular north western blizzard'}
+#sysfonts::font_add_google("Montserrat", "Montserrat")
+library(magrittr)
+library(magick)
+library(ggplot2)
+library(cowplot)
+
+mynd21 <- image_read("index_files/IMG_4704.JPEG") %>% 
+  image_scale("x300") %>% 
+  image_rotate(90)
+ggdraw() +
+  draw_image(mynd21)+
+  patchwork::plot_annotation(
+    caption = "Regular north western blizzard",
+    theme = theme(plot.caption = element_text(size = 12,
+                                            hjust=0.5),
+                  plot.background = element_rect(fill = NA, colour = 'black', size = 3))
+  )
+```
+
+Not a single snowflake comes from the clouds above, it's all from the highlands in the north east, and it's densely packed snow powder. Southern winds are more frequent in winter but they don't have the same effect. They're not as strong and do usually not involve a snow storm. 
+
+```{r, include=FALSE}
+source("index_files/plot_windrose.R", local = knitr::knit_global())
+source("index_files/Windcontours.R", local = knitr::knit_global())
+# or sys.source("your-script.R", envir = knitr::knit_global())
+
+library(tidyverse)
+#sysfonts::font_add_google("Montserrat", "Montserrat")
+#sysfonts::font_add_google("Sacramento", "Sacramento")
+#sysfonts::font_add_google("Catamaran", "Catamaran")
+showtext::showtext_auto()
+
+
+files <- list.files("index_files/skjol/",pattern="*.txt",full.names = T)
+vedur <- files %>% map_dfr(read_delim, delim = "\t", locale = locale(decimal_mark = ","), trim_ws = TRUE, col_types = cols(`Timabil` = col_datetime(format = "%H:%M %d.%m.%Y")))
+```
+
+```{r rose}
+df <- vedur %>%   mutate(manudur = format(Timabil, "%m"),
+                      man = format(Timabil, "%b")) %>%
+  group_by(manudur)
+df$manudur = factor(format(strptime(df$Timabil,'%Y-%m-%d'),'%b'), levels=format(ISOdate(2000, 1:12, 1), "%b"), ordered=TRUE)
+
+p.wr2 <- plot.windrose(data = df,
+                       spd = "Vindur (m/s)",
+                       dir = "Vindatt (deg)")
+```
+
+Windroses are available for any area of Iceland https://vindatlas.vedur.is/ but they don't have seasonality. 
+
+
+The winters have dominating N-NE winds and S-SW winds, the pattern in summer is different with diurnal pattern. The diurnal effect is strongest from april to september.
+
+```{r density}
+p <- p.wr2 + facet_wrap(~manudur, nrow = 3) +
+p
+```
+
+July is the mildest month, with a breath of northern wind it's good to sit under a wall facing the sun. A diurnal pattern is evident in the summer and spring. In april the we notice a sea breeze in the middle of the day coming from the west

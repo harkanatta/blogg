@@ -271,4 +271,5 @@ function leastSquares(xSeries,ySeries) {
   
   return [slope, intercept, rSquare];
 }
-            
+   
+ var result = regression.polynomial(data, { order: 3 });   

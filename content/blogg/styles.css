@@ -1,5 +1,6 @@
      body {
-		  margin: 0 auto;
+		  max-width: 500px;
+		  margin: auto;
 		  margin-top: 1em;  
       display: table;
 			font-family: "Helvetica Neue", sans-serif;
