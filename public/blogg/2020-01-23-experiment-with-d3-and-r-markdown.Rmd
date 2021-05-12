@@ -1,0 +1,89 @@
+---
+title: Experiment with D3 and R markdown
+author: Valtýr
+date: '2020-01-23'
+slug: experiment-with-d3-and-r-markdown
+categories:
+  - R
+tags:
+  - R
+  - projects
+  - d3
+description: Desc
+hacker_news_id: ''
+lobsters_id: ''
+meta_img: /images/image.jpg
+css: styles.css
+---
+
+People enjoy interactive charts. RStudio offers Shiny apps which require running R to support it so I find that complicated. Instead of a Shiny application it's possible to embed a D3 visualisation into R markdown files. Going from R code to D3 is not a small step and getting the hang takes a long time but there is inspiration to be found [here](http://bl.ocks.org/enjalot/raw/211bd42857358a60a936/)
+
+The visualization below was forked and adapted from a [Github repository](https://github.com/jalapic/D3jsR/tree/master/regression). It represents length and weight measurements that were taken as a part of a monitoring program of some of the main catch species in Iceland, cod and haddock.
+ 
+----
+
+
+```{r,  results="asis", message=FALSE, warning=FALSE, echo=FALSE}
+library(tidyverse)
+allt <- read.csv("allt.csv")
+fiskur <- allt %>% filter(MAELIADGERD == 3) %>% 
+  select(c("TEGUND", "LENGD", "OSLAEGT")) %>% 
+  na.omit()
+
+fiskur$TEGUND <- ifelse(fiskur$TEGUND=="1","Gadus morhua",
+       ifelse(fiskur$TEGUND=="2","Melanogrammus aeglefinus",
+              "Other"))
+#fiskur <- rbind(fiskur[fiskur$TEGUND=="Other",],fiskur[sample(1:dim(fiskur)[1],100),])
+
+library(jsonlite)
+cat(
+  paste(
+  '<script>
+    var data = ',toJSON(fiskur),';
+  </script>'
+  , sep="")
+)
+```
+
+
+
+
+<!--html_preserve-->
+  <div><select id="selector"></select></div>
+	<div class="chart">
+	<div class="equation"></div>
+	<div class="equation"></div>
+	</div>
+<!--/html_preserve-->
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="vizjs.js"></script>
+
+The useless regression line does look odd and a power curve is more appropriate for this data. A power corve is useful for spotting outliers when skimming through the data. The graph below has the desired power regression lines. 
+
+```{r echo=FALSE}
+
+fiskur <- allt %>% filter(MAELIADGERD==3 & !is.na(OSLAEGT) & OSLAEGT!=0 & !is.na(LIFUR) & LIFUR!=0 & !is.na(LENGD) & TEGUND==1 & !is.na(SLAEGT) & SLAEGT!=0)
+
+Logwl <- data.frame(logw = log(fiskur$OSLAEGT),logl = log(fiskur$LENGD))
+Reg <- lm(Logwl$logw~Logwl$logl)
+
+a <- Reg$coeff[1]
+plot(fiskur$LENGD,fiskur$OSLAEGT, xlab = "Length (cm)", ylab = "Weight (g)")
+q <- exp(a)
+b <- Reg$coeff[2]
+expw <- q * fiskur$LENGD^b
+points(fiskur$LENGD,expw, pch=18, col='red')
+sortlength <- sort(fiskur$LENGD)
+expw2 <- q * sortlength^b
+points(sortlength,expw2, type="l",col='red')
+points(sortlength,expw2*1.35, type="l",col='blue')
+points(sortlength,expw2*0.65, type="l",col='blue')
+
+```
+
+Next up on my list is to figure out how to get the power curves into D3.
+
+<img src="/blogg/2020-01-23-experiment-with-d3-and-r-markdown_files/VL.JPG" style="width:60.0%; display:block; margin: 0 auto;" alt="Linda and me working on measuring fish at BioPol in Skagaströnd. Fiskmælingar hjá BioPol á Skagaströnd">
+
+Linda and I working on data collection.

@@ -1,0 +1,83 @@
+---
+title: The Weather
+author: Valtýr
+date: '2021-04-24'
+slug: the-weather
+categories: []
+tags: []
+description: Desc
+hacker_news_id: ''
+lobsters_id: ''
+meta_img: /images/image.jpg
+---
+
+<script src="/rmarkdown-libs/header-attrs/header-attrs.js"></script>
+
+
+<p>After moving to Skagaströnd I became a weather enthusiast. The weather here has such clear patterns that I hadn’t realized before. In winter a north-east wind brings snow from the highlands that piles up behind every obsticle downwind, so houses that have front doors not facing the blizzard are covered with snow.</p>
+<div class="figure"><span id="fig:BASEMAN"></span>
+<img src="/blogg/2021-04-24-the-weather_files/figure-html/BASEMAN-1.png" alt="Regular north western blizzard" width="672" />
+<p class="caption">
+Figure 1: Regular north western blizzard
+</p>
+</div>
+<p>Not a single snowflake comes from the clouds above, it’s all carried by wind from the highlands above town, and it’s densely packed snow powder. Southern winds are more frequent in winter but they don’t have the same effect. They don’t tend to get as strong and do usually not involve snow storms.</p>
+<pre class="r"><code>df &lt;- vedur %&gt;%   mutate(manudur = format(Timabil, &quot;%m&quot;),
+                      man = format(Timabil, &quot;%b&quot;)) %&gt;%
+  group_by(manudur)
+df$manudur = factor(format(strptime(df$Timabil,&#39;%Y-%m-%d&#39;),&#39;%b&#39;), levels=format(ISOdate(2000, 1:12, 1), &quot;%b&quot;), ordered=TRUE)
+
+p.wr2 &lt;- plot.windrose(data = df, 
+                       spd = &quot;Vindur (m/s)&quot;,
+                       dir = &quot;Vindatt (deg)&quot;)</code></pre>
+<p><img src="/blogg/2021-04-24-the-weather_files/figure-html/rose-1.png" width="672" /></p>
+<pre class="r"><code># plot.windrose taken from stackoverflow user Andy Clifton:
+# https://stackoverflow.com/questions/17266780/wind-rose-with-ggplot-r</code></pre>
+<p>Windroses are available for any area of Iceland <a href="https://vindatlas.vedur.is/" class="uri">https://vindatlas.vedur.is/</a> but they don’t have seasonality.</p>
+<p>The winters have dominating winds from north-northeast and south-southwest, the pattern in summer is different.</p>
+<pre class="r"><code>p &lt;- p.wr2 + facet_wrap(~manudur, nrow = 3)
+p</code></pre>
+<p><img src="/blogg/2021-04-24-the-weather_files/figure-html/density-1.png" width="672" /></p>
+<p>A diurnal pattern is evident in the summer and spring with a sea breeze in the middle of the day coming from the northwest, something that you never see in winter. The diurnal effect is strongest from april to september. Lets look at two most extreme months to see the wind direction and strength by the hour.</p>
+<pre class="r"><code>for (i in c(&quot;12&quot;,&quot;07&quot;)) {
+  
+
+ df &lt;- vedur %&gt;%  mutate(hour = format(Timabil, &quot;%H&quot;),
+                 manudur = format(Timabil, &quot;%m&quot;),
+                 manudurstor = format(Timabil, &quot;%B&quot;)) %&gt;% 
+    filter(manudur == i)
+
+
+  windContours(hour = df$hour,
+               wd = df$`Vindatt (deg)`,
+               ws = df$`Vindur (m/s)`,
+               keytitle = paste(paste(&quot;Skagaströnd Wind Frequency in&quot;,unique(df$manudurstor),sep = &quot; &quot;),&#39;[%] 2011-2020&#39;, sep = &#39; &#39; ))
+
+}</code></pre>
+<pre><code>## Loading required package: latticeExtra</code></pre>
+<pre><code>## Loading required package: lattice</code></pre>
+<pre><code>## 
+## Attaching package: &#39;latticeExtra&#39;</code></pre>
+<pre><code>## The following object is masked from &#39;package:ggplot2&#39;:
+## 
+##     layer</code></pre>
+<pre><code>## Loading required package: fields</code></pre>
+<pre><code>## Loading required package: spam</code></pre>
+<pre><code>## Loading required package: dotCall64</code></pre>
+<pre><code>## Loading required package: grid</code></pre>
+<pre><code>## Spam version 2.6-0 (2020-12-14) is loaded.
+## Type &#39;help( Spam)&#39; or &#39;demo( spam)&#39; for a short introduction 
+## and overview of this package.
+## Help for individual functions is also obtained by adding the
+## suffix &#39;.spam&#39; to the function name, e.g. &#39;help( chol.spam)&#39;.</code></pre>
+<pre><code>## 
+## Attaching package: &#39;spam&#39;</code></pre>
+<pre><code>## The following objects are masked from &#39;package:base&#39;:
+## 
+##     backsolve, forwardsolve</code></pre>
+<pre><code>## See https://github.com/NCAR/Fields for
+##  an extensive vignette, other supplements and source code</code></pre>
+<pre><code>## Loading required package: abind</code></pre>
+<pre><code>## Loading required package: gridBase</code></pre>
+<pre><code>## Loading required package: RColorBrewer</code></pre>
+<p><img src="/blogg/2021-04-24-the-weather_files/figure-html/windcontour-1.png" width="672" /><img src="/blogg/2021-04-24-the-weather_files/figure-html/windcontour-2.png" width="672" /></p>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogg on Various things from the job</title>
+    <link>https://relaxed-curie-6ab3e3.netlify.com/blogg/</link>
+    <description>Recent content in Blogg on Various things from the job</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>is</language>
+    <lastBuildDate>Sat, 24 Apr 2021 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://relaxed-curie-6ab3e3.netlify.com/blogg/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>The Weather</title>
+      <link>https://relaxed-curie-6ab3e3.netlify.com/blogg/the-weather/</link>
+      <pubDate>Sat, 24 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://relaxed-curie-6ab3e3.netlify.com/blogg/the-weather/</guid>
+      <description>After moving to Skagaströnd I became a weather enthusiast. The weather here has such clear patterns that I hadn’t realized before. In winter a north-east wind brings snow from the highlands that piles up behind every obsticle downwind, so houses that have front doors not facing the blizzard are covered with snow.
+Figure 1: Regular north western blizzardNot a single snowflake comes from the clouds above, it’s all carried by wind from the highlands above town, and it’s densely packed snow powder.</description>
+    </item>
+    
+    <item>
+      <title>Sources of Microplastics in Iceland</title>
+      <link>https://relaxed-curie-6ab3e3.netlify.com/blogg/sources-of-microplastics-in-iceland/</link>
+      <pubDate>Mon, 10 Feb 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://relaxed-curie-6ab3e3.netlify.com/blogg/sources-of-microplastics-in-iceland/</guid>
+      <description>The ministry of environment requested an estimate of microplastic pollution to Icelandic seas. The main goal was to obtain information about the main sources and pathways to be able to react with political action if necessary. A part of the goal was to write a overview on the state of knowledge about microplastics regarding the marine environment especially. The outcome was a report (in Icelandic).</description>
+    </item>
+    
+    <item>
+      <title>GBIF and Mapview</title>
+      <link>https://relaxed-curie-6ab3e3.netlify.com/blogg/gbif-og-r/</link>
+      <pubDate>Tue, 17 Dec 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://relaxed-curie-6ab3e3.netlify.com/blogg/gbif-og-r/</guid>
+      <description>{&#34;x&#34;:{&#34;options&#34;:{&#34;minZoom&#34;:1,&#34;maxZoom&#34;:100,&#34;crs&#34;:{&#34;crsClass&#34;:&#34;L.CRS.EPSG3857&#34;,&#34;code&#34;:null,&#34;proj4def&#34;:null,&#34;projectedBounds&#34;:null,&#34;options&#34;:{}},&#34;preferCanvas&#34;:false,&#34;bounceAtZoomLimits&#34;:false,&#34;maxBounds&#34;:[[[-90,-370]],[[90,370]]],&#34;fullscreenControl&#34;:{&#34;position&#34;:&#34;topleft&#34;,&#34;pseudoFullscreen&#34;:true}},&#34;calls&#34;:[{&#34;method&#34;:&#34;addProviderTiles&#34;,&#34;args&#34;:[&#34;Esri.WorldImagery&#34;,1,&#34;Esri.WorldImagery&#34;,{&#34;errorTileUrl&#34;:&#34;&#34;,&#34;noWrap&#34;:false,&#34;detectRetina&#34;:false}]},{&#34;method&#34;:&#34;createMapPane&#34;,&#34;args&#34;:[&#34;point&#34;,440]},{&#34;method&#34;:&#34;addCircleMarkers&#34;,&#34;args&#34;:[[51.759832,45.124119,51.91,48.262202,48.126076,45.954298,45.124119,52.358658,55.950183],[8.711067,10.366345,-0.58,13.032801,16.304871,8.873744,10.366345,4.869113,-3.125446],14,null,&#34;Photos&#34;,{&#34;crs&#34;:{&#34;crsClass&#34;:&#34;L.CRS.EPSG3857&#34;,&#34;code&#34;:null,&#34;proj4def&#34;:null,&#34;projectedBounds&#34;:null,&#34;options&#34;:{}},&#34;pane&#34;:&#34;point&#34;,&#34;stroke&#34;:true,&#34;color&#34;:&#34;#333333&#34;,&#34;weight&#34;:2,&#34;opacity&#34;:0.9,&#34;fill&#34;:true,&#34;fillColor&#34;:&#34;#0000FF&#34;,&#34;fillOpacity&#34;:0.6},null,null,[&#34;   #popup { font-family: Arial, Helvetica, sans-serif; width: 100%; border-collapse: collapse; } div.scrollableContainer { max-height: 2000px; max-width: 2000px; overflow-y: auto; overflow-x: auto; margin: 0px; background: transparent; } div::-webkit-scrollbar { width: 5px; height: 5px; } div::-webkit-scrollbar-button { width: 0px; height: 0px; } div::-webkit-scrollbar-thumb { background: #666666; border: 0px none #ffffff; border-radius: 0px; } div::-webkit-scrollbar-thumb:hover { background: #333333; } div::-webkit-scrollbar-thumb:active { background: #333333; } div::-webkit-scrollbar-track { background: #e1e1e1; border: 0px none #ffffff; border-radius: 50px; } div::-webkit-scrollbar-track:hover { background: #e1e1e1; } div::-webkit-scrollbar-track:active { background: #e1e1e1; } div::-webkit-scrollbar-corner { background: transparent; } .</description>
+    </item>
+    
+    <item>
+      <title>Kelp</title>
+      <link>https://relaxed-curie-6ab3e3.netlify.com/blogg/%C3%BEari/</link>
+      <pubDate>Thu, 24 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://relaxed-curie-6ab3e3.netlify.com/blogg/%C3%BEari/</guid>
+      <description>In summertime we marine biologist get to venture out in the sun. Despite regular winds most of the year, summers here are great. But at these high latitudes they are short, only about 3 months. Unfortunately for me, I can get sea sick but still I manage to work my way around it.
+Figure 1: Click the slideshow above, press &#39;c&#39; to clone it (opens on a seperate window) and then press &#39;f&#39; for fullscreen.</description>
+    </item>
+    
+    <item>
+      <title>Kelp</title>
+      <link>https://relaxed-curie-6ab3e3.netlify.com/blogg/%C3%BEari/</link>
+      <pubDate>Thu, 24 Oct 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://relaxed-curie-6ab3e3.netlify.com/blogg/%C3%BEari/</guid>
+      <description>In summertime we marine biologist get to venture out in the sun. Despite regular winds most of the year, summers here are great. But at these high latitudes they are short, only about 3 months. Unfortunately for me, I can get sea sick but still I manage to work my way around it.
+Figure 1: Click the slideshow above, press &#39;c&#39; to clone it (opens on a seperate window) and then press &#39;f&#39; for fullscreen.</description>
+    </item>
+    
+  </channel>
+</rss>
