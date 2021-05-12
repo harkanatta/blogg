@@ -4,24 +4,24 @@ author: "Valtýr"
 date: "09/12/2019"
 ---
 
-:writing_hand:
-:woman_teacher:
+# Reports
 Here are a few reports done with the amazing R package [Bookdown](https://bookdown.org/):
 
-- Reports
 
 | Name          | Link               | Language
 | ----------------- |:----------------------- |:-----
 | Sources and pathways of microplastic Iceland    | [:link:][Mp-report]      |[:iceland:]
 | Kelp estimate                                   | [:link:][Kelp-report]     |[:iceland:]
-| Microplastic lab protocol                       | [:link:][MP-protocol]     |
+| Microplastic lab protocol                       | [:link:][MP-protocol]     |Eng
 
 [Mp-report]: https://harkanatta.github.io/orplastskyrslaUAR/
 [Kelp-report]: https://harkanatta.github.io/ssnv_trident/
 [MP-protocol]: https://harkanatta.github.io/MPprotocol/
 
-## Sources and Pathways of Microplastics to Icelandic Seas (**a talk**)
-March 2020
+# Talks
+
+## Sources and Pathways of Microplastics to Icelandic Seas
+[International Symposium on Plastics in the Arctic](https://www.arcticplastics2020.is/index.php/en/) March 2020
 
 This is a talk from a report made for the **Environmental Ministry of Iceland**. Below is the [talk :man_teacher:]("https://harkanatta.github.io/mp-mirror") and [here is the report :notebook:](https://harkanatta.github.io/orplastskyrslaUAR/) *in Icelandic* 
 
