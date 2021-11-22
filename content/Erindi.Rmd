@@ -50,7 +50,9 @@ knitr::include_url("https://harkanatta.github.io/innragrunn/#1")
 October 2014 and November 2015. *A talk from my masters thesis*:[The effects of a herring mass death on the bottom biota in Kolgrafafjörður Iceland <i class="fas fa-chalkboard-teacher"></i>](http://www.vegagerdin.is/vefur2.nsf/c16a923a6485025d0025793b003db0e2/b81be193196d902500257d85004e57c2/$FILE/1630%20ValtyrSigurdsson1630.pdf).
 This talk was held on an event in 2014 by The Icelandic Road and Coastal Administration (which funded the project) and again, slightly modified, at the [Icelandic Biology Conference in 2015](https://biologia.is/liffraediradstefnan-2015/dagskra/)
 
-![Mass death of herring in winter in Kolgrafafjörður Iceland, February 2013.  <i class="far fa-copyright"></i>Róbert Arnar Stefánsson.](https://www.dropbox.com/s/f5beb43y4fh1vzk/capitella%20skali.JPG?dl=0)
+![Mass death of herring in winter in Kolgrafafjörður Iceland caused suffocated the benthic fauna. In the absence of competition from other species the bristle worm *Capitella capitata* flourished.  <i class="far fa-copyright"></i>Valtýr Sigurðsson](https://raw.githubusercontent.com/harkanatta/blogg/master/static/img/capitata.jpeg)
+
+![The scavenging amphipod *Anonyx sarsi*  <i class="far fa-copyright"></i>Valtýr Sigurðsson](https://raw.githubusercontent.com/harkanatta/blogg/master/static/img/anonyxsarsi.jpeg)
 
 <details>
   <summary>Masters thesis abstract:</summary>
