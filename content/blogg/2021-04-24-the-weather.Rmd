@@ -35,10 +35,12 @@ ggdraw() +
 
 Not a single snowflake comes from the clouds above, it's all carried by wind from the highlands above town, and it's densely packed snow powder. Southern winds are more frequent in winter but they don't have the same effect. They don't tend to get as strong and do usually not involve snow storms. 
 
-```{r, include=FALSE}
+```{r, include=FALSE, echo=FALSE, message=FALSE, warning=FALSE}
 source("2021-04-24-the-weather/index_files/plot_windrose.R", local = knitr::knit_global())
 source("2021-04-24-the-weather/index_files/Windcontours.R", local = knitr::knit_global())
 # or sys.source("your-script.R", envir = knitr::knit_global())
+
+
 
 library(tidyverse)
 sysfonts::font_add_google("Montserrat", "Montserrat")
@@ -52,7 +54,7 @@ vedur <- files %>% map_dfr(read_delim, delim = "\t", locale = locale(decimal_mar
 ```
 
 ```{r rose, echo=FALSE, message=FALSE, warning=FALSE}
-Sys.setlocale("LC_ALL", "English")
+#Sys.setlocale("LC_ALL", "English")
 df <- vedur %>%   mutate(manudur = format(Timabil, "%m"),
                       man = format(Timabil, "%b")) %>%
   group_by(manudur)

@@ -20,36 +20,46 @@ Here are a few reports done with the amazing R package [Bookdown](https://bookdo
 
 # Talks
 
-## Sources and Pathways of Microplastics to Icelandic Seas
-[International Symposium on Plastics in the Arctic](https://www.arcticplastics2020.is/index.php/en/) March 2020
-
+## - Sources and Pathways of Microplastics to Icelandic Seas
+[International Symposium on Plastics in the Arctic](https://www.arcticplastics2020.is/index.php/en/) March 2020.
 This is a talk from a report made for the **Environmental Ministry of Iceland**. Below is the [talk :man_teacher:]("https://harkanatta.github.io/mp-mirror") and [here is the report :notebook:](https://harkanatta.github.io/orplastskyrslaUAR/) *in Icelandic* 
 
-```{r echo=FALSE, fig.cap="Click the slideshow above, press `'c'` to clone it (opens on a seperate window) and then press `'f'` for fullscreen."}
+```{r mpenglish, echo=FALSE, fig.cap="Click the slideshow above, press `'c'` to clone it (opens on a seperate window) and then press `'f'` for fullscreen."}
 knitr::include_url("https://harkanatta.github.io/mp-mirror")
 ```
 
-## In Icelandic: Örplast í hafinu við Ísland - Helstu uppsprettur, magn og farleiðir í hafið
-31. október 2019
+## - Monitoring project [:iceland:] Vöktun Náttúruverndarsvæða á Norðurlandi vestra
+Samstarf náttúrustofanna og Náttúrufræðistofnunar um [vöktun náttúruverndarsvæða](https://www.ni.is/greinar/voktun-natturuverndarsvaeda). Þetta er erindi sem haldið var fyrir samstarfsaðila um vöktunarsumarið 2021.
+[Erindi :man_teacher:]("https://harkanatta.github.io/mp-mirror")
 
-Létt erindi um niðurstöður skýrslu sem ber sama heiti og má finna [hér <i class="fas fa-book"></i>](https://harkanatta.github.io/orplastskyrslaUAR/). Erindið má sjá [hér <i class="fas fa-chalkboard-teacher"></i>](https://harkanatta.github.io/innragrunn)
-
-```{r echo=FALSE, fig.cap="Click the slideshow above, press `'c'` to clone it (opens on a seperate window) and then press `'f'` for fullscreen.", include=FALSE}
-knitr::include_url("https://harkanatta.github.io/innragrunn")
+```{r nnv, echo=FALSE, fig.cap="Click the slideshow above, press `'c'` to clone it (opens on a seperate window) and then press `'f'` for fullscreen."}
+knitr::include_url("https://harkanatta.github.io/Laugarbakki2021")
 ```
 
-## Masters thesis:
+## - Örplast í hafinu við Ísland - Helstu uppsprettur, magn og farleiðir í hafið
+31. október 2019
+
+Létt erindi á íslensku um niðurstöður skýrslu sem ber sama heiti og má finna [hér <i class="fas fa-book"></i>](https://harkanatta.github.io/orplastskyrslaUAR/). Erindið má sjá [hér <i class="fas fa-chalkboard-teacher"></i>](https://harkanatta.github.io/innragrunn)
+
+```{r mpicelandic, echo=FALSE, fig.cap="Click the slideshow above, press `'c'` to clone it (opens on a seperate window) and then press `'f'` for fullscreen."}
+knitr::include_url("https://harkanatta.github.io/innragrunn/#1")
+```
+
+## - Masters thesis:
 ### The effects of a herring mass death on the bottom biota
-October 2014 and November 2015 (*a talk from my masters thesis*)
+October 2014 and November 2015. *A talk from my masters thesis*:[The effects of a herring mass death on the bottom biota in Kolgrafafjörður Iceland <i class="fas fa-chalkboard-teacher"></i>](http://www.vegagerdin.is/vefur2.nsf/c16a923a6485025d0025793b003db0e2/b81be193196d902500257d85004e57c2/$FILE/1630%20ValtyrSigurdsson1630.pdf).
+This talk was held on an event in 2014 by The Icelandic Road and Coastal Administration (which funded the project) and again, slightly modified, at the [Icelandic Biology Conference in 2015](https://biologia.is/liffraediradstefnan-2015/dagskra/)
 
-[The effects of a herring mass death on the bottom biota in Kolgrafafjörður Iceland <i class="fas fa-chalkboard-teacher"></i>](http://www.vegagerdin.is/vefur2.nsf/c16a923a6485025d0025793b003db0e2/b81be193196d902500257d85004e57c2/$FILE/1630%20ValtyrSigurdsson1630.pdf). This talk was held on an event in 2014 by The Icelandic Road and Coastal Administration (which funded the project) and again, slightly modified, at the [Icelandic Biology Conference in 2015](https://biologia.is/liffraediradstefnan-2015/dagskra/)
+![Mass death of herring in winter 2012-13 in Kolgrafafjörður Iceland suffocated the benthic fauna. In the absence of competition from other species the bristle worm *Capitella capitata* flourished.](https://raw.githubusercontent.com/harkanatta/blogg/master/static/img/capitata.jpeg)
 
-![Mass death of herring in winter in Kolgrafafjörður Iceland, February 2013.  <i class="far fa-copyright"></i>Róbert Arnar Stefánsson.](/static/Erindi_files/síldRobertKolgr.jpg)
+
 
 <details>
   <summary>Masters thesis abstract:</summary>
 > The overwintering Atlantic herring *Clupea harengus*, off the coast of the Snæfellsnes peninsula, Iceland, has had a large impact on the marine ecosystem of the southern Breiðafjörður bay. In winter 2012 - 2013, over 50,000 tonnes of herring succumbed to oxygen depletion in a large scale die-off in the shallow silled fjord Kolgrafafjörður. Around 20,000 tonnes of dead herring accumulated on the seafloor and subsequently some of the benthic biota washed ashore. The effects of the oxygen depleted conditions, caused by the organic material, on benthic infaunal communities were assessed with bottom grab sampling. The results were compared with those from a similar study made in 1999 as part of an environmental assessment prior to construction of a bridge crossing the fjord. Data indicated lowered biodiversity and dominance of the polychaete *Capitella capitata*, in contrast to a species rich fauna in the area in 1999 (where only a single *C. capitata* specimen was found). Over 77,000 individuals/m² of *C. capitata* were recorded at one station in 2013. This species is particularly associated with disturbed or polluted sediments.
 Similar conditions have not been documented in Iceland before but the impact of a 500 tonne herring death on the benthic fauna of a small fjord in North Norway lasted for approximately three years. Another study on the effects of a smaller scale herring death was conducted at another location in southern Breiðafjörður bay. There, the catch of amphipod traps, baited for epifaunal lysianassids, indicated that the scavenging amphipod *Anonyx sarsi* avoided sources of organic pollution.
+
+![The scavenging amphipod *Anonyx sarsi*.](https://raw.githubusercontent.com/harkanatta/blogg/master/static/img/anonyxsarsi.jpeg)
 
 </details>
 

@@ -1,1 +1,1 @@
-if (.Platform$OS.type == 'windows') Sys.setlocale("LC_TIME", "Icelandic")
+if (.Platform$OS.type == 'windows') Sys.setlocale("LC_ALL", "Icelandic")
