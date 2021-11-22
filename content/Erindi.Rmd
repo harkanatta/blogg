@@ -52,12 +52,14 @@ This talk was held on an event in 2014 by The Icelandic Road and Coastal Adminis
 
 ![Mass death of herring in winter in Kolgrafafjörður Iceland caused suffocated the benthic fauna. In the absence of competition from other species the bristle worm *Capitella capitata* flourished.  <i class="far fa-copyright"></i>Valtýr Sigurðsson](https://raw.githubusercontent.com/harkanatta/blogg/master/static/img/capitata.jpeg)
 
-![The scavenging amphipod *Anonyx sarsi*  <i class="far fa-copyright"></i>Valtýr Sigurðsson](https://raw.githubusercontent.com/harkanatta/blogg/master/static/img/anonyxsarsi.jpeg)
+
 
 <details>
   <summary>Masters thesis abstract:</summary>
 > The overwintering Atlantic herring *Clupea harengus*, off the coast of the Snæfellsnes peninsula, Iceland, has had a large impact on the marine ecosystem of the southern Breiðafjörður bay. In winter 2012 - 2013, over 50,000 tonnes of herring succumbed to oxygen depletion in a large scale die-off in the shallow silled fjord Kolgrafafjörður. Around 20,000 tonnes of dead herring accumulated on the seafloor and subsequently some of the benthic biota washed ashore. The effects of the oxygen depleted conditions, caused by the organic material, on benthic infaunal communities were assessed with bottom grab sampling. The results were compared with those from a similar study made in 1999 as part of an environmental assessment prior to construction of a bridge crossing the fjord. Data indicated lowered biodiversity and dominance of the polychaete *Capitella capitata*, in contrast to a species rich fauna in the area in 1999 (where only a single *C. capitata* specimen was found). Over 77,000 individuals/m² of *C. capitata* were recorded at one station in 2013. This species is particularly associated with disturbed or polluted sediments.
 Similar conditions have not been documented in Iceland before but the impact of a 500 tonne herring death on the benthic fauna of a small fjord in North Norway lasted for approximately three years. Another study on the effects of a smaller scale herring death was conducted at another location in southern Breiðafjörður bay. There, the catch of amphipod traps, baited for epifaunal lysianassids, indicated that the scavenging amphipod *Anonyx sarsi* avoided sources of organic pollution.
+
+![The scavenging amphipod *Anonyx sarsi*  <i class="far fa-copyright"></i>Valtýr Sigurðsson](https://raw.githubusercontent.com/harkanatta/blogg/master/static/img/anonyxsarsi.jpeg)
 
 </details>
 
