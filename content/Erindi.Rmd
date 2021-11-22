@@ -20,21 +20,28 @@ Here are a few reports done with the amazing R package [Bookdown](https://bookdo
 
 # Talks
 
-## Sources and Pathways of Microplastics to Icelandic Seas
-[International Symposium on Plastics in the Arctic](https://www.arcticplastics2020.is/index.php/en/) March 2020
-
+## - Sources and Pathways of Microplastics to Icelandic Seas
+[International Symposium on Plastics in the Arctic](https://www.arcticplastics2020.is/index.php/en/) March 2020.
 This is a talk from a report made for the **Environmental Ministry of Iceland**. Below is the [talk :man_teacher:]("https://harkanatta.github.io/mp-mirror") and [here is the report :notebook:](https://harkanatta.github.io/orplastskyrslaUAR/) *in Icelandic* 
 
-```{r echo=FALSE, fig.cap="Click the slideshow above, press `'c'` to clone it (opens on a seperate window) and then press `'f'` for fullscreen."}
+```{r mpenglish, echo=FALSE, fig.cap="Click the slideshow above, press `'c'` to clone it (opens on a seperate window) and then press `'f'` for fullscreen."}
 knitr::include_url("https://harkanatta.github.io/mp-mirror")
 ```
 
-## In Icelandic: Örplast í hafinu við Ísland - Helstu uppsprettur, magn og farleiðir í hafið
+## - Monitoring project [:iceland:] Vöktun Náttúruverndarsvæða á Norðurlandi vestra
+Samstarf náttúrustofanna og Náttúrufræðistofnunar um [vöktun náttúruverndarsvæða](https://www.ni.is/greinar/voktun-natturuverndarsvaeda). Þetta er erindi sem haldið var fyrir samstarfsaðila um vöktunarsumarið 2021.
+[Erindi :man_teacher:]("https://harkanatta.github.io/mp-mirror")
+
+```{r nnv, echo=FALSE, fig.cap="Click the slideshow above, press `'c'` to clone it (opens on a seperate window) and then press `'f'` for fullscreen."}
+knitr::include_url("https://harkanatta.github.io/Laugarbakki2021")
+```
+
+## - Örplast í hafinu við Ísland - Helstu uppsprettur, magn og farleiðir í hafið
 31. október 2019
 
-Létt erindi um niðurstöður skýrslu sem ber sama heiti og má finna [hér <i class="fas fa-book"></i>](https://harkanatta.github.io/orplastskyrslaUAR/). Erindið má sjá [hér <i class="fas fa-chalkboard-teacher"></i>](https://harkanatta.github.io/innragrunn)
+Létt erindi á íslensku um niðurstöður skýrslu sem ber sama heiti og má finna [hér <i class="fas fa-book"></i>](https://harkanatta.github.io/orplastskyrslaUAR/). Erindið má sjá [hér <i class="fas fa-chalkboard-teacher"></i>](https://harkanatta.github.io/innragrunn)
 
-```{r echo=FALSE, fig.cap="Click the slideshow above, press `'c'` to clone it (opens on a seperate window) and then press `'f'` for fullscreen.", include=FALSE}
+```{r mpicelandic, echo=FALSE, fig.cap="Click the slideshow above, press `'c'` to clone it (opens on a seperate window) and then press `'f'` for fullscreen.", include=FALSE}
 knitr::include_url("https://harkanatta.github.io/innragrunn")
 ```
 
@@ -44,7 +51,7 @@ October 2014 and November 2015 (*a talk from my masters thesis*)
 
 [The effects of a herring mass death on the bottom biota in Kolgrafafjörður Iceland <i class="fas fa-chalkboard-teacher"></i>](http://www.vegagerdin.is/vefur2.nsf/c16a923a6485025d0025793b003db0e2/b81be193196d902500257d85004e57c2/$FILE/1630%20ValtyrSigurdsson1630.pdf). This talk was held on an event in 2014 by The Icelandic Road and Coastal Administration (which funded the project) and again, slightly modified, at the [Icelandic Biology Conference in 2015](https://biologia.is/liffraediradstefnan-2015/dagskra/)
 
-![Mass death of herring in winter in Kolgrafafjörður Iceland, February 2013.  <i class="far fa-copyright"></i>Róbert Arnar Stefánsson.](/static/Erindi_files/síldRobertKolgr.jpg)
+![Mass death of herring in winter in Kolgrafafjörður Iceland, February 2013.  <i class="far fa-copyright"></i>Róbert Arnar Stefánsson.](https://m2.mbl.is/givf8hsHtMAKjNYQsyCpE23-A6g=/1640x1093/smart/frimg/6/97/697169.jpg)
 
 <details>
   <summary>Masters thesis abstract:</summary>
