@@ -51,7 +51,7 @@ files <- list.files("2021-04-24-the-weather/index_files/skjol/",pattern="*.txt",
 vedur <- files %>% map_dfr(read_delim, delim = "\t", locale = locale(decimal_mark = ","), trim_ws = TRUE, col_types = cols(`Timabil` = col_datetime(format = "%H:%M %d.%m.%Y")))
 ```
 
-```{r rose}
+```{r rose, echo=FALSE, message=FALSE, warning=FALSE}
 Sys.setlocale("LC_ALL", "English")
 df <- vedur %>%   mutate(manudur = format(Timabil, "%m"),
                       man = format(Timabil, "%b")) %>%
@@ -71,14 +71,14 @@ Windroses are available for any area of Iceland https://vindatlas.vedur.is/ but 
 
 The winters have dominating winds from north-northeast and south-southwest, the pattern in summer is different.
 
-```{r density}
+```{r density, echo=FALSE, message=FALSE, warning=FALSE}
 p <- p.wr2 + facet_wrap(~manudur, nrow = 3)
 p
 ```
 
 A diurnal pattern is evident in the summer and spring with a sea breeze in the middle of the day coming from the northwest, something that you never see in winter. The diurnal effect is strongest from april to september. Lets look at two most extreme months to see the wind direction and strength by the hour.
 
-```{r windcontour}
+```{r windcontour, echo=FALSE, message=FALSE, warning=FALSE}
 
 
 for (i in c("12","07")) {
