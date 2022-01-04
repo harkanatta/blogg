@@ -1,0 +1,16 @@
+---
+title: Kort af hafstraumum
+author: Valtýr
+date: '2022-01-04'
+slug: kort-af-hafstraumum
+categories:
+  - R
+tags:
+  - tags
+description: Desc
+hacker_news_id: ''
+lobsters_id: ''
+meta_img: /images/image.jpg
+---
+
+Hér er kort upp úr gögnum frá haffræðingnum Kai Logemann. Kai starfaði um árabil hérlendis og gerði sjávarfallalíkan sem....
