@@ -1,0 +1,138 @@
+---
+title: Kort af hafstraumum
+author: Valtýr
+date: '2022-01-04'
+slug: kort-af-hafstraumum
+categories:
+  - R
+tags:
+  - tags
+description: Desc
+hacker_news_id: ''
+lobsters_id: ''
+meta_img: /images/image.jpg
+---
+
+<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
+
+
+<p>Kortið á mynd 1 hér að neðan er unnið upp úr gögnum frá haffræðingnum Kai Logemann. Kai starfaði um árabil hérlendis og gerði sjávarfallalíkan sem hefur nýst til þess að spá fyrir um rek agna í sjó kringum landið. Þetta kort er nákvæmasta straumakort af hafinu kringum Ísland sem ég veit um og þess vegna langaði mig til þess að nota það og um leið gera gögnin sem það byggir á aðgengilegri.</p>
+<p>Hér er hlekkur á <a href="https://github.com/harkanatta/hafstraumakort">Github :file_folder:</a> þar sem má sækja allt sem þarf til að endurgera myndina á botni þessar síðu.</p>
+<div class="figure">
+<img src="images/kai.png" alt="" />
+<p class="caption">Kort af hafstraumum við Ísland frá Kai Logemann.</p>
+</div>
+<p>Til þess að trufla ekki manninn þá sótti ég töfluna yfir styrk straumanna í greinina hans <a href="https://os.copernicus.org/articles/9/931/2013/">The circulation of Icelandic waters – a modelling study</a> með pakkanum <a href="https://github.com/ropensci/tabulizer">tabulizer</a>.</p>
+<div class="figure">
+<img src="images/kai_tafla.png" alt="" />
+<p class="caption">Skjáskot úr greininni af töflunni sem sýnir styrk og hitastig hafstrauma við Ísland.</p>
+</div>
+<p>Byrjum á að lesa inn pakkana. Ef þeir eru ekki allir á <a href="https://cran.r-project.org/">CRAN</a> þá er hægt að sækja þá á github-síðu pakkasmiðanna. Þetta á t.d. við um <a href="https://github.com/ropensci/tabulizer">tabulizer</a> pakkann þegar þetta er skrifað.</p>
+<pre><code># Hér eru pakkarnir sem notaðir eru í þessu dæmi
+Rpakkar &lt;- c(&quot;tidyverse&quot;, &quot;ggOceanMaps&quot;, &quot;pdftools&quot;, &quot;tabulizer&quot;, &quot;plyr&quot;)
+pacman::p_load(Rpakkar, character.only = TRUE)
+</code></pre>
+<p>Svo er það að sækja straumstyrkinn og heiti straumanna úr töflunni í greininni:</p>
+<pre><code>f &lt;- file.path(&quot;Logemann et al. - 2013 - The circulation of Icelandic waters – a modelling study.pdf&quot;)
+tafla &lt;- tabulizer::extract_tables(f, pages = 9)
+
+dfs &lt;- do.call(rbind,tafla) %&gt;% 
+  as.data.frame() %&gt;%
+  janitor::row_to_names(row_number = 1) 
+
+# Taflan í greininni (mynd 2) er höfð á tveggja dálka formi, svo hún sé breiðari því þá er greinin læsilegri. Svona lagað skapar örlítil vandamál. Tveir &quot;data frames&quot; gerðir til að leysa það. 
+
+one &lt;- dfs[,1:5 ]
+two &lt;- dfs[,6:10 ]
+
+# Þeir eru svo bundnir saman en dálkurinn T er færður inn handvirkt því mínusmerkið var eitthvað einkennilegt sem gerði mér ekki kleift að breyta þessu úr &quot;character&quot; yfir í &quot;double&quot; eða frá texta yfir í tölur.
+
+dfs &lt;- bind_rows(one, two) %&gt;%
+  slice(-c(1, 24, 46)) %&gt;% 
+  readr::type_convert() %&gt;% 
+  mutate(T=as.double(c(&quot;6.98&quot;,&quot;6.93&quot;,&quot;6.98&quot;,&quot;5.89&quot;,&quot;6.82&quot;,&quot;6.35&quot;,&quot;5.93&quot;,&quot;6.16&quot;,&quot;1.18&quot;,&quot;5.95&quot;,&quot;5.34&quot;,&quot;0.43&quot;,&quot;0.09&quot;,&quot;5.66&quot;,&quot;2.56&quot;,&quot;0.21&quot;,&quot;5.14&quot;,&quot;2.32&quot;,&quot;0.09&quot;,&quot;4.75&quot;,&quot;4.04&quot;,&quot;2.98&quot;,&quot;1.45&quot;,&quot;-0.22&quot;,&quot;4.05&quot;,&quot;2.32&quot;,&quot;-0.16&quot;,&quot;3.88&quot;,&quot;2.55&quot;,&quot;-0.46&quot;,&quot;4.28&quot;,&quot;2.29&quot;,&quot;-0.19&quot;,&quot;7.24&quot;,&quot;7.53&quot;,&quot;6.74&quot;,&quot;7.49&quot;,&quot;7.04&quot;,&quot;6.74&quot;,&quot;7.87&quot;,&quot;7.62&quot;,&quot;6.86&quot;,&quot;7.73&quot;))) %&gt;% 
+  ddply(.(Current),summarize,T=mean(T))
+</code></pre>
+<p>Staðsetning straumanna er ekki gefin með GPS-punktum í greininni og leysti ég það vandamál frekar gróflega í <a href="https://www.qgis.org/en/site/">QGIS</a>. Ég get því miður ekki munað nákvæmlega hvernig ég gerði það og QGIS býður ekki upp á “reproducible workflow” á sama máta og R.</p>
+<p>Grófleg lýsing:</p>
+<ul>
+<li>Mynd 1 hér að ofan hnitsett með því að skella henni yfir kort af Íslandi. Þetta er gert með viðbótinni (plugin) <a href="https://gvellut.github.io/FreehandRasterGeoreferencer/">Freehand raster georeferencer</a> og undirliggjandi kortið getur t.d. verið frá viðbótinni <a href="https://plugins.%5BQGIS%5D(https://www.qgis.org/en/site/).org/plugins/quick_map_services/">QuickMapServices</a>. Nákvæmnin þarf ekki að vera sérstaklega mikil en maður vandar sig bara eins og hægt er.</li>
+<li>Þegar línurnar hafa verið teiknaðar inn á myndina þá þarf að skrifa þær út (export) sem .shp skrá og nota svo tólið “Extract vertices” til þess að breyta línunum í punkta. Punktarnir eru svo vistaðir sem .csv og þá er hægt að nota þá með eftirfarandi hætti í R.</li>
+</ul>
+<pre><code>sam &lt;- readr::read_csv(&quot;currents.csv&quot;) %&gt;%
+  left_join(dfs, by = c(&quot;Current&quot;=&quot;Current&quot;))
+
+sam$type &lt;- recode_factor(as.factor(sam$type), &quot;local&quot;= &quot;Strandsjór&quot;, &quot;Atlantic&quot; = &quot;Hlýir&quot;, &quot;Arctic&quot;= &quot;Kaldir&quot;)
+
+linur &lt;- sf::read_sf(&quot;nokkrarlinur.shp&quot;) %&gt;% 
+  sf::as_Spatial() %&gt;% 
+  fortify()
+
+linur2 &lt;- transform_coord(linur)
+
+linur &lt;- linur %&gt;% 
+  mutate(styrkur = sam$styrkur,
+         T = sam$T,
+         type = sam$type,
+         flow = sam$flow,
+         current = sam$Current,
+         long = linur2[,1],
+         lat = linur2[,2])
+</code></pre>
+<p>Nú þegar hnitsettar línur með nöfn, upplýsingar um stærð, hitastig (heitt/kalt) og dýpi liggja fyrir er hægt teikna þær inn á kort. Það mætti gera á snyrtilegri máta en þar sem mig langaði að auðkenna neðansjávarstrauma með punktalínum en það er straumurinn NIJ (North Icelandic Jet) er gert geom_path fyrir hverja straumgerð.</p>
+<pre><code>
+linurU &lt;- linur %&gt;% filter(flow == &quot;u&quot;, type != &quot;Coastal&quot;)
+linurY &lt;- linur %&gt;% filter(flow != &quot;u&quot;, type != &quot;Coastal&quot;)
+linurCU &lt;- linur %&gt;% filter(flow == &quot;u&quot;, type == &quot;Coastal&quot;)
+linurCY &lt;- linur %&gt;% filter(flow != &quot;u&quot;, type == &quot;Coastal&quot;)
+
+lim &lt;- c(-31,-4,62.57 , 68.72)
+st=.6
+p &lt;- basemap(limits = lim, bathymetry = T, glaciers = T, legends = T, base_size = 2, bathy.style = &quot;poly_greys&quot;,land.size = .06, gla.size = .06) +
+  geom_path(data = linurU, 
+            aes(x = long, y = lat, group = id, color = &quot;black&quot;),
+            size = st,
+            linetype = 1,
+            arrow = arrow(type = &quot;open&quot;, angle = 15, ends = &quot;last&quot;, length = unit(0.3, &quot;lines&quot;))) +
+  geom_path(data = linurU, 
+            aes(x = long, y = lat, group = id, color = type),
+            size = linurU$styrkur*st,
+            linetype = 11,
+            arrow = arrow(type = &quot;open&quot;, angle = 15, ends = &quot;last&quot;, length = unit(0.3, &quot;lines&quot;))) + 
+  geom_path(data = linurY,
+            aes(x = long, y = lat, group = id, color = type),
+            size = linurY$styrkur*st,
+            linetype = 1,
+            arrow = arrow(type = &quot;open&quot;, angle = 15, ends = &quot;last&quot;, length = unit(0.3, &quot;lines&quot;))) +
+  geom_path(data = linurCY, 
+            aes(x = long, y = lat, group = id, color = type),
+            size = st,
+            linetype = 1,
+            arrow = arrow(type = &quot;open&quot;, angle = 15, ends = &quot;last&quot;, length = unit(0.1, &quot;lines&quot;)))
+</code></pre>
+<p>Einfaldast fannst mér að gera .shp-skrá fyrir heiti straumanna í QGIS með því að gera nýtt „scratch-layer“ og finna sæmilega staðstningu fyrir heitin. Það er auðveldara en að staðsetja heitin með ggplot.</p>
+<pre><code>
+sysfonts::font_add_google(&quot;PT Serif&quot;, &quot;PT Serif&quot;)
+showtext::showtext_auto()
+
+punktar &lt;- sf::read_sf(&quot;heitiIsland.shp&quot;) 
+
+p2 &lt;- p + scale_color_manual(name = &quot;Hafstraumar:&quot;,
+                             values = c( &quot;Kaldir&quot; = &quot;blue&quot;,&quot;Hlýir&quot; = &quot;red&quot;,&quot;Strandsjór&quot; = &quot;green&quot;),
+                             guide = guide_legend(order = 3, override.aes = list(fill = NA)))  + 
+  geom_text_repel( data = heitipunktar,   aes(geometry = geometry, label = heiti, family=&quot;PT Serif&quot;, fontface=&quot;italic&quot;),
+                   colour = &quot;black&quot;,
+                   size = 30,
+                   show.legend = FALSE,
+                   stat = &quot;sf_coordinates&quot;)
+
+p3 &lt;- p2 + labs(caption = &quot;Unnið upp úr Logeman et al. (2013)&quot;) +
+  theme_void() + theme_void(base_size = 60) +theme(legend.key.size = unit(.5, &quot;cm&quot;), legend.key.width = unit(.86, &quot;cm&quot;), legend.text.align = unit(.4, &quot;cm&quot;), legend.spacing.y = unit(0.4, &quot;cm&quot;))
+
+
+ggsave(&quot;straumar.png&quot;, p3, device = &quot;png&quot;, height=16, width=16, units = &quot;cm&quot;, dpi=800, bg = &quot;white&quot;)
+</code></pre>
+<div class="figure">
+<img src="images/straumar.png" alt="" />
+<p class="caption">Hafstraumar um Ísland. Gert með ggplot í R.</p>
+</div>
