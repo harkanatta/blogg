@@ -13,26 +13,28 @@ meta_img: /images/image.jpg
 ---
 
 <script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
+<script src="{{< blogdown/postref >}}index_files/htmlwidgets/htmlwidgets.js"></script>
+<link href="{{< blogdown/postref >}}index_files/datatables-css/datatables-crosstalk.css" rel="stylesheet" />
+<script src="{{< blogdown/postref >}}index_files/datatables-binding/datatables.js"></script>
+<script src="{{< blogdown/postref >}}index_files/jquery/jquery-3.6.0.min.js"></script>
+<link href="{{< blogdown/postref >}}index_files/dt-core/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="{{< blogdown/postref >}}index_files/dt-core/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="{{< blogdown/postref >}}index_files/dt-core/js/jquery.dataTables.min.js"></script>
+<link href="{{< blogdown/postref >}}index_files/crosstalk/css/crosstalk.min.css" rel="stylesheet" />
+<script src="{{< blogdown/postref >}}index_files/crosstalk/js/crosstalk.min.js"></script>
 
 
-<div id="forsaga" class="section level1">
-<h1>Forsaga</h1>
-<p>Þegar Kolgrafafjörður var lagður undir af 200 þúsund tonnum af dauðri síld drapst nánast allt botndýralíf í firðinum. Til þess að fylgjast með framvindu botndýralífsins hafa verið tekin sýni af botninum ár hvert þar til 2017 Óeðlilegt óstand skapaðist, nær allar tegundir hurfu en fljótlega fjölgaði þeim aftur.</p>
+<p>Segjum að einhvern langi til að skoða burstaorma úr mjúkum botni í færeyskum firði og rekist þar á orm sem er byggður eins og bambussproti. Viðkomandi hringir í vin sem segir að þetta sé pottþétt Maldanidae-ormur en til þess að vita hvaða tegund þetta sé þá þurfi að skoða haus eða afturenda betur. <strong>Höskuldarviðvörun</strong> þetta er ormurinn <em>Praxilella praetermissa</em> sem sést hér að neðan.</p>
 <div class="figure">
-<img src="images/IMG_6297.jpeg" alt="" />
-<p class="caption">burstaormur</p>
+<img src="images/praxilella.jpg" alt="" />
+<p class="caption">Haus og tveir afturendar <em>Praxilella praetermissa</em>.</p>
 </div>
-<p>Minn hlutur í þessu verkefni er að greina þessi dýr til tegunda og var mér úthlutað tveimur árgöngum, þeim fyrsta og þeim næst síðasta. Tegundalistinn frá hinum árgöngunum er til staðar og er gott að geta stuðst við hann. Einn galli er þó við þann lista að hann samanstendur af aðeins tveimur dálkum í Excel: tegund og fjölda.</p>
-<div class="figure">
-<img src="images/skjaskot-excel.png" alt="" />
-<p class="caption">gg skjáskot</p>
-</div>
-<p>Þar sem flokkun smádýra er mjög vandasamt og tímafrekt ferli er ekki alltaf greint að tegund. Stundum getur verið einfalt að sjá ættbálk dýrsins undir smásjánni og bera það svo við eintök af sama ættbálki sem fundust á svæðinu áður.</p>
+<p>Þar sem flokkun smádýra er mjög vandasöm og tímafrek er ekki alltaf greint alla leið að tegund og ónákvæm greining látin duga. Stundum getur verið einfalt að sjá <strong>ætt</strong> (e. family) dýrsins undir smásjánni og þá getur verið gott að bera það saman við eintök af sem hafa fundist áður á svæðinu og eru sömu ættar. Maldanidae-ormar eru einmitt af því taginu að þeir eru mjög auðgreinanlegir sem ætt en svo vandast málið þegar á að tegundagreina þá nákvæmlega með greiningarlykli.</p>
 <table>
 <thead>
 <tr class="header">
-<th>Flokkun <strong>Capitella capitata</strong></th>
-<th>A</th>
+<th><em>Praxillella praetermissa</em></th>
+<th></th>
 </tr>
 </thead>
 <tbody>
@@ -54,17 +56,113 @@ meta_img: /images/image.jpg
 </tr>
 <tr class="odd">
 <td>Ætt (Family)</td>
-<td>Capitellidae</td>
+<td>Maldanidae</td>
 </tr>
 <tr class="even">
-<td>Ættkvísl (Genus)</td>
-<td>Capitella</td>
+<td>Undirætt (subfamily)</td>
+<td>Euclymeninae</td>
 </tr>
 <tr class="odd">
+<td>Ættkvísl (Genus)</td>
+<td><em>Praxillella</em></td>
+</tr>
+<tr class="even">
 <td>Tegund (Species)</td>
-<td>Capitella capitata</td>
+<td><em>Praxillella praetermissa</em></td>
 </tr>
 </tbody>
 </table>
-<p>Til þess að búa til lista með öllum hærri flokkunarstigum</p>
+<p>Segjum að spyrjandi finni lista af burstaormum frá Færeyjum í greininni <a href="https://timarit.is/issue/324425"><strong>Botndyr í bleytbotni á føroyskum firðum</strong></a> sem hann getur vonandi stuðst við.</p>
+<div class="figure">
+<img src="images/oyartafla.png" style="width:100.0%" alt="" />
+<p class="caption">Skjáskot af tímarit.is</p>
 </div>
+<p>Það hjálpar óreyndum áhugamanni ekki mikið að sjá tegundirnar útlistaðar með þessum hætti þar sem tegundaheiti bera ekki með sér nema heiti <strong>ættkvíslarinnar</strong> (e. genus). Það er oftast ekkert í tegundaheiti ormanna sem gefur til kynna hærri flokkunarstig en ættkvísl. Flokkun Maldanidae-ormsins <em>Praxillella praetermissa</em> eins og hún er gefin upp á síðunni <a href="http://species-identification.org/species.php?species_group=macrobenthos_polychaeta&amp;id=189&amp;menuentry=groepen">Marine Species Identification Portal</a> lítur svona út:</p>
+<p><img src="images/MSIP.png" /></p>
+<p>Á þessari síðu eru upplýsingar um einkenni sjávarlífvera og flokkun þeirra í flokkunarkerfi Linnaeusar. Langflestar tegundir sem ég hef rekist á í greiningum úr botnseti á grunnsævi hér við land eru tilgreindar á henni og þess vegna skrapaði ég öll flokkunarstigin þaðan með <em>for-lúppum</em> og R-pökkunum <code>httr</code> og <code>rvest</code>. Ekki verður því ferli lýst nákvæmlega hér en gögnin eru komin í .csv-skrána <a href="https://raw.githubusercontent.com/harkanatta/botndyr/main/skjol/species-identification/Rank.csv">Rank.csv</a> :open_file_folder:. Í skránni eru flest dýr í bókinni <strong>Macrobenthos of the North Sea</strong> (M.J. de Kluijver et al.) og því hægt að fá hærri flokkunarstig þeirra tegunda sem finnast listum af því tagi sem birtist í Færeysku rannsókninni.</p>
+<p>Þetta eru R-pakkarnir í þessu dæmi:</p>
+<pre><code>Rpakkar &lt;- c(&quot;tidyverse&quot;, &quot;dplyr&quot;, &quot;data.table&quot;, &quot;tabulizer&quot;, &quot;DT&quot;)
+pacman::p_load(Rpakkar, character.only = TRUE)
+</code></pre>
+<p>Byrjum á því að sækja <a href="https://timarit.is/files/24875479">pfd-skjalið með töflunni</a> og lesa inn töfluna með R-pakkanum <a href="https://github.com/ropensci/tabulizer">tabulizer</a> til þess að fá allan tegundalistann úr Færeysku rannsókninni.</p>
+<pre><code>f &lt;- file.path(&quot;skjal.pdf&quot;)
+tafla &lt;- tabulizer::extract_tables(f)
+tegundalisti = list(unlist(tafla)[2:40])</code></pre>
+<p>Þetta eru um 40 tegundir og tegundahópar. Óreyndur áhugamaður hefur, eins og áður sagði, enga vitneskju um hvaða tegundaheiti á að fletta upp ennþá. Til þess þarf hann að vita hvaða tegundir tilheyra Maldanidae ættinni.</p>
+<p>Þetta fall tekur inn lista af tegundum og tegundahópum og skilar töflu með hærri flokkunarstigum þeirra:</p>
+<pre><code>families &lt;- function(tegundir){
+#Pakkarnir:
+  require(dplyr)
+  require(data.table)
+  require(tidyverse)
+  require(DT)
+  
+#Hreinsa til í tegundalistanum. Taka burtu „white-space“ í kringum orðin, punkta, „sp“ og fleira.
+  tegundir &lt;- lapply(tegundir, function(x) trimws(x))
+  tegundir &lt;- sapply(tegundir, function(x) gsub(&quot;\\.|\\ sp|\\(p)|\\/.*&quot;,&quot;&quot;,x))
+  tegundir &lt;- tegundir[!is.na(tegundir) &amp; tegundir != &quot;&quot;]
+  tegundir &lt;- as.list(tegundir)
+  
+#Lesa inn listann af Macrobenthos of the North Sea frá Marine Species Identification Portal:
+  Rank &lt;- read.csv(&quot;https://raw.githubusercontent.com/harkanatta/botndyr/main/skjol/species-identification/Rank.csv&quot;)
+
+#Búa til tóma lista og data frames fyrir for-lúppuna:  
+  DF &lt;- data.frame()
+  AList &lt;- list()
+  Annarlisti &lt;- list()
+  
+#
+  for (i in 1:length(tegundir)) {
+    
+    ifelse(
+      lengths(strsplit(tegundir[[i]], &quot;\\W+&quot;)) &gt; 1,
+      df2 &lt;-
+        Rank %&gt;%
+        mutate(ranks = case_when(
+          tolower(Rank$Species) %like% tolower(tegundir[i]) == 1 ~ &#39;Species&#39;)),
+      df2 &lt;-
+        Rank %&gt;%
+        mutate(ranks = case_when(
+          tolower(Rank$Genus) %like% tolower(tegundir[i]) == 1 ~ &#39;Genus&#39;,
+          tolower(Rank$Subfamily) %like% tolower(tegundir[i]) == 1 ~ &#39;Subfamily&#39;,
+          tolower(Rank$Family) %like% tolower(tegundir[i]) == 1 ~ &#39;Family&#39;,
+          tolower(Rank$Superfamily) %like% tolower(tegundir[i]) == 1 ~ &#39;Superfamily&#39;,
+          tolower(Rank$Order) %like% tolower(tegundir[i]) == 1 ~ &#39;Order&#39;,
+          tolower(Rank$Class) %like% tolower(tegundir[i]) == 1 ~ &#39;Class&#39;
+        )
+        ))
+    ifelse(all(is.na(df2$ranks)),
+           Annarlisti[i] &lt;- tegundir[i],NA)
+    
+    if (all(is.na(df2$ranks))){next}
+    
+    DF &lt;- Rank[!is.na(df2$ranks),seq(1:match(unique(na.omit(df2$ranks)), colnames(Rank)))]
+    AList[i] &lt;- list(DF)
+    
+  }
+  
+  TheTable &lt;- do.call(dplyr::bind_rows, AList)
+  TheTable &lt;- TheTable[!duplicated(TheTable), ]
+  TheTable &lt;- TheTable[c(&quot;Family&quot;,&quot;Genus&quot;,&quot;Species&quot;)] # Til styttingar, annars verður taflan of breið.
+  DT::datatable(TheTable,caption = &quot;Flokkun&quot;,rownames = F)
+  
+    
+  #Til að sjá hvað er ekki tekið með (oft villur í nöfnum):
+  #Ekki_i_toflu &lt;- do.call(rbind,Annarlisti)
+  #print(Ekki_i_toflu)
+  
+}
+</code></pre>
+<p>Þegar <code>families(tegundalisti)</code> er slegið inn ætti taflan hér að neðan að birtast með dálki fyrir ætt (e. family) framan við tegundaheitið. Taflan er gagnvirk og með því að slá inn <em>Maldanidae</em> (bambussprotaormurinn) koma upp þær tegundir sem tilheyra þeirri ætt. Þá þrengist leitin í tvo orma sem koma helst til greina.</p>
+<div id="htmlwidget-1" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"filter":"none","vertical":false,"caption":"<caption>Flokkun<\/caption>","data":[[" Orbiniidae"," Cirratulidae"," Capitellidae"," Pholoidae"," Cirratulidae"," Maldanidae"," Paraonidae"," Capitellidae"," Spionidae"," Scalibregmatidae"," Syllidae"," Paraonidae"," Nephtyidae"," Pectinariidae"," Nephtyidae"," Spionidae"," Opheliidae"," Terebellidae"," Goniadidae"," Nephtyidae"," Phyllodocidae"," Oweniidae"," Dorvilleidae"," Ampharetidae"," Flabelligeridae"," Sabellidae"," Syllidae"," Flabelligeridae"," Phyllodocidae"," Cirratulidae"," Hesionidae"," Maldanidae"],[" Scoloplos armiger"," Chaetozone setosa"," Mediomastus fragilis"," Pholoe inornata"," Cirratulus cirratus"," Praxillella praetermissa"," Aricidea suecica"," Capitella capitata"," Spio filicornis"," Scalibregma inflatum"," Exogone naidina"," Levinsenia gracilis"," Nephtys caeca"," Pectinaria koreni"," Nephtys hombergii"," Polydora ciliata"," Ophelina acuminata"," Lanice conchilega"," Goniada maculata"," Nephtys ciliata"," Eumida sanguinea"," Myriochele oculata"," Ophryotrocha hartmanni"," Anobothrus gracilis"," Diplocirrus glaucus"," Chone fauveli"," Exogone verugera"," Pherusa flabellata"," Eteone longa",null," Kefersteinia cirrata"," Rhodine gracilior"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>Ætt<\/th>\n      <th>Tegund<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
+<p>Neðst í <em>for-lúppunni</em> er annar listi (sem er kallaður <code>Annarlisti</code> og er tekinn út með millumerki) sem inniheldur þau heiti á Færeyska listanum sem ekki komust í töfluna. Þeim getur hafa verið sleppt vegna þess að taflan hjá mér er ófullkomin eða að það séu villur og athugasemdir í tegundaheitunum. Það má einfaldlega lagfæra með því að opna tegundalistan í ritli þegar maður hefur komist að því hvað þarf að laga.</p>
+<pre><code>##      [,1]                      
+## [1,] &quot;Dipolydora quadrillobata&quot;
+## [2,] &quot;Pseudopolydora pulchra&quot;  
+## [3,] &quot;Syllidae,T187&quot;           
+## [4,] &quot;Maldanidae a&quot;            
+## [5,] &quot;Owenidae&quot;                
+## [6,] &quot;Dipolydora socialis&quot;     
+## [7,] &quot;Tra visia forbesii&quot;</code></pre>
+<p>Hér að ofan er listinn yfir þau heiti sem ekki komust gegnum nálaraugað. Það má sjá forskeytið „Di“ framan við <em>Polydora quadrillobata</em> og Syllidae er með „T187“ fyrir aftan. Þetta má kanna betur hvað þýðir. Auka bil er á milli <strong>Tra</strong> og <strong>vista</strong> í <em>Tra visia forbesii</em> en það verður að skrifa á innlesturinn í R-ið hjá mér.</p>

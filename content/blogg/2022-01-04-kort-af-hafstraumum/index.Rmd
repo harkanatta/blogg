@@ -12,25 +12,26 @@ hacker_news_id: ''
 lobsters_id: ''
 meta_img: /images/image.jpg
 ---
-Kortið á mynd 1 hér að neðan er unnið upp úr gögnum frá haffræðingnum Kai Logemann. Kai starfaði um árabil hérlendis og gerði sjávarfallalíkan sem hefur  nýst til þess að spá fyrir um rek agna í sjó kringum landið. Þetta kort er nákvæmasta straumakort af hafinu kringum Ísland sem ég veit um og þess vegna langaði mig til þess að nota það og um leið gera gögnin sem það byggir á aðgengilegri. 
 
-Hér er hlekkur á [Github :file_folder: ](https://github.com/harkanatta/hafstraumakort) þar sem má sækja allt sem þarf til að endurgera myndina á botni þessar síðu.
+Hér er [hlekkur á Github ](https://github.com/harkanatta/hafstraumakort) þar sem má sækja öll skjölin sem þarf til að endurgera myndina á botni þessar síðu.
+
+Kortið á mynd 1 hér að neðan er birt í grein haffræðingsins Kai Logemann. Kai starfaði um árabil hérlendis og gerði sjávarfallalíkan sem hefur nýst til þess að spá fyrir um rek agna í sjó kringum landið. Þetta kort er nákvæmasta straumakort af hafinu kringum Ísland sem ég veit um og þess vegna langaði mig til þess að endurgera það og um leið gera gögnin sem það byggir á aðgengilegri. Fyrst þarf að sækja gögnin.
 
 ![Kort af hafstraumum við Ísland frá Kai Logemann.](images/kai.png)
 
-Til þess að trufla ekki manninn þá sótti ég töfluna yfir styrk straumanna í greinina hans [The circulation of Icelandic waters – a modelling study](https://os.copernicus.org/articles/9/931/2013/) með pakkanum [tabulizer](https://github.com/ropensci/tabulizer). 
+Taflan yfir styrk straumanna er sótt í greinina hans [The circulation of Icelandic waters – a modelling study](https://os.copernicus.org/articles/9/931/2013/) með pakkanum [tabulizer](https://github.com/ropensci/tabulizer) því ekki viljum við slá inn tölur og skapa hættu á innsláttarvillum. 
 
 ![Skjáskot úr greininni af töflunni sem sýnir styrk og hitastig hafstrauma við Ísland.](images/kai_tafla.png)
 
-Byrjum á að lesa inn pakkana. Ef þeir eru ekki allir á [CRAN](https://cran.r-project.org/) þá er hægt að sækja þá á github-síðu pakkasmiðanna. Þetta á t.d. við um [tabulizer](https://github.com/ropensci/tabulizer) pakkann þegar þetta er skrifað.
+Byrjum á að lesa inn R-pakkana. Ef þeir eru ekki allir á [CRAN](https://cran.r-project.org/) þá er hægt að sækja þá á github-síðu pakkasmiðanna. Þetta á t.d. við um [tabulizer](https://github.com/ropensci/tabulizer) pakkann þegar þetta er skrifað.
 ```
 # Hér eru pakkarnir sem notaðir eru í þessu dæmi
-Rpakkar <- c("tidyverse", "ggOceanMaps", "pdftools", "tabulizer", "plyr")
+Rpakkar <- c("tidyverse", "ggOceanMaps", "tabulizer", "plyr", "sysfonts", "showtext")
 pacman::p_load(Rpakkar, character.only = TRUE)
 
 ```
 
-Svo er það að sækja straumstyrkinn og heiti straumanna úr töflunni í greininni:
+Svo er það að sækja straumstyrkinn og heiti straumanna úr töflunni í greininni og færa yfir á þægilegt form:
 
 ```
 f <- file.path("Logemann et al. - 2013 - The circulation of Icelandic waters – a modelling study.pdf")
@@ -55,7 +56,7 @@ dfs <- bind_rows(one, two) %>%
 
 ```
 
-Staðsetning straumanna er ekki gefin með GPS-punktum í greininni og leysti ég það vandamál frekar gróflega í [QGIS](https://www.qgis.org/en/site/). Ég get því miður ekki munað nákvæmlega hvernig ég gerði það og QGIS býður ekki upp á "reproducible workflow" á sama máta og R. 
+Staðsetning straumanna er ekki gefin með GPS-punktum í greininni og leysti ég það vandamál frekar gróflega í [QGIS](https://www.qgis.org/en/site/). Ég get því miður ekki munað nákvæmlega hvernig ég gerði það en QGIS býður ekki upp á „reproducible workflow“ með sama máta og R. 
 
 Grófleg lýsing: 
 
@@ -86,7 +87,7 @@ linur <- linur %>%
 
 ```
 
-Nú þegar hnitsettar línur með nöfn, upplýsingar um stærð, hitastig (heitt/kalt) og dýpi liggja fyrir er hægt teikna þær inn á kort. Það mætti gera á snyrtilegri máta en þar sem mig langaði að auðkenna neðansjávarstrauma með punktalínum en það er straumurinn NIJ (North Icelandic Jet) er gert geom_path fyrir hverja straumgerð.
+Nú þegar hnitsettar línur með nöfn, upplýsingar um stærð, hitastig (heitt/kalt) og dýpi liggja fyrir er hægt teikna þær inn á kort með R-pakkanum [ggOceanMaps](https://github.com/MikkoVihtakari/ggOceanMaps). Það mætti gera á snyrtilegri máta en þar sem mig langaði að auðkenna neðansjávarstrauma með punktalínum en það er straumurinn NIJ (North Icelandic Jet) er gert geom_path fyrir hverja straumgerð.
 
 
 ```
@@ -121,7 +122,7 @@ p <- basemap(limits = lim, bathymetry = T, glaciers = T, legends = T, base_size 
             arrow = arrow(type = "open", angle = 15, ends = "last", length = unit(0.1, "lines")))
 
 ```
-Einfaldast fannst mér að gera .shp-skrá fyrir heiti straumanna í QGIS með því að gera nýtt „scratch-layer“ og finna sæmilega staðstningu fyrir heitin. Það er auðveldara en að staðsetja heitin með ggplot.
+Einfaldast fannst mér að gera .shp-skrá fyrir heiti straumanna í QGIS með því að gera nýtt „scratch-layer“ og finna sæmilega staðstningu fyrir heitin með músinni. Það er auðveldara en að staðsetja heitin með ggplot.
 
 ```
 
@@ -147,4 +148,4 @@ ggsave("straumar.png", p3, device = "png", height=16, width=16, units = "cm", dp
 
 ```
 
-![Hafstraumar um Ísland. Gert með ggplot í R.](images/straumar.png)
+![Hafstraumar um Ísland. Gert með ggOceanMaps í R.](images/straumar.png)
