@@ -1,0 +1,118 @@
+---
+title: Stundaskrá í R
+author: Valtýr
+date: '2022-01-14'
+slug: stundaskra-i-r
+categories:
+  - R
+tags: []
+description: Desc
+hacker_news_id: ''
+lobsters_id: ''
+meta_img: /images/image.jpg
+---
+
+<script src="{{< blogdown/postref >}}index_files/header-attrs/header-attrs.js"></script>
+<script src="{{< blogdown/postref >}}index_files/htmlwidgets/htmlwidgets.js"></script>
+<script src="{{< blogdown/postref >}}index_files/jquery/jquery.min.js"></script>
+<link href="{{< blogdown/postref >}}index_files/datatables-css/datatables-crosstalk.css" rel="stylesheet" />
+<script src="{{< blogdown/postref >}}index_files/datatables-binding/datatables.js"></script>
+<link href="{{< blogdown/postref >}}index_files/dt-core/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="{{< blogdown/postref >}}index_files/dt-core/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="{{< blogdown/postref >}}index_files/dt-core/js/jquery.dataTables.min.js"></script>
+<link href="{{< blogdown/postref >}}index_files/crosstalk/css/crosstalk.css" rel="stylesheet" />
+<script src="{{< blogdown/postref >}}index_files/crosstalk/js/crosstalk.min.js"></script>
+
+
+<p>Segjum að einhver sé að kenna á trommur í Tónlistarskóla A-Hún og vilji gera stundatöflu. Stundataflan skarast á við kennslu í grunnskólanum og þarf því að vera breytileg svo krakkarnir missi ekki alltaf af sömu skólastundunum. Það er leyst með því að hliðra nemendum til um einn tíma næsta kennsludag og koll af kolli.
+Hér eru R-pakkarnir:</p>
+<pre><code>Rpakkar &lt;- c(&quot;tidyverse&quot;,&quot;lubridate&quot;,&quot;DT&quot;)
+pacman::p_load(Rpakkar, character.only = TRUE)
+
+Sys.setlocale(&quot;LC_ALL&quot;, &quot;Icelandic&quot;) # `Sys.setlocale` er hér fyrir íslenskar dagsetningar.</code></pre>
+<p>Það eru einungis tvö föll. Fallið <code>dagar</code> tekur inn árið og vikudag (frá 1-7) og gefur alla tiltekna vikudaga fyrir það árið. Fallið <code>hlidrun</code> tekur inn vektor með nöfnum og hliðrar þeim um eitt sæti.</p>
+<pre><code># Föll
+dagar &lt;- function(Ar,Dagur) {
+  dagarnir &lt;- strptime(paste(Ar, 1:366, sep=&quot;-&quot;), format=&quot;%Y-%j&quot;)
+  vikudagur &lt;- dagarnir[dagarnir$wday==Dagur]
+  vikudagur[!is.na(vikudagur)]  # Needed to remove NA from day 366 in non-leap years
+}
+
+hlidrun &lt;- function(x, n = 1) {
+  if (n == 0) x else c(tail(x, -n), head(x, n))
+}</code></pre>
+<p>Stundakennarinn við tónlistarskólann starfar á mánudögum og fimmtudögum. Á mánudögum eru aðeins 3 nemar í 30 mínútur hver. En til að dreifa þeim yfir fjórar kennslustundir er nauðsynlegt að hafa eitt tómt stak í nafnalistanum. Listinn á mánudögum er <code>c('Kourtney','Kim','Khloé', '')</code> en á fimmtudögum bætist Rob við.
+Hér er lúppa fyrir mánudaga en einfalt væri að gera fall sem tæki inn vikudag, nafnalista og tímasetningu fyrsta og síðasta tíma. Hef þetta bara svona í bili.</p>
+<pre><code>
+manudagar &lt;- dagar(2022,1)[1:20]
+manudagur_nemar &lt;- c(&#39;Kourtney&#39;,&#39;Kim&#39;,&#39;Khloé&#39;, &#39;&#39;)
+fyrsti_timi &lt;- &quot;08:30&quot;
+sidasti_timi &lt;- &quot;10:00&quot;
+manudagur_timar &lt;- list()
+for (i in 1:length(manudagar)) {
+  manudagur_timar[[i]] &lt;- seq(
+  from=ymd_hm(paste(format(manudagar[i],&quot;%Y-%m-%d&quot;),fyrsti_timi)),
+  to=ymd_hm(paste(format(manudagar[i],&quot;%Y-%m-%d&quot;),sidasti_timi)),
+  by=&quot;30 min&quot;
+)
+}  
+manudagur_timar &lt;- do.call(c,manudagur_timar)
+
+A &lt;- list()
+for (i in 1:length(manudagur_nemar)) {
+  A[[i]] &lt;- hlidrun(manudagur_nemar,i)
+}
+
+lengd &lt;- length(manudagur_timar)/sqrt(length(unlist(A)))
+
+manudagur_nemar &lt;- do.call(c,A) %&gt;% 
+  rep(lengd) %&gt;% 
+  as.factor()
+
+df_manudagur_timar &lt;- data.frame(manudagur_timar, manudagur_nemar) %&gt;% 
+  mutate(timar=manudagur_timar,
+         dagur= format(manudagur_timar,&quot;%a %d %b&quot;),
+         timi= format(manudagur_timar,&quot;%H:%M&quot;),
+         nemar = manudagur_nemar) %&gt;%
+           select(timar,dagur,timi,nemar) %&gt;%
+  distinct()
+</code></pre>
+<p>Hér er fimmtudagur:</p>
+<pre><code>
+fimmtudagar &lt;- dagar(2022,4)[1:20]
+fimmtudagur_nemar &lt;- c(&#39;Kourtney&#39;,&#39;Kim&#39;,&#39;Khloé&#39;, &#39;Rob&#39;)
+fyrsti_timi &lt;- &quot;10:00&quot;
+sidasti_timi &lt;- &quot;11:30&quot;
+fimmdudagur_timar &lt;- list()
+for (i in 1:length(fimmtudagar)) {
+  fimmdudagur_timar[[i]] &lt;- seq(
+  from=ymd_hm(paste(format(fimmtudagar[i],&quot;%Y-%m-%d&quot;),fyrsti_timi)),
+  to=ymd_hm(paste(format(fimmtudagar[i],&quot;%Y-%m-%d&quot;),sidasti_timi)),
+  by=&quot;30 min&quot;
+)
+}
+fimmdudagur_timar &lt;- do.call(c,fimmdudagur_timar)
+
+A &lt;- list()
+for (i in 1:length(fimmtudagur_nemar)) {
+  A[[i]] &lt;- hlidrun(fimmtudagur_nemar,i)
+}
+
+lengd &lt;- length(fimmdudagur_timar)/sqrt(length(unlist(A)))
+
+fimmtudagur_nemar &lt;- do.call(c,A) %&gt;% 
+  rep(lengd) %&gt;% 
+  as.factor()
+
+df_fimmtudagur_timar &lt;- data.frame(fimmdudagur_timar, fimmtudagur_nemar) %&gt;% 
+  mutate(timar=fimmdudagur_timar,
+         dagur= format(fimmdudagur_timar,&quot;%a %d %b&quot;),
+         timi= format(fimmdudagur_timar,&quot;%H:%M&quot;),
+         nemar = fimmtudagur_nemar) %&gt;%
+           select(timar,dagur,timi,nemar) %&gt;%
+  distinct()</code></pre>
+<p>Þá þarf bara að binda dagana saman í einn <em>data frame</em>, setja allt í rétta tímaröð og búa til töfluna. Þessi tafla er þægileg fyrir kennara grunnskólans, þeir sjá nöfn nemendanna í réttri tímaröð og eru því fljótir að sjá hvern á að senda yfir í Tónó. Það er hins vegar betra fyrir foreldrana að sjá sitt barn sem eina línu í gegnum alla töfluna og geta merkt það með einu striki með yfirstrikunarpenna. Sú tafla er fyrir neðan.</p>
+<div id="htmlwidget-1" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-1">{"x":{"filter":"none","caption":"<caption>Trommur<\/caption>","data":[["08:30","09:00","09:30","10:00","10:30","11:00","11:30"],["Kim","Khloé","","Kourtney",null,null,null],[null,null,null,"Kim","Khloé","Rob","Kourtney"],["Khloé","","Kourtney","Kim",null,null,null],[null,null,null,"Khloé","Rob","Kourtney","Kim"],["","Kourtney","Kim","Khloé",null,null,null],[null,null,null,"Rob","Kourtney","Kim","Khloé"],["Kourtney","Kim","Khloé","",null,null,null],[null,null,null,"Kourtney","Kim","Khloé","Rob"],["Kim","Khloé","","Kourtney",null,null,null],[null,null,null,"Kim","Khloé","Rob","Kourtney"],["Khloé","","Kourtney","Kim",null,null,null],[null,null,null,"Khloé","Rob","Kourtney","Kim"],["","Kourtney","Kim","Khloé",null,null,null],[null,null,null,"Rob","Kourtney","Kim","Khloé"],["Kourtney","Kim","Khloé","",null,null,null],[null,null,null,"Kourtney","Kim","Khloé","Rob"],["Kim","Khloé","","Kourtney",null,null,null],[null,null,null,"Kim","Khloé","Rob","Kourtney"],["Khloé","","Kourtney","Kim",null,null,null],[null,null,null,"Khloé","Rob","Kourtney","Kim"],["","Kourtney","Kim","Khloé",null,null,null],[null,null,null,"Rob","Kourtney","Kim","Khloé"],["Kourtney","Kim","Khloé","",null,null,null],[null,null,null,"Kourtney","Kim","Khloé","Rob"],["Kim","Khloé","","Kourtney",null,null,null],[null,null,null,"Kim","Khloé","Rob","Kourtney"],["Khloé","","Kourtney","Kim",null,null,null],[null,null,null,"Khloé","Rob","Kourtney","Kim"],["","Kourtney","Kim","Khloé",null,null,null],[null,null,null,"Rob","Kourtney","Kim","Khloé"],["Kourtney","Kim","Khloé","",null,null,null],[null,null,null,"Kourtney","Kim","Khloé","Rob"],["Kim","Khloé","","Kourtney",null,null,null],[null,null,null,"Kim","Khloé","Rob","Kourtney"],["Khloé","","Kourtney","Kim",null,null,null],[null,null,null,"Khloé","Rob","Kourtney","Kim"],["","Kourtney","Kim","Khloé",null,null,null],[null,null,null,"Rob","Kourtney","Kim","Khloé"],["Kourtney","Kim","Khloé","",null,null,null],[null,null,null,"Kourtney","Kim","Khloé","Rob"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>timi<\/th>\n      <th>mán. 03 jan.<\/th>\n      <th>fim. 06 jan.<\/th>\n      <th>mán. 10 jan.<\/th>\n      <th>fim. 13 jan.<\/th>\n      <th>mán. 17 jan.<\/th>\n      <th>fim. 20 jan.<\/th>\n      <th>mán. 24 jan.<\/th>\n      <th>fim. 27 jan.<\/th>\n      <th>mán. 31 jan.<\/th>\n      <th>fim. 03 feb.<\/th>\n      <th>mán. 07 feb.<\/th>\n      <th>fim. 10 feb.<\/th>\n      <th>mán. 14 feb.<\/th>\n      <th>fim. 17 feb.<\/th>\n      <th>mán. 21 feb.<\/th>\n      <th>fim. 24 feb.<\/th>\n      <th>mán. 28 feb.<\/th>\n      <th>fim. 03 mar.<\/th>\n      <th>mán. 07 mar.<\/th>\n      <th>fim. 10 mar.<\/th>\n      <th>mán. 14 mar.<\/th>\n      <th>fim. 17 mar.<\/th>\n      <th>mán. 21 mar.<\/th>\n      <th>fim. 24 mar.<\/th>\n      <th>mán. 28 mar.<\/th>\n      <th>fim. 31 mar.<\/th>\n      <th>mán. 04 apr.<\/th>\n      <th>fim. 07 apr.<\/th>\n      <th>mán. 11 apr.<\/th>\n      <th>fim. 14 apr.<\/th>\n      <th>mán. 18 apr.<\/th>\n      <th>fim. 21 apr.<\/th>\n      <th>mán. 25 apr.<\/th>\n      <th>fim. 28 apr.<\/th>\n      <th>mán. 02 maí<\/th>\n      <th>fim. 05 maí<\/th>\n      <th>mán. 09 maí<\/th>\n      <th>fim. 12 maí<\/th>\n      <th>mán. 16 maí<\/th>\n      <th>fim. 19 maí<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":17,"dom":"tip","order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[10,17,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-2" style="width:100%;height:auto;" class="datatables html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2">{"x":{"filter":"none","caption":"<caption>Trommur<\/caption>","data":[["Kim","Khloé","","Kourtney","Rob"],["08:30","09:00","09:30","10:00",null],["10:00","10:30",null,"11:30","11:00"],["10:00","08:30","09:00","09:30",null],["11:30","10:00",null,"11:00","10:30"],["09:30","10:00","08:30","09:00",null],["11:00","11:30",null,"10:30","10:00"],["09:00","09:30","10:00","08:30",null],["10:30","11:00",null,"10:00","11:30"],["08:30","09:00","09:30","10:00",null],["10:00","10:30",null,"11:30","11:00"],["10:00","08:30","09:00","09:30",null],["11:30","10:00",null,"11:00","10:30"],["09:30","10:00","08:30","09:00",null],["11:00","11:30",null,"10:30","10:00"],["09:00","09:30","10:00","08:30",null],["10:30","11:00",null,"10:00","11:30"],["08:30","09:00","09:30","10:00",null],["10:00","10:30",null,"11:30","11:00"],["10:00","08:30","09:00","09:30",null],["11:30","10:00",null,"11:00","10:30"],["09:30","10:00","08:30","09:00",null],["11:00","11:30",null,"10:30","10:00"],["09:00","09:30","10:00","08:30",null],["10:30","11:00",null,"10:00","11:30"],["08:30","09:00","09:30","10:00",null],["10:00","10:30",null,"11:30","11:00"],["10:00","08:30","09:00","09:30",null],["11:30","10:00",null,"11:00","10:30"],["09:30","10:00","08:30","09:00",null],["11:00","11:30",null,"10:30","10:00"],["09:00","09:30","10:00","08:30",null],["10:30","11:00",null,"10:00","11:30"],["08:30","09:00","09:30","10:00",null],["10:00","10:30",null,"11:30","11:00"],["10:00","08:30","09:00","09:30",null],["11:30","10:00",null,"11:00","10:30"],["09:30","10:00","08:30","09:00",null],["11:00","11:30",null,"10:30","10:00"],["09:00","09:30","10:00","08:30",null],["10:30","11:00",null,"10:00","11:30"]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th>nemar<\/th>\n      <th>mán. 03 jan.<\/th>\n      <th>fim. 06 jan.<\/th>\n      <th>mán. 10 jan.<\/th>\n      <th>fim. 13 jan.<\/th>\n      <th>mán. 17 jan.<\/th>\n      <th>fim. 20 jan.<\/th>\n      <th>mán. 24 jan.<\/th>\n      <th>fim. 27 jan.<\/th>\n      <th>mán. 31 jan.<\/th>\n      <th>fim. 03 feb.<\/th>\n      <th>mán. 07 feb.<\/th>\n      <th>fim. 10 feb.<\/th>\n      <th>mán. 14 feb.<\/th>\n      <th>fim. 17 feb.<\/th>\n      <th>mán. 21 feb.<\/th>\n      <th>fim. 24 feb.<\/th>\n      <th>mán. 28 feb.<\/th>\n      <th>fim. 03 mar.<\/th>\n      <th>mán. 07 mar.<\/th>\n      <th>fim. 10 mar.<\/th>\n      <th>mán. 14 mar.<\/th>\n      <th>fim. 17 mar.<\/th>\n      <th>mán. 21 mar.<\/th>\n      <th>fim. 24 mar.<\/th>\n      <th>mán. 28 mar.<\/th>\n      <th>fim. 31 mar.<\/th>\n      <th>mán. 04 apr.<\/th>\n      <th>fim. 07 apr.<\/th>\n      <th>mán. 11 apr.<\/th>\n      <th>fim. 14 apr.<\/th>\n      <th>mán. 18 apr.<\/th>\n      <th>fim. 21 apr.<\/th>\n      <th>mán. 25 apr.<\/th>\n      <th>fim. 28 apr.<\/th>\n      <th>mán. 02 maí<\/th>\n      <th>fim. 05 maí<\/th>\n      <th>mán. 09 maí<\/th>\n      <th>fim. 12 maí<\/th>\n      <th>mán. 16 maí<\/th>\n      <th>fim. 19 maí<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"dom":"tip","order":[],"autoWidth":false,"orderClasses":false}},"evals":[],"jsHooks":[]}</script>
