@@ -1,24 +1,24 @@
 ---
-title: "Talks and reports"
+title: "Erindi og skýrslur"
 author: "Valtýr"
 date: "09/12/2019"
 ---
 
 # Reports
-Here are a few reports done with the amazing R package [Bookdown](https://bookdown.org/):
+Hér eru nokkur erindi og skýrslur gerðar í R með [Bookdown](https://bookdown.org/):
 
 
 | Name          | Link               | Language
 | ----------------- |:----------------------- |:-----
-| Sources and pathways of microplastic Iceland    | [:link:][Mp-report]      |[:iceland:]
-| Kelp estimate                                   | [:link:][Kelp-report]     |[:iceland:]
+| Örplast í hafinu við Ísland    | [:link:][Mp-report]      |[:iceland:]
+| Þarabreiður í Húnaflóa                                   | [:link:][Kelp-report]     |[:iceland:]
 | Microplastic lab protocol                       | [:link:][MP-protocol]     |Eng
 
 [Mp-report]: https://harkanatta.github.io/orplastskyrslaUAR/
 [Kelp-report]: https://harkanatta.github.io/ssnv_trident/
 [MP-protocol]: https://harkanatta.github.io/MPprotocol/
 
-# Talks
+# Erindi
 
 ## - Sources and Pathways of Microplastics to Icelandic Seas
 [International Symposium on Plastics in the Arctic](https://www.arcticplastics2020.is/index.php/en/) March 2020.
@@ -28,7 +28,7 @@ This is a talk from a report made for the **Environmental Ministry of Iceland**.
 knitr::include_url("https://harkanatta.github.io/mp-mirror")
 ```
 
-## - Monitoring project [:iceland:] Vöktun Náttúruverndarsvæða á Norðurlandi vestra
+## - Vöktun Náttúruverndarsvæða á Norðurlandi vestra. (Monitoring project [:iceland:])
 Samstarf náttúrustofanna og Náttúrufræðistofnunar um [vöktun náttúruverndarsvæða](https://www.ni.is/greinar/voktun-natturuverndarsvaeda). Þetta er erindi sem haldið var fyrir samstarfsaðila um vöktunarsumarið 2021.
 [Erindi :man_teacher:]("https://harkanatta.github.io/mp-mirror")
 
@@ -45,10 +45,10 @@ Létt erindi á íslensku um niðurstöður skýrslu sem ber sama heiti og má f
 knitr::include_url("https://harkanatta.github.io/innragrunn/#1")
 ```
 
-## - Masters thesis:
-### The effects of a herring mass death on the bottom biota
-October 2014 and November 2015. *A talk from my masters thesis*:[The effects of a herring mass death on the bottom biota in Kolgrafafjörður Iceland <i class="fas fa-chalkboard-teacher"></i>](http://www.vegagerdin.is/vefur2.nsf/c16a923a6485025d0025793b003db0e2/b81be193196d902500257d85004e57c2/$FILE/1630%20ValtyrSigurdsson1630.pdf).
-This talk was held on an event in 2014 by The Icelandic Road and Coastal Administration (which funded the project) and again, slightly modified, at the [Icelandic Biology Conference in 2015](https://biologia.is/liffraediradstefnan-2015/dagskra/)
+## - Erindi upp úr meistaraverkefni:
+### Síldardauðinn í Kolgrafafirði. Áhrif súrefnisþurrðar á botn.
+Október 2014 and nóvember 2015. *Erindi*:[The effects of a herring mass death on the bottom biota in Kolgrafafjörður Iceland <i class="fas fa-chalkboard-teacher"></i>](http://www.vegagerdin.is/vefur2.nsf/c16a923a6485025d0025793b003db0e2/b81be193196d902500257d85004e57c2/$FILE/1630%20ValtyrSigurdsson1630.pdf).
+Kynning haldin á fundi Vegagerðarinnar með styrkhöfum 2014 en Vegagerðin styrkti verkefnið. Sama erindi var svo flutt á [líffræðiráðstefnunni 2015](https://biologia.is/liffraediradstefnan-2015/dagskra/)
 
 ![Mass death of herring in winter 2012-13 in Kolgrafafjörður Iceland suffocated the benthic fauna. In the absence of competition from other species the bristle worm *Capitella capitata* flourished.](https://raw.githubusercontent.com/harkanatta/blogg/master/static/img/capitata.jpeg)
 
