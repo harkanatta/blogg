@@ -1,12 +1,50 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blogg on Various things from the job</title>
+    <title>Blogg on Valtýr, ýmsar pælingar</title>
     <link>https://relaxed-curie-6ab3e3.netlify.com/blogg/</link>
-    <description>Recent content in Blogg on Various things from the job</description>
+    <description>Recent content in Blogg on Valtýr, ýmsar pælingar</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>is</language>
-    <lastBuildDate>Sat, 24 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://relaxed-curie-6ab3e3.netlify.com/blogg/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 10 Feb 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://relaxed-curie-6ab3e3.netlify.com/blogg/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hitastig og vindar í áratug</title>
+      <link>https://relaxed-curie-6ab3e3.netlify.com/blogg/hitastig-og-vindar-ratug/</link>
+      <pubDate>Thu, 10 Feb 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://relaxed-curie-6ab3e3.netlify.com/blogg/hitastig-og-vindar-ratug/</guid>
+      <description>🌅 Jæja, fer hann ekki að snúast í norðaustan?VindarósirÁ veturna eru ríkjandi áttir á Skagaströnd suð-austlægar og norð-austlægar en norðanáttirnar eru hvassari en sunnanáttirnar þó þær séu álíka tíðar í mælingum. Á vindarósunum má sjá tíðni vinda eftir áttum og vindhraða og hér má sjá vindarósir fyrir hvern mánuð. Hægt er að nálgast vindarósir á vef Veðurstofunnar en þar sem veðurfar er auðvitað mjög breytilegt eftir árstíðum er skemmtilegt að geta séð þær fyrir hvern mánuð.</description>
+    </item>
+    
+    <item>
+      <title>Stundaskrá í R</title>
+      <link>https://relaxed-curie-6ab3e3.netlify.com/blogg/stundaskra-i-r/</link>
+      <pubDate>Fri, 14 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://relaxed-curie-6ab3e3.netlify.com/blogg/stundaskra-i-r/</guid>
+      <description>Segjum að einhver sé að kenna á trommur í Tónlistarskóla A-Hún og vilji gera stundatöflu. Stundataflan skarast á við kennslu í grunnskólanum og þarf því að vera breytileg svo krakkarnir missi ekki alltaf af sömu skólastundunum. Það er leyst með því að hliðra nemendum til um einn tíma næsta kennsludag og koll af kolli.Hér eru R-pakkarnir:
+Rpakkar &amp;lt;- c(&amp;quot;tidyverse&amp;quot;,&amp;quot;lubridate&amp;quot;,&amp;quot;DT&amp;quot;)pacman::p_load(Rpakkar, character.only = TRUE)Sys.</description>
+    </item>
+    
+    <item>
+      <title>Kort af hafstraumum</title>
+      <link>https://relaxed-curie-6ab3e3.netlify.com/blogg/kort-af-hafstraumum/</link>
+      <pubDate>Tue, 04 Jan 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://relaxed-curie-6ab3e3.netlify.com/blogg/kort-af-hafstraumum/</guid>
+      <description>Hér er hlekkur á Github þar sem má sækja öll skjölin sem þarf til að endurgera myndina á botni þessar síðu.
+Kortið á mynd 1 hér að neðan er birt í grein haffræðingsins Kai Logemann. Kai starfaði um árabil hérlendis og gerði sjávarfallalíkan sem hefur nýst til þess að spá fyrir um rek agna í sjó kringum landið. Þetta kort er nákvæmasta straumakort af hafinu kringum Ísland sem ég veit um og þess vegna langaði mig til þess að endurgera það og um leið gera gögnin sem það byggir á aðgengilegri.</description>
+    </item>
+    
+    <item>
+      <title>Flokkun, flokkunarkerfi Linnaeusar - sjálkrafa listi yfir hærri flokkunarstig gerður í R</title>
+      <link>https://relaxed-curie-6ab3e3.netlify.com/blogg/flokkun-flokkunarkerfi-linnaeusar/</link>
+      <pubDate>Tue, 21 Dec 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://relaxed-curie-6ab3e3.netlify.com/blogg/flokkun-flokkunarkerfi-linnaeusar/</guid>
+      <description>Segjum að einhvern langi til að skoða burstaorma úr mjúkum botni í færeyskum firði og rekist þar á orm sem er byggður eins og bambussproti. Viðkomandi hringir í vin sem segir að þetta sé pottþétt Maldanidae-ormur en til þess að vita hvaða tegund þetta sé þá þurfi að skoða haus eða afturenda betur. Höskuldarviðvörun þetta er ormurinn Praxilella praetermissa sem sést hér að neðan.</description>
+    </item>
+    
     <item>
       <title>The Weather</title>
       <link>https://relaxed-curie-6ab3e3.netlify.com/blogg/the-weather/</link>

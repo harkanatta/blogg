@@ -1,5 +1,5 @@
 ---
-title: "Erindi og skýrslur"
+title: "Skýrslur og erindi"
 author: "Valtýr"
 date: "09/12/2019"
 ---

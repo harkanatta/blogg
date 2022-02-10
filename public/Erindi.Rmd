@@ -5,20 +5,20 @@ date: "09/12/2019"
 ---
 
 # Reports
-Here are a few reports done with the amazing R package [Bookdown](https://bookdown.org/):
+Hér eru nokkur erindi og skýrslur gerðar í R með [Bookdown](https://bookdown.org/):
 
 
 | Name          | Link               | Language
 | ----------------- |:----------------------- |:-----
-| Sources and pathways of microplastic Iceland    | [:link:][Mp-report]      |[:iceland:]
-| Kelp estimate                                   | [:link:][Kelp-report]     |[:iceland:]
+| Örplast í hafinu við Ísland    | [:link:][Mp-report]      |[:iceland:]
+| Þarabreiður í Húnaflóa                                   | [:link:][Kelp-report]     |[:iceland:]
 | Microplastic lab protocol                       | [:link:][MP-protocol]     |Eng
 
 [Mp-report]: https://harkanatta.github.io/orplastskyrslaUAR/
 [Kelp-report]: https://harkanatta.github.io/ssnv_trident/
 [MP-protocol]: https://harkanatta.github.io/MPprotocol/
 
-# Talks
+# Erindi
 
 ## - Sources and Pathways of Microplastics to Icelandic Seas
 [International Symposium on Plastics in the Arctic](https://www.arcticplastics2020.is/index.php/en/) March 2020.
@@ -28,7 +28,7 @@ This is a talk from a report made for the **Environmental Ministry of Iceland**.
 knitr::include_url("https://harkanatta.github.io/mp-mirror")
 ```
 
-## - Monitoring project [:iceland:] Vöktun Náttúruverndarsvæða á Norðurlandi vestra
+## - Vöktun Náttúruverndarsvæða á Norðurlandi vestra. (Monitoring project [:iceland:])
 Samstarf náttúrustofanna og Náttúrufræðistofnunar um [vöktun náttúruverndarsvæða](https://www.ni.is/greinar/voktun-natturuverndarsvaeda). Þetta er erindi sem haldið var fyrir samstarfsaðila um vöktunarsumarið 2021.
 [Erindi :man_teacher:]("https://harkanatta.github.io/mp-mirror")
 
@@ -45,18 +45,19 @@ Létt erindi á íslensku um niðurstöður skýrslu sem ber sama heiti og má f
 knitr::include_url("https://harkanatta.github.io/innragrunn/#1")
 ```
 
-## - Masters thesis:
-### The effects of a herring mass death on the bottom biota
-October 2014 and November 2015. *A talk from my masters thesis*:[The effects of a herring mass death on the bottom biota in Kolgrafafjörður Iceland <i class="fas fa-chalkboard-teacher"></i>](http://www.vegagerdin.is/vefur2.nsf/c16a923a6485025d0025793b003db0e2/b81be193196d902500257d85004e57c2/$FILE/1630%20ValtyrSigurdsson1630.pdf).
-This talk was held on an event in 2014 by The Icelandic Road and Coastal Administration (which funded the project) and again, slightly modified, at the [Icelandic Biology Conference in 2015](https://biologia.is/liffraediradstefnan-2015/dagskra/)
+## - Erindi upp úr meistaraverkefni:
+### Síldardauðinn í Kolgrafafirði. Áhrif súrefnisþurrðar á botn.
+Október 2014 and nóvember 2015. *Erindi*:[Áhrif síldardauða á botndýralíf í Kolgrafafirði <i class="fas fa-chalkboard-teacher"></i>](http://www.vegagerdin.is/vefur2.nsf/c16a923a6485025d0025793b003db0e2/b81be193196d902500257d85004e57c2/$FILE/1630%20ValtyrSigurdsson1630.pdf).
+Kynning haldin á fundi Vegagerðarinnar með styrkhöfum 2014 en Vegagerðin styrkti verkefnið. Sama erindi var svo flutt á [líffræðiráðstefnunni 2015](https://biologia.is/liffraediradstefnan-2015/dagskra/)
 
-![Mass death of herring in winter 2012-13 in Kolgrafafjörður Iceland suffocated the benthic fauna. In the absence of competition from other species the bristle worm *Capitella capitata* flourished.](https://raw.githubusercontent.com/harkanatta/blogg/master/static/img/capitata.jpeg)
+![Fjöldadauði síldar í Kolgrafafirði veturinn 2012-13 kæfði allt botndýralíf í firðinum. Í fjarveru keppinauta sinna blómstraði burstaormurinn *Capitella capitata* en hann þolir mengun einkar vel. English: Mass death of herring in winter 2012-13 in Kolgrafafjörður Iceland suffocated the benthic fauna. In the absence of competition from other species the bristle worm *Capitella capitata* flourished.](https://raw.githubusercontent.com/harkanatta/blogg/master/static/img/capitata.jpeg)
 
 
 
 <details>
   <summary>Masters thesis abstract:</summary>
-> The overwintering Atlantic herring *Clupea harengus*, off the coast of the Snæfellsnes peninsula, Iceland, has had a large impact on the marine ecosystem of the southern Breiðafjörður bay. In winter 2012 - 2013, over 50,000 tonnes of herring succumbed to oxygen depletion in a large scale die-off in the shallow silled fjord Kolgrafafjörður. Around 20,000 tonnes of dead herring accumulated on the seafloor and subsequently some of the benthic biota washed ashore. The effects of the oxygen depleted conditions, caused by the organic material, on benthic infaunal communities were assessed with bottom grab sampling. The results were compared with those from a similar study made in 1999 as part of an environmental assessment prior to construction of a bridge crossing the fjord. Data indicated lowered biodiversity and dominance of the polychaete *Capitella capitata*, in contrast to a species rich fauna in the area in 1999 (where only a single *C. capitata* specimen was found). Over 77,000 individuals/m² of *C. capitata* were recorded at one station in 2013. This species is particularly associated with disturbed or polluted sediments.
+> Síldargöngur inn Breiðafjörð undanfarin ár hafa borið með sér mikla næringu inn í vistkerfi fjarðarins. Síldin hefur drepist í stórum stíl, af mismunandi ástæðum, og fallið til botns þar sem hún rotnaði og olli ofauðgun svo að botninn varð ólífvænlegur fyrir flest dýr. Áhrif lífrænnar mengunar á botndýralíf í Breiðafirði voru könnuð með tveimur rannsóknum á grunnsævi. Önnur rannsóknin beindist að gildruveiði á marflóm á mismenguðum svæðum fyrir utan Stykkishólm á Snæfellsnesi. Þar voru helstu niðurstöður þær að marflóartegundin *Anonyx sarsi* var í ríkum mæli á svæðinu og fannst í meira magni á minna menguðum stöðvum. Hin rannsóknin sneri að áhrifum mikils síldardauða í Kolgrafafirði en þar drápust yfir 50 þúsund tonn af síld í kringum áramótin 2012 til 2013. Áhrif síldardauðans á botndýralíf voru borin saman við rannsókn Agnars Ingólfssonar sem var gerð árið 1999 vegna mats á umhverfisáhrifum þverunar Kolgrafafjarðar. Engar rannsóknir eru til við sambærilegar aðstæður hér á landi og sköpuðust í Kolgrafafirði veturinn 2012 og 2013. Norsk rannsókn á áhrifum dauða nokkurra hundruða tonna af síld í litlum firði í Norður-Noregi sýndi að það tók botninn um þrjú ár að komast í fyrra horf. Tegundasamsetning botndýra í Kolgrafafirði árin 1999 og 2013 var gjörólík. Mikil tegundafækkun varð í kjölfar síldardauðans. Mengunarsækni burstaormurinn *Capitella capitata* fannst í um 9.600 einstaklinga á fermetra að meðaltali í firðinum og mest í yfir 77.000 einstaklinga á fermetra á einni stöð. Aðeins fannst eitt eintak af tegundinni í Kolgrafafirði árið 1999.
+English: The overwintering Atlantic herring *Clupea harengus*, off the coast of the Snæfellsnes peninsula, Iceland, has had a large impact on the marine ecosystem of the southern Breiðafjörður bay. In winter 2012 - 2013, over 50,000 tonnes of herring succumbed to oxygen depletion in a large scale die-off in the shallow silled fjord Kolgrafafjörður. Around 20,000 tonnes of dead herring accumulated on the seafloor and subsequently some of the benthic biota washed ashore. The effects of the oxygen depleted conditions, caused by the organic material, on benthic infaunal communities were assessed with bottom grab sampling. The results were compared with those from a similar study made in 1999 as part of an environmental assessment prior to construction of a bridge crossing the fjord. Data indicated lowered biodiversity and dominance of the polychaete *Capitella capitata*, in contrast to a species rich fauna in the area in 1999 (where only a single *C. capitata* specimen was found). Over 77,000 individuals/m² of *C. capitata* were recorded at one station in 2013. This species is particularly associated with disturbed or polluted sediments.
 Similar conditions have not been documented in Iceland before but the impact of a 500 tonne herring death on the benthic fauna of a small fjord in North Norway lasted for approximately three years. Another study on the effects of a smaller scale herring death was conducted at another location in southern Breiðafjörður bay. There, the catch of amphipod traps, baited for epifaunal lysianassids, indicated that the scavenging amphipod *Anonyx sarsi* avoided sources of organic pollution.
 
 ![The scavenging amphipod *Anonyx sarsi*.](https://raw.githubusercontent.com/harkanatta/blogg/master/static/img/anonyxsarsi.jpeg)

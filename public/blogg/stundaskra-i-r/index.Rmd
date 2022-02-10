@@ -1,0 +1,229 @@
+---
+title: Stundaskrá í R
+author: Valtýr
+date: '2022-01-14'
+slug: stundaskra-i-r
+categories:
+  - R
+tags: []
+description: Desc
+hacker_news_id: ''
+lobsters_id: ''
+meta_img: /images/image.jpg
+---
+
+```{r pakkar, message=FALSE, warning=FALSE, include=FALSE}
+Rpakkar <- c("tidyverse","lubridate","DT")
+pacman::p_load(Rpakkar, character.only = TRUE)
+
+Sys.setlocale("LC_ALL", "Icelandic") # `Sys.setlocale` er hér fyrir íslenskar dagsetningar.
+```
+```{r foll, message=FALSE, warning=FALSE, include=FALSE}
+# Föll
+dagar <- function(Ar,Dagur) {
+  dagarnir <- strptime(paste(Ar, 1:366, sep="-"), format="%Y-%j")
+  vikudagur <- dagarnir[dagarnir$wday==Dagur]
+  vikudagur[!is.na(vikudagur)]  # Needed to remove NA from day 366 in non-leap years
+}
+
+hlidrun <- function(x, n = 1) {
+  if (n == 0) x else c(tail(x, -n), head(x, n))
+}
+```
+```{r manudagar, warning=FALSE, include=FALSE}
+
+manudagar <- dagar(2022,1)[1:20]
+manudagur_nemar <- c('Kourtney','Kim','Khloé', '')
+fyrsti_timi <- "08:30"
+sidasti_timi <- "10:00"
+manudagur_timar <- list()
+for (i in 1:length(manudagar)) {
+  manudagur_timar[[i]] <- seq(
+  from=ymd_hm(paste(format(manudagar[i],"%Y-%m-%d"),fyrsti_timi)),
+  to=ymd_hm(paste(format(manudagar[i],"%Y-%m-%d"),sidasti_timi)),
+  by="30 min"
+)
+}  
+manudagur_timar <- do.call(c,manudagur_timar)
+
+A <- list()
+for (i in 1:length(manudagur_nemar)) {
+  A[[i]] <- hlidrun(manudagur_nemar,i)
+}
+
+lengd <- length(manudagur_timar)/sqrt(length(unlist(A)))
+
+manudagur_nemar <- do.call(c,A) %>% 
+  rep(lengd) %>% 
+  as.factor()
+
+df_manudagur_timar <- data.frame(manudagur_timar, manudagur_nemar) %>% 
+  mutate(timar=manudagur_timar,
+         dagur= format(manudagur_timar,"%a %d %b"),
+         timi= format(manudagur_timar,"%H:%M"),
+         nemar = manudagur_nemar) %>%
+           select(timar,dagur,timi,nemar) %>%
+  distinct()
+
+```
+```{r fimmtudagar, warning=FALSE, include=FALSE}
+
+fimmtudagar <- dagar(2022,4)[1:20]
+fimmtudagur_nemar <- c('Kourtney','Kim','Khloé', 'Rob')
+fyrsti_timi <- "10:00"
+sidasti_timi <- "11:30"
+fimmdudagur_timar <- list()
+for (i in 1:length(fimmtudagar)) {
+  fimmdudagur_timar[[i]] <- seq(
+  from=ymd_hm(paste(format(fimmtudagar[i],"%Y-%m-%d"),fyrsti_timi)),
+  to=ymd_hm(paste(format(fimmtudagar[i],"%Y-%m-%d"),sidasti_timi)),
+  by="30 min"
+)
+}
+fimmdudagur_timar <- do.call(c,fimmdudagur_timar)
+
+A <- list()
+for (i in 1:length(fimmtudagur_nemar)) {
+  A[[i]] <- hlidrun(fimmtudagur_nemar,i)
+}
+
+lengd <- length(fimmdudagur_timar)/sqrt(length(unlist(A)))
+
+fimmtudagur_nemar <- do.call(c,A) %>% 
+  rep(lengd) %>% 
+  as.factor()
+
+df_fimmtudagur_timar <- data.frame(fimmdudagur_timar, fimmtudagur_nemar) %>% 
+  mutate(timar=fimmdudagur_timar,
+         dagur= format(fimmdudagur_timar,"%a %d %b"),
+         timi= format(fimmdudagur_timar,"%H:%M"),
+         nemar = fimmtudagur_nemar) %>%
+           select(timar,dagur,timi,nemar) %>%
+  distinct()
+```
+
+Segjum að einhver sé að kenna á trommur í Tónlistarskóla A-Hún og vilji gera stundatöflu. Stundataflan skarast á við kennslu í grunnskólanum og þarf því að vera breytileg svo krakkarnir missi ekki alltaf af sömu skólastundunum. Það er leyst með því að hliðra nemendum til um einn tíma næsta kennsludag og koll af kolli.
+Hér eru R-pakkarnir: 
+
+```
+Rpakkar <- c("tidyverse","lubridate","DT")
+pacman::p_load(Rpakkar, character.only = TRUE)
+
+Sys.setlocale("LC_ALL", "Icelandic") # `Sys.setlocale` er hér fyrir íslenskar dagsetningar.
+```
+
+Það eru einungis tvö föll. Fallið `dagar` tekur inn árið og vikudag (frá 1-7) og gefur alla tiltekna vikudaga fyrir það árið. Fallið `hlidrun` tekur inn vektor með nöfnum og hliðrar þeim um eitt sæti.
+
+```
+# Föll
+dagar <- function(Ar,Dagur) {
+  dagarnir <- strptime(paste(Ar, 1:366, sep="-"), format="%Y-%j")
+  vikudagur <- dagarnir[dagarnir$wday==Dagur]
+  vikudagur[!is.na(vikudagur)]  # Needed to remove NA from day 366 in non-leap years
+}
+
+hlidrun <- function(x, n = 1) {
+  if (n == 0) x else c(tail(x, -n), head(x, n))
+}
+```
+
+Stundakennarinn við tónlistarskólann starfar á mánudögum og fimmtudögum. Á mánudögum eru aðeins 3 nemar í 30 mínútur hver. En til að dreifa þeim yfir fjórar kennslustundir er nauðsynlegt að hafa eitt tómt stak í nafnalistanum. Listinn á mánudögum er `c('Kourtney','Kim','Khloé', '')` en á fimmtudögum bætist Rob við.
+Hér er lúppa fyrir mánudaga en einfalt væri að gera fall sem tæki inn vikudag, nafnalista og tímasetningu fyrsta og síðasta tíma. Hef þetta bara svona í bili.
+
+```
+
+manudagar <- dagar(2022,1)[1:20]
+manudagur_nemar <- c('Kourtney','Kim','Khloé', '')
+fyrsti_timi <- "08:30"
+sidasti_timi <- "10:00"
+manudagur_timar <- list()
+for (i in 1:length(manudagar)) {
+  manudagur_timar[[i]] <- seq(
+  from=ymd_hm(paste(format(manudagar[i],"%Y-%m-%d"),fyrsti_timi)),
+  to=ymd_hm(paste(format(manudagar[i],"%Y-%m-%d"),sidasti_timi)),
+  by="30 min"
+)
+}  
+manudagur_timar <- do.call(c,manudagur_timar)
+
+A <- list()
+for (i in 1:length(manudagur_nemar)) {
+  A[[i]] <- hlidrun(manudagur_nemar,i)
+}
+
+lengd <- length(manudagur_timar)/sqrt(length(unlist(A)))
+
+manudagur_nemar <- do.call(c,A) %>% 
+  rep(lengd) %>% 
+  as.factor()
+
+df_manudagur_timar <- data.frame(manudagur_timar, manudagur_nemar) %>% 
+  mutate(timar=manudagur_timar,
+         dagur= format(manudagur_timar,"%a %d %b"),
+         timi= format(manudagur_timar,"%H:%M"),
+         nemar = manudagur_nemar) %>%
+           select(timar,dagur,timi,nemar) %>%
+  distinct()
+
+```
+
+Hér er fimmtudagur:
+
+```
+
+fimmtudagar <- dagar(2022,4)[1:20]
+fimmtudagur_nemar <- c('Kourtney','Kim','Khloé', 'Rob')
+fyrsti_timi <- "10:00"
+sidasti_timi <- "11:30"
+fimmdudagur_timar <- list()
+for (i in 1:length(fimmtudagar)) {
+  fimmdudagur_timar[[i]] <- seq(
+  from=ymd_hm(paste(format(fimmtudagar[i],"%Y-%m-%d"),fyrsti_timi)),
+  to=ymd_hm(paste(format(fimmtudagar[i],"%Y-%m-%d"),sidasti_timi)),
+  by="30 min"
+)
+}
+fimmdudagur_timar <- do.call(c,fimmdudagur_timar)
+
+A <- list()
+for (i in 1:length(fimmtudagur_nemar)) {
+  A[[i]] <- hlidrun(fimmtudagur_nemar,i)
+}
+
+lengd <- length(fimmdudagur_timar)/sqrt(length(unlist(A)))
+
+fimmtudagur_nemar <- do.call(c,A) %>% 
+  rep(lengd) %>% 
+  as.factor()
+
+df_fimmtudagur_timar <- data.frame(fimmdudagur_timar, fimmtudagur_nemar) %>% 
+  mutate(timar=fimmdudagur_timar,
+         dagur= format(fimmdudagur_timar,"%a %d %b"),
+         timi= format(fimmdudagur_timar,"%H:%M"),
+         nemar = fimmtudagur_nemar) %>%
+           select(timar,dagur,timi,nemar) %>%
+  distinct()
+```
+
+Þá þarf bara að binda dagana saman í einn *data frame*, setja allt í rétta tímaröð og búa til töfluna. Þessi tafla er þægileg fyrir kennara grunnskólans, þeir sjá nöfn nemendanna í réttri tímaröð og eru því fljótir að sjá hvern á að senda yfir í Tónó. Það er hins vegar betra fyrir foreldrana að sjá sitt barn sem eina línu í gegnum alla töfluna og geta merkt það með einu striki með yfirstrikunarpenna. Sú tafla er fyrir neðan.
+
+```{r tafla, echo=FALSE}
+allt <- rbind(df_manudagur_timar,df_fimmtudagur_timar) %>%
+  arrange(timar) %>% 
+  select(dagur,timi,nemar) %>%
+  pivot_wider(names_from = dagur,values_from = nemar) 
+
+DT::datatable(allt,rownames = F, caption = "Trommur", options = list(pageLength = 17, dom = 'tip'))
+
+```
+
+```{r taflatvo, echo=FALSE}
+allt <- rbind(df_manudagur_timar,df_fimmtudagur_timar) %>%
+  arrange(timar) %>% 
+  select(dagur,timi,nemar) %>%
+  pivot_wider(names_from = dagur,values_from = timi) 
+
+DT::datatable(allt,rownames = F, caption = "Trommur", options = list(dom = 'tip'))
+
+```
+
