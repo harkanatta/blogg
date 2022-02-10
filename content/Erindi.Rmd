@@ -24,7 +24,7 @@ Hér eru nokkur erindi og skýrslur gerðar í R með [Bookdown](https://bookdow
 [International Symposium on Plastics in the Arctic](https://www.arcticplastics2020.is/index.php/en/) March 2020.
 This is a talk from a report made for the **Environmental Ministry of Iceland**. Below is the [talk :man_teacher:]("https://harkanatta.github.io/mp-mirror") and [here is the report :notebook:](https://harkanatta.github.io/orplastskyrslaUAR/) *in Icelandic* 
 
-```{r mpenglish, echo=FALSE, fig.cap="Click the slideshow above, press `'c'` to clone it (opens on a seperate window) and then press `'f'` for fullscreen."}
+```{r mpenglish, echo=FALSE, fig.cap="Smellið á erindið að ofan, ýtið á `'c'` til að það opnist í nýjum glugga, ýtið svo á `'f'` svo það fylli út skjáinn. Click the slideshow above, press `'c'` to clone it (opens on a seperate window) and then press `'f'` for fullscreen."}
 knitr::include_url("https://harkanatta.github.io/mp-mirror")
 ```
 
@@ -32,7 +32,7 @@ knitr::include_url("https://harkanatta.github.io/mp-mirror")
 Samstarf náttúrustofanna og Náttúrufræðistofnunar um [vöktun náttúruverndarsvæða](https://www.ni.is/greinar/voktun-natturuverndarsvaeda). Þetta er erindi sem haldið var fyrir samstarfsaðila um vöktunarsumarið 2021.
 [Erindi :man_teacher:]("https://harkanatta.github.io/mp-mirror")
 
-```{r nnv, echo=FALSE, fig.cap="Click the slideshow above, press `'c'` to clone it (opens on a seperate window) and then press `'f'` for fullscreen."}
+```{r nnv, echo=FALSE, fig.cap=""Smellið á erindið að ofan, ýtið á `'c'` til að það opnist í nýjum glugga, ýtið svo á `'f'` svo það fylli út skjáinn. Click the slideshow above, press `'c'` to clone it (opens on a seperate window) and then press `'f'` for fullscreen."}
 knitr::include_url("https://harkanatta.github.io/Laugarbakki2021")
 ```
 
@@ -41,7 +41,7 @@ knitr::include_url("https://harkanatta.github.io/Laugarbakki2021")
 
 Létt erindi á íslensku um niðurstöður skýrslu sem ber sama heiti og má finna [hér <i class="fas fa-book"></i>](https://harkanatta.github.io/orplastskyrslaUAR/). Erindið má sjá [hér <i class="fas fa-chalkboard-teacher"></i>](https://harkanatta.github.io/innragrunn)
 
-```{r mpicelandic, echo=FALSE, fig.cap="Click the slideshow above, press `'c'` to clone it (opens on a seperate window) and then press `'f'` for fullscreen."}
+```{r mpicelandic, echo=FALSE, fig.cap=""Smellið á erindið að ofan, ýtið á `'c'` til að það opnist í nýjum glugga, ýtið svo á `'f'` svo það fylli út skjáinn. Click the slideshow above, press `'c'` to clone it (opens on a seperate window) and then press `'f'` for fullscreen."}
 knitr::include_url("https://harkanatta.github.io/innragrunn/#1")
 ```
 
