@@ -1,0 +1,54 @@
+---
+title: Hitastig og vindar í áratug
+author: Valtýr
+date: '2022-02-10'
+slug: hitastig-og-vindar-ratug
+categories:
+  - R
+  - Veður
+tags:
+  - R
+description: Desc
+hacker_news_id: ''
+lobsters_id: ''
+meta_img: /images/image.jpg
+---
+
+## :sunrise: *Jæja, fer hann ekki að snúast í norðaustan?*
+### Vindarósir
+Á veturna eru ríkjandi áttir á Skagaströnd suð-austlægar og norð-austlægar en norðanáttirnar eru hvassari en sunnanáttirnar þó þær séu álíka tíðar í mælingum. Á vindarósunum má sjá tíðni vinda eftir áttum og vindhraða og hér má sjá vindarósir fyrir hvern mánuð. Hægt er að nálgast vindarósir á vef [Veðurstofunnar](https://www.vedur.is/vedur/vedurfar/vindorka/gogn/) en þar sem veðurfar er auðvitað mjög breytilegt eftir árstíðum er skemmtilegt að geta séð þær fyrir hvern mánuð.
+
+
+[![](https://i.imgur.com/FFMYOfB.png)](https://i.imgur.com/FFMYOfB.png)
+
+
+### Tíðni vinda eftir tíma dags
+Vindur blæs aldrei lengi úr vestri fyrr en sólin fer að hækka á himni á vorin. Í júní, júlí og ágúst kemur hafgolan inn síðla morguns en dofnar svo um kvöldið. Þó þetta sé almenn vitneskja og vel þekkt veðrakerfi er áhugavert að rýna í myndirnar. Tíðni og styrk vinda eftir tíma dags má sjá á myndunum hér að neðan sem sýna febrúarmánuð annars vegar og júlímánuð hins vegar.
+
+[![](https://i.imgur.com/WQlZpMz.png)](https://i.imgur.com/WQlZpMz.png)
+[![](https://i.imgur.com/hnMvNcJ.png)](https://i.imgur.com/hnMvNcJ.png)
+
+Hitastig hefur farið yfir 20 °C í júlí árin 2017-19 en það hefur gerðist ekki í sumar (2021) þó að meðalhiti hafi verið með hærra móti í júlí eða 11 °C.
+
+[![](https://i.imgur.com/zNGHyLX.png)](https://i.imgur.com/zNGHyLX.png)
+
+
+Skagaströnd er ekki þekkt fyrir að vera nein sólarströnd frekar en aðrir staðir á Íslandi. Hér geta vindar blásið dögum saman úr norðri og austri á veturna. Í nóvember 2016 var lengsta tímabilið með stöðugum norðanvindi en þá blés í 3,8 sólarhringa með léttum vindi (meðaltal 10 m/s) en miðað við gögnin þá hefur versta veðrið síðasta áratuginn líklega verið í apríl árið 2020. Þá blés úr norðaustri í tvo sólarhringa með skafrenningi ofan af fjöllum. Þá var meðalvindur upp á 16,6 m/s og mestu hviður fóru upp í 44 m/s og meðalhiti var -5,6 °C. 
+
+### Verstu og langdregnustu veður síðasta áratugar:
+
+|Frá (dags/tími)     |Til (dags/tími)     | Fjöldi klst.| Meðalvindur (m/s)| Hviður (m/s)| Meðalhiti (°C)|Átt |
+|:-------------------|:-------------------|------------:|-----------------:|------------:|--------------:|:---|
+|19. nóv. 2012/04:50 |16. nóv. 2012/02:00 |           75|               9.5|           20|           -2.2|N   |
+|14. jan. 2011/05:50 |10. jan. 2011/22:50 |           79|              14.6|           34|           -0.7|A   |
+|24. feb. 2014/01:40 |20. feb. 2014/18:10 |           80|              15.4|           29|            1.1|NA  |
+|14. feb. 2014/19:50 |11. feb. 2014/14:20 |           78|              14.8|           37|            2.0|NA  |
+|18. sep. 2013/07:20 |15. sep. 2013/06:30 |           73|              11.1|           26|            2.7|N   |
+|20. nóv. 2016/12:20 |16. nóv. 2016/16:00 |           92|               9.7|           23|           -0.4|N   |
+|22. sep. 2018/16:10 |19. sep. 2018/18:40 |           70|               7.2|           20|            1.7|N   |
+|25. nóv. 2017/15:20 |23. nóv. 2017/02:20 |           61|              10.7|           23|           -1.7|N   |
+|21. des. 2019/00:10 |18. des. 2019/00:10 |           72|              15.5|           36|            0.4|NA  |
+|17. des. 2020/08:30 |14. des. 2020/10:50 |           70|              16.3|           34|            3.5|A   |
+|05. apr. 2020/23:40 |03. apr. 2020/08:50 |           63|              16.6|           44|           -5.6|NA  |
+
+Gögnin eru unnin upp úr mælingum veðurstöðvarinnar á Skagastrandarhöfn en hún var sett upp að beiðni Skagastrandarhafnar árið 2011. Gögnin voru sótt á vef M&T ehf. (www.mogt.is) sem sér um að þjónusta veðurstöðina.
