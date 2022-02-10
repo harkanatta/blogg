@@ -4,7 +4,7 @@ author: "Valtýr"
 date: "09/12/2019"
 ---
 
-# Reports
+# Skýrslur
 Hér eru nokkur erindi og skýrslur gerðar í R með [Bookdown](https://bookdown.org/):
 
 
