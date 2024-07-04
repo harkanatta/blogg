@@ -10,9 +10,9 @@ Hér eru nokkur erindi og skýrslur gerðar í R með [Bookdown](https://bookdow
 
 | Name          | Link               | Language
 | ----------------- |:----------------------- |:-----
-| Örplast í hafinu við Ísland    | [:link:][Mp-report]      |[:iceland:]
-| Þarabreiður í Húnaflóa                                   | [:link:][Kelp-report]     |[:iceland:]
-| Microplastic lab protocol                       | [:link:][MP-protocol]     |Eng
+| Örplast í hafinu við Ísland    | [🔗][Mp-report]      |[🇮🇸]
+| Þarabreiður í Húnaflóa                                   | [🔗][Kelp-report]     |[🇮🇸]
+| Microplastic lab protocol                       | [🔗][MP-protocol]     |Eng
 
 [Mp-report]: https://harkanatta.github.io/orplastskyrslaUAR/
 [Kelp-report]: https://harkanatta.github.io/ssnv_trident/
@@ -22,7 +22,7 @@ Hér eru nokkur erindi og skýrslur gerðar í R með [Bookdown](https://bookdow
 
 ## From Disaster to Recovery: A Study of Benthic Community Response to Anoxia
 [International Polychaete Conference](https://savetcon.co.za/ipc14/) held in Stellenbosch, Cape Town in July 2023 and also presented at the [European Marine Biology Symposium](https://embs2023.com/) in Reykjavík in september that year. 
-Below is the [talk :man_teacher:]("https://harkanatta.github.io/embs23/#/title-slide")  
+Below is the [talk]("https://harkanatta.github.io/embs23/#/title-slide")  
 
 ```{r polychaetaenglish, echo=FALSE, fig.cap="Smellið á erindið að ofan, ýtið á `'c'` til að það opnist í nýjum glugga, ýtið svo á `'f'` svo það fylli út skjáinn. Click the slideshow above, press `'c'` to clone it (opens on a seperate window) and then press `'f'` for fullscreen."}
 knitr::include_url("https://harkanatta.github.io/embs23/#/title-slide")
@@ -30,15 +30,15 @@ knitr::include_url("https://harkanatta.github.io/embs23/#/title-slide")
 
 ## - Sources and Pathways of Microplastics to Icelandic Seas
 [International Symposium on Plastics in the Arctic](https://www.arcticplastics2020.is/index.php/en/) March 2020.
-This is a talk from a report made for the **Environmental Ministry of Iceland**. Below is the [talk :man_teacher:]("https://harkanatta.github.io/mp-mirror") and [here is the report :notebook:](https://harkanatta.github.io/orplastskyrslaUAR/) *in Icelandic* 
+This is a talk from a report made for the **Environmental Ministry of Iceland**. Below is the [talk :man_teacher:]("https://harkanatta.github.io/mp-mirror") and [here is the report 📔](https://harkanatta.github.io/orplastskyrslaUAR/) *in Icelandic* 
 
 ```{r mpenglish, echo=FALSE, fig.cap="Smellið á erindið að ofan, ýtið á `'c'` til að það opnist í nýjum glugga, ýtið svo á `'f'` svo það fylli út skjáinn. Click the slideshow above, press `'c'` to clone it (opens on a seperate window) and then press `'f'` for fullscreen."}
 knitr::include_url("https://harkanatta.github.io/mp-mirror")
 ```
 
-## - Vöktun Náttúruverndarsvæða á Norðurlandi vestra. (Monitoring project [:iceland:])
+## - Vöktun Náttúruverndarsvæða á Norðurlandi vestra. (Monitoring project [🇮🇸])
 Samstarf náttúrustofanna og Náttúrufræðistofnunar um [vöktun náttúruverndarsvæða](https://www.ni.is/greinar/voktun-natturuverndarsvaeda). Þetta er erindi sem haldið var fyrir samstarfsaðila um vöktunarsumarið 2021.
-[Erindi :man_teacher:]("https://harkanatta.github.io/mp-mirror")
+[Erindi]("https://harkanatta.github.io/mp-mirror")
 
 ```{r nnv, echo=FALSE, fig.cap="Smellið á erindið að ofan, ýtið á 'c' til að það opnist í nýjum glugga, ýtið svo á 'f' svo það fylli út skjáinn. Click the slideshow above, press 'c' to clone it (opens in a separate window) and then press 'f' for fullscreen."}
 
