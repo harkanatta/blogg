@@ -25,7 +25,7 @@ Hér eru nokkur erindi og skýrslur gerðar í R með [Bookdown](https://bookdow
 Below is the [talk :man_teacher:]("https://harkanatta.github.io/embs23/#/title-slide")  
 
 ```{r polychaetaenglish, echo=FALSE, fig.cap="Smellið á erindið að ofan, ýtið á `'c'` til að það opnist í nýjum glugga, ýtið svo á `'f'` svo það fylli út skjáinn. Click the slideshow above, press `'c'` to clone it (opens on a seperate window) and then press `'f'` for fullscreen."}
-knitr::include_url("https://harkanatta.github.io/mp-mirror")
+knitr::include_url("https://harkanatta.github.io/embs23/#/title-slide")
 ```
 
 ## - Sources and Pathways of Microplastics to Icelandic Seas
