@@ -24,7 +24,7 @@ Hér eru nokkur erindi og skýrslur gerðar í R með [Bookdown](https://bookdow
 [International Polychaete Conference](https://savetcon.co.za/ipc14/) held in Stellenbosch, Cape Town in July 2023 and also presented at the [European Marine Biology Symposium](https://embs2023.com/) in Reykjavík in september that year. 
 Below is the [talk :man_teacher:]("https://harkanatta.github.io/embs23/#/title-slide")  
 
-```{r mpenglish, echo=FALSE, fig.cap="Smellið á erindið að ofan, ýtið á `'c'` til að það opnist í nýjum glugga, ýtið svo á `'f'` svo það fylli út skjáinn. Click the slideshow above, press `'c'` to clone it (opens on a seperate window) and then press `'f'` for fullscreen."}
+```{r polychaetaenglish, echo=FALSE, fig.cap="Smellið á erindið að ofan, ýtið á `'c'` til að það opnist í nýjum glugga, ýtið svo á `'f'` svo það fylli út skjáinn. Click the slideshow above, press `'c'` to clone it (opens on a seperate window) and then press `'f'` for fullscreen."}
 knitr::include_url("https://harkanatta.github.io/mp-mirror")
 ```
 
@@ -40,7 +40,8 @@ knitr::include_url("https://harkanatta.github.io/mp-mirror")
 Samstarf náttúrustofanna og Náttúrufræðistofnunar um [vöktun náttúruverndarsvæða](https://www.ni.is/greinar/voktun-natturuverndarsvaeda). Þetta er erindi sem haldið var fyrir samstarfsaðila um vöktunarsumarið 2021.
 [Erindi :man_teacher:]("https://harkanatta.github.io/mp-mirror")
 
-```{r nnv, echo=FALSE, fig.cap=""Smellið á erindið að ofan, ýtið á `'c'` til að það opnist í nýjum glugga, ýtið svo á `'f'` svo það fylli út skjáinn. Click the slideshow above, press `'c'` to clone it (opens on a seperate window) and then press `'f'` for fullscreen."}
+```{r nnv, echo=FALSE, fig.cap="Smellið á erindið að ofan, ýtið á 'c' til að það opnist í nýjum glugga, ýtið svo á 'f' svo það fylli út skjáinn. Click the slideshow above, press 'c' to clone it (opens in a separate window) and then press 'f' for fullscreen."}
+
 knitr::include_url("https://harkanatta.github.io/Laugarbakki2021")
 ```
 
@@ -49,7 +50,9 @@ knitr::include_url("https://harkanatta.github.io/Laugarbakki2021")
 
 Létt erindi á íslensku um niðurstöður skýrslu sem ber sama heiti og má finna [hér <i class="fas fa-book"></i>](https://harkanatta.github.io/orplastskyrslaUAR/). Erindið má sjá [hér <i class="fas fa-chalkboard-teacher"></i>](https://harkanatta.github.io/innragrunn)
 
-```{r mpicelandic, echo=FALSE, fig.cap=""Smellið á erindið að ofan, ýtið á `'c'` til að það opnist í nýjum glugga, ýtið svo á `'f'` svo það fylli út skjáinn. Click the slideshow above, press `'c'` to clone it (opens on a seperate window) and then press `'f'` for fullscreen."}
+```{r mpicelandic, echo=FALSE, fig.cap="Smellið á erindið að ofan, ýtið á 'c' til að það opnist í nýjum glugga, ýtið svo á 'f' svo það fylli út skjáinn. Click the slideshow above, press 'c' to clone it (opens in a separate window) and then press 'f' for fullscreen."}
+# Your R code here
+
 knitr::include_url("https://harkanatta.github.io/innragrunn/#1")
 ```
 
