@@ -1,0 +1,60 @@
+{{ partial "header.html" . }}
+<div class="main column">
+    <div class="container">
+        <div class="content">
+            <div class="page-heading">{{ .Title }}</div>
+
+            {{ with .Content }}<div class="markdown">{{ . }}</div>{{ end }}
+
+            <style>
+            .taxon-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                gap: 14px;
+                margin: 28px 0;
+            }
+            .taxon-card { display: block; text-decoration: none; }
+            .taxon-card .thumb {
+                display: block;
+                width: 100%;
+                aspect-ratio: 1 / 1;
+                background-size: cover;
+                background-position: center;
+                background-color: #e6e6e6;
+                transition: transform .25s ease, filter .25s ease;
+            }
+            .taxon-card:hover .thumb { transform: scale(1.04); filter: brightness(1.06); }
+            .taxon-card .label {
+                display: block;
+                margin-top: 6px;
+                font-size: .85rem;
+                line-height: 1.25;
+                font-style: italic;
+            }
+            .taxon-card .count {
+                font-style: normal;
+                opacity: .55;
+                font-size: .78rem;
+            }
+            </style>
+
+            <div class="taxon-grid">
+            {{ range .Pages.ByTitle }}
+                {{ $dir := printf "myndir/%s" .File.BaseFileName }}
+                {{ $thumb := "" }}
+                {{ range first 1 (where (readDir (printf "/static/%s" $dir)) "Name" "!=" "") }}
+                    {{ $thumb = printf "/%s/%s" $dir .Name }}
+                {{ end }}
+                <a class="taxon-card" href="{{ .RelPermalink }}">
+                    <span class="thumb" style="background-image:url('{{ $thumb }}');"></span>
+                    <span class="label">{{ .Title }}
+                        <span class="count">({{ .Params.myndafjoldi }})</span>
+                    </span>
+                </a>
+            {{ end }}
+            </div>
+
+        </div>
+    </div>
+</div>
+{{ partial "footer.html" . }}

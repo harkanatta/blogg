@@ -1,19 +1,16 @@
-[build]
-  base = "focal"
-
 baseurl = "https://relaxed-curie-6ab3e3.netlify.com/"
 theme = "cocoa-eh-hugo-theme"
 builddrafts = true
 canonifyurls = true
 contentdir = "content"
-languageCode = "is"
+locale = "is"
 layoutdir = "layouts"
 publishdir = "public"
 author = "Valtýr Sigurðsson"
 title = "Valtýr, ýmsar pælingar"
 disqusshortname = ""
 pluralizelisttitles = false
-disableKinds = ["taxonomy", "taxonomyTerm"]
+disableKinds = ["taxonomy", "term"]
 enableEmoji = true
 
 [permalinks]
@@ -54,3 +51,7 @@ enableEmoji = true
     special = "#ffcb8d"
     value = "#96c2d7"
     statement = "#ff8e91"
+
+# blogdown renders content to .html; Hugo >= 0.123 blocks that by default.
+[security]
+  allowContent = ['.*']
