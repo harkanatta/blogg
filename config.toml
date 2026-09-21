@@ -12,6 +12,7 @@ disqusshortname = ""
 pluralizelisttitles = false
 disableKinds = ["taxonomy", "term"]
 enableEmoji = true
+enableRobotsTXT = true
 
 [permalinks]
   blog = "blog/:slug/"
@@ -19,7 +20,7 @@ enableEmoji = true
 [params]
   dateform = "Jan 2, 2006"
   dateformfull = "`r format(Sys.time(), '%e. %B %Y')`"
-  description = "Blog"
+  description = "Valtýr Sigurðsson — sjávarlíffræðingur. Botndýr, myndasafn úr Kolgrafafirði, skýrslur og erindi."
   copyright = ""
   logofile = "img/iconid.png"
   faviconfile = "img/iconid.png"
