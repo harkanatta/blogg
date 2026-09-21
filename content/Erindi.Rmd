@@ -22,39 +22,40 @@ Hér eru nokkur erindi og skýrslur gerðar í R með [Bookdown](https://bookdow
 
 ## From Disaster to Recovery: A Study of Benthic Community Response to Anoxia
 [International Polychaete Conference](https://savetcon.co.za/ipc14/) held in Stellenbosch, Cape Town in July 2023 and also presented at the [European Marine Biology Symposium](https://embs2023.com/) in Reykjavík in september that year. 
-Below is the [talk]("https://harkanatta.github.io/embs23/#/title-slide")  
+Below is the [talk](https://harkanatta.github.io/embs23/#/title-slide)  
 
-```{r polychaetaenglish, echo=FALSE, fig.cap="Smellið á erindið að ofan, ýtið á `'c'` til að það opnist í nýjum glugga, ýtið svo á `'f'` svo það fylli út skjáinn. Click the slideshow above, press `'c'` to clone it (opens on a seperate window) and then press `'f'` for fullscreen."}
-knitr::include_url("https://harkanatta.github.io/embs23/#/title-slide")
-```
+<iframe src="https://harkanatta.github.io/embs23/#/title-slide" width="100%" height="400" allowfullscreen
+        style="border:0" loading="lazy"></iframe>
+
+<p class="caption">Smellið á erindið að ofan og ýtið svo á `f` til að það fylli út skjáinn (`s` fyrir glósur, `o` fyrir yfirlit, `?` sýnir alla flýtilykla). Click the slideshow above, then press `f` for fullscreen (`s` for speaker notes, `o` for overview, `?` lists all shortcuts). Þetta erindi er reveal.js — `c` á ekki við hér. / This deck is reveal.js, so `c` does not apply.</p>
 
 ## - Sources and Pathways of Microplastics to Icelandic Seas
 [International Symposium on Plastics in the Arctic](https://www.arcticplastics2020.is/index.php/en/) March 2020.
-This is a talk from a report made for the **Environmental Ministry of Iceland**. Below is the [talk :man_teacher:]("https://harkanatta.github.io/mp-mirror") and [here is the report 📔](https://harkanatta.github.io/orplastskyrslaUAR/) *in Icelandic* 
+This is a talk from a report made for the **Environmental Ministry of Iceland**. Below is the [talk :man_teacher:](https://harkanatta.github.io/mp-mirror) and [here is the report 📔](https://harkanatta.github.io/orplastskyrslaUAR/) *in Icelandic* 
 
-```{r mpenglish, echo=FALSE, fig.cap="Smellið á erindið að ofan, ýtið á `'c'` til að það opnist í nýjum glugga, ýtið svo á `'f'` svo það fylli út skjáinn. Click the slideshow above, press `'c'` to clone it (opens on a seperate window) and then press `'f'` for fullscreen."}
-knitr::include_url("https://harkanatta.github.io/mp-mirror")
-```
+<iframe src="https://harkanatta.github.io/mp-mirror" width="100%" height="400" allowfullscreen
+        style="border:0" loading="lazy"></iframe>
+
+<p class="caption">Smellið á erindið að ofan, ýtið á `c` til að það opnist í nýjum glugga, ýtið svo á `f` svo það fylli út skjáinn. Click the slideshow above, press `c` to clone it (opens in a separate window) and then press `f` for fullscreen.</p>
 
 ## - Vöktun Náttúruverndarsvæða á Norðurlandi vestra. (Monitoring project [🇮🇸])
 Samstarf náttúrustofanna og Náttúrufræðistofnunar um [vöktun náttúruverndarsvæða](https://www.ni.is/greinar/voktun-natturuverndarsvaeda). Þetta er erindi sem haldið var fyrir samstarfsaðila um vöktunarsumarið 2021.
-[Erindi]("https://harkanatta.github.io/mp-mirror")
+[Erindi](https://harkanatta.github.io/Laugarbakki2021)
 
-```{r nnv, echo=FALSE, fig.cap="Smellið á erindið að ofan, ýtið á 'c' til að það opnist í nýjum glugga, ýtið svo á 'f' svo það fylli út skjáinn. Click the slideshow above, press 'c' to clone it (opens in a separate window) and then press 'f' for fullscreen."}
+<iframe src="https://harkanatta.github.io/Laugarbakki2021" width="100%" height="400" allowfullscreen
+        style="border:0" loading="lazy"></iframe>
 
-knitr::include_url("https://harkanatta.github.io/Laugarbakki2021")
-```
+<p class="caption">Smellið á erindið að ofan, ýtið á `c` til að það opnist í nýjum glugga, ýtið svo á `f` svo það fylli út skjáinn. Click the slideshow above, press `c` to clone it (opens in a separate window) and then press `f` for fullscreen.</p>
 
 ## - Örplast í hafinu við Ísland - Helstu uppsprettur, magn og farleiðir í hafið
 31. október 2019
 
 Létt erindi á íslensku um niðurstöður skýrslu sem ber sama heiti og má finna [hér <i class="fas fa-book"></i>](https://harkanatta.github.io/orplastskyrslaUAR/). Erindið má sjá [hér <i class="fas fa-chalkboard-teacher"></i>](https://harkanatta.github.io/innragrunn)
 
-```{r mpicelandic, echo=FALSE, fig.cap="Smellið á erindið að ofan, ýtið á 'c' til að það opnist í nýjum glugga, ýtið svo á 'f' svo það fylli út skjáinn. Click the slideshow above, press 'c' to clone it (opens in a separate window) and then press 'f' for fullscreen."}
-# Your R code here
+<iframe src="https://harkanatta.github.io/innragrunn/#1" width="100%" height="400" allowfullscreen
+        style="border:0" loading="lazy"></iframe>
 
-knitr::include_url("https://harkanatta.github.io/innragrunn/#1")
-```
+<p class="caption">Smellið á erindið að ofan, ýtið á `c` til að það opnist í nýjum glugga, ýtið svo á `f` svo það fylli út skjáinn. Click the slideshow above, press `c` to clone it (opens in a separate window) and then press `f` for fullscreen.</p>
 
 ## - Erindi upp úr meistaraverkefni:
 ### Síldardauðinn í Kolgrafafirði. Áhrif súrefnisþurrðar á botn.
