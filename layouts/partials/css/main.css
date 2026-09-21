@@ -194,10 +194,16 @@ div.header nav ul {
   display: -ms-inline-flexbox;
   display: -ms-inline-flex;
   display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  row-gap: 4px;
 }
 div.header nav ul li {
   margin-left: 6px;
   margin-right: 6px;
+  /* keep multi-word items like "Skýrslur og erindi" on one line;
+     the row as a whole wraps instead (see flex-wrap on the ul) */
+  white-space: nowrap;
 }
 div.header nav ul li:first-child {
   margin-left: 0;
